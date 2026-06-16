@@ -48,6 +48,8 @@ const projects = [
 const projectGrid = document.querySelector("#projectGrid");
 const toast = document.querySelector("#toast");
 const heroParticlesRoot = document.querySelector("#heroParticles");
+const heroEyebrow = document.querySelector(".hero-copy .eyebrow");
+const heroIntro = document.querySelector(".hero-copy .hero-intro--deferred");
 let toastTimer = null;
 
 const defaultParticleColors = ["#20252c", "#4b5563", "#6c7888", "#96a3b5"];
@@ -186,6 +188,85 @@ function setupMotion() {
   );
 
   revealTargets.forEach((element) => observer.observe(element));
+}
+
+function setupHeroEyebrowMotion() {
+  if (!heroEyebrow) return;
+
+  const text = heroEyebrow.textContent;
+  if (!text) return;
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  heroEyebrow.classList.add("split-eyebrow");
+  heroEyebrow.setAttribute("aria-label", text);
+  heroEyebrow.textContent = "";
+
+  const fragment = document.createDocumentFragment();
+  const characters = Array.from(text);
+
+  characters.forEach((character, index) => {
+    const span = document.createElement("span");
+    span.className = "split-eyebrow__char";
+    span.setAttribute("aria-hidden", "true");
+    span.style.setProperty("--char-delay", `${140 + index * 42}ms`);
+    span.textContent = character === " " ? "\u00A0" : character;
+    fragment.appendChild(span);
+  });
+
+  heroEyebrow.appendChild(fragment);
+
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => {
+      heroEyebrow.classList.add("is-ready");
+    });
+  });
+
+  return 140 + Math.max(characters.length - 1, 0) * 42 + 720;
+}
+
+function setupHeroIntroMotion(startDelay = 0) {
+  if (!heroIntro) return;
+
+  const text = heroIntro.dataset.deferredText;
+  if (!text) return;
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    heroIntro.textContent = text;
+    return;
+  }
+
+  const revealIntro = () => {
+    heroIntro.textContent = "";
+    heroIntro.setAttribute("aria-label", text);
+
+    const fragment = document.createDocumentFragment();
+    const segments = text
+      .split(/(?<=[，。])/)
+      .map((segment) => segment.trim())
+      .filter(Boolean);
+
+    segments.forEach((segment, index) => {
+      const span = document.createElement("span");
+      span.className = "hero-intro__segment";
+      span.setAttribute("aria-hidden", "true");
+      span.style.setProperty("--segment-delay", `${index * 130}ms`);
+      span.textContent = segment;
+      fragment.appendChild(span);
+    });
+
+    heroIntro.appendChild(fragment);
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        heroIntro.classList.add("is-ready");
+      });
+    });
+  };
+
+  window.setTimeout(revealIntro, startDelay);
 }
 
 function setupHeroParticles() {
@@ -459,4 +540,6 @@ function setupHeroParticles() {
 }
 
 renderProjectGrid();
+const eyebrowDuration = setupHeroEyebrowMotion() || 0;
+setupHeroIntroMotion(eyebrowDuration + 120);
 setupHeroParticles();
