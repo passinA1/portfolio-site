@@ -939,6 +939,19 @@ main,
   }
 }
 
+@keyframes movieLinkPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(17, 17, 17, 0);
+    transform: translateY(0);
+  }
+
+  50% {
+    box-shadow: 0 0 0 8px rgba(17, 17, 17, 0.05);
+    transform: translateY(-1px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .site-header,
   .hero-copy > * {
@@ -955,6 +968,10 @@ main,
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+
+  .case-link-button {
+    animation: none !important;
   }
 }
 
@@ -1210,6 +1227,17 @@ main,
   color: var(--color-title);
 }
 
+.case-hero-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem 1.25rem;
+}
+
+.case-hero-heading h1 {
+  margin-bottom: 0;
+}
+
 .case-hero-subtitle {
   margin: -0.45rem 0 1.15rem;
   max-width: 24ch;
@@ -1265,6 +1293,47 @@ main,
   color: var(--color-title);
   font-size: 0.96rem;
   font-weight: 600;
+}
+
+.case-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 0.18rem;
+  flex: 0 0 auto;
+}
+
+.case-link-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid rgba(21, 24, 28, 0.12);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--color-title);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1;
+  box-shadow: 0 0 0 rgba(17, 17, 17, 0);
+  animation: movieLinkPulse 2.8s ease-in-out infinite;
+  transition:
+    background-color var(--ease),
+    color var(--ease),
+    border-color var(--ease),
+    box-shadow var(--ease),
+    transform var(--ease);
+}
+
+.case-link-button:hover,
+.case-link-button:focus-visible {
+  background: #111111;
+  border-color: #111111;
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(17, 17, 17, 0.12);
+  transform: translateY(-2px);
+  outline: none;
 }
 
 .case-section-grid {
@@ -1933,6 +2002,10 @@ main,
   max-width: none;
   font-size: clamp(2.25rem, 4.9vw, 3.5rem);
   line-height: 1.04;
+}
+
+.theme-movie3d .case-hero-heading {
+  align-items: flex-start;
 }
 
 .theme-movie3d .case-hero-subtitle {
@@ -4341,6 +4414,15 @@ main,
 
   .theme-movie3d .case-copy--hero h1 {
     font-size: 2.25rem;
+  }
+
+  .case-hero-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .case-hero-actions {
+    margin-top: 0.4rem;
   }
 
   .theme-movie3d .case-hero-subtitle {
