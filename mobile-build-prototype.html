@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>移动端建造编辑器原型</title>
+    <style>
+      :root {
+        --ink: #15171a;
+        --muted: #6f7479;
+        --line: rgba(18, 20, 24, 0.1);
+        --surface: rgba(255, 255, 255, 0.88);
+        --panel: rgba(246, 247, 248, 0.92);
+        --accent: #9cff36;
+        --dark: #1b1f26;
+        --blue: #58a6ff;
+        --danger: #ff7474;
+        font-family: "Avenir Next", "SF Pro Display", "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 18% 12%, rgba(199, 225, 255, 0.55), transparent 24%),
+          radial-gradient(circle at 76% 78%, rgba(218, 245, 201, 0.5), transparent 26%),
+          #f7f8f7;
+      }
+
+      .board {
+        width: 1600px;
+        min-height: 960px;
+        margin: 0 auto;
+        padding: 56px 70px 64px;
+      }
+
+      .intro {
+        display: grid;
+        grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+        gap: 58px;
+        align-items: end;
+        margin-bottom: 48px;
+      }
+
+      h1 {
+        margin: 0;
+        color: #050505;
+        font-size: 58px;
+        line-height: 1.04;
+        letter-spacing: 0;
+      }
+
+      .summary {
+        margin: 0;
+        max-width: 760px;
+        color: #3f464d;
+        font-size: 20px;
+        line-height: 1.75;
+      }
+
+      .priority-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .priority-strip span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 38px;
+        padding: 0 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.74);
+        color: #20252a;
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .prototype-grid {
+        display: grid;
+        grid-template-columns: 1.16fr 0.92fr 0.92fr;
+        gap: 34px;
+        align-items: start;
+      }
+
+      .state {
+        display: grid;
+        gap: 16px;
+      }
+
+      .state-title {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 0 8px;
+      }
+
+      .state-title span {
+        color: #81878d;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .state-title strong {
+        color: #101316;
+        font-size: 22px;
+      }
+
+      .phone {
+        position: relative;
+        overflow: hidden;
+        border: 12px solid #111318;
+        border-radius: 36px;
+        background: #d9f0ff;
+        box-shadow:
+          0 34px 70px rgba(16, 22, 30, 0.18),
+          0 0 0 1px rgba(255, 255, 255, 0.7) inset;
+        aspect-ratio: 16 / 9;
+      }
+
+      .phone::before {
+        content: "";
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        z-index: 20;
+        width: 12px;
+        height: 78px;
+        border-radius: 999px;
+        background: #050505;
+        transform: translateY(-50%);
+      }
+
+      .scene {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02)),
+          url("./assets/mockups/desktop-mockup.png") center center / cover;
+      }
+
+      .status-bar {
+        position: absolute;
+        top: 14px;
+        left: 58px;
+        right: 18px;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        min-height: 42px;
+        padding: 0 12px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 999px;
+        background: rgba(22, 25, 29, 0.56);
+        color: white;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+        backdrop-filter: blur(14px);
+      }
+
+      .status-bar b {
+        font-size: 14px;
+      }
+
+      .status-bar span {
+        color: rgba(255, 255, 255, 0.74);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .close {
+        display: inline-grid;
+        place-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.16);
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .cube {
+        position: absolute;
+        left: 48%;
+        top: 44%;
+        z-index: 4;
+        width: 92px;
+        height: 72px;
+        transform: translate(-50%, -50%) rotate(-6deg);
+      }
+
+      .cube::before,
+      .cube::after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(145deg, #fff36d, #f4b12f 70%);
+        box-shadow: 0 14px 22px rgba(84, 60, 24, 0.24);
+      }
+
+      .cube::before {
+        inset: 4px 18px 12px 18px;
+        transform: skewY(-18deg);
+      }
+
+      .cube::after {
+        right: 8px;
+        top: 14px;
+        width: 32px;
+        height: 48px;
+        background: linear-gradient(145deg, #d58824, #ffce46);
+        transform: skewY(28deg);
+      }
+
+      .select-ring {
+        position: absolute;
+        left: 48%;
+        top: 45%;
+        z-index: 3;
+        width: 154px;
+        height: 104px;
+        border: 2px solid rgba(156, 255, 54, 0.95);
+        border-radius: 50%;
+        transform: translate(-50%, -50%) rotate(-4deg);
+        box-shadow: 0 0 0 6px rgba(156, 255, 54, 0.12);
+      }
+
+      .quick-menu {
+        position: absolute;
+        right: 18px;
+        top: 96px;
+        z-index: 6;
+        display: grid;
+        gap: 10px;
+      }
+
+      .quick-menu button,
+      .tool-item {
+        border: 0;
+        color: #111417;
+        background: var(--surface);
+        font-weight: 800;
+        box-shadow: 0 10px 22px rgba(12, 16, 22, 0.12);
+      }
+
+      .quick-menu button {
+        width: 52px;
+        height: 52px;
+        border-radius: 18px;
+        font-size: 20px;
+      }
+
+      .toolbar {
+        position: absolute;
+        left: 50%;
+        bottom: 18px;
+        z-index: 7;
+        display: grid;
+        grid-template-columns: repeat(5, 64px);
+        gap: 10px;
+        padding: 10px;
+        border-radius: 28px;
+        background: rgba(20, 23, 28, 0.62);
+        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(18px);
+        transform: translateX(-50%);
+      }
+
+      .tool-item {
+        display: grid;
+        place-items: center;
+        gap: 3px;
+        height: 58px;
+        border-radius: 18px;
+        font-size: 12px;
+      }
+
+      .tool-item i {
+        font-style: normal;
+        font-size: 20px;
+        line-height: 1;
+      }
+
+      .tool-item.is-primary {
+        background: var(--accent);
+      }
+
+      .drawer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        padding: 16px 18px 18px;
+        border-radius: 30px 30px 20px 20px;
+        background: rgba(249, 250, 250, 0.96);
+        box-shadow: 0 -20px 38px rgba(6, 10, 16, 0.18);
+      }
+
+      .drawer-handle {
+        width: 54px;
+        height: 5px;
+        margin: 0 auto 14px;
+        border-radius: 999px;
+        background: rgba(18, 20, 24, 0.18);
+      }
+
+      .tabs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .tabs span {
+        min-height: 34px;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        background: #eceff0;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .tabs span:first-child {
+        background: #111417;
+        color: white;
+      }
+
+      .shape-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      .shape {
+        display: grid;
+        place-items: center;
+        min-height: 64px;
+        border: 1px solid rgba(18, 20, 24, 0.08);
+        border-radius: 18px;
+        background: white;
+      }
+
+      .shape::before {
+        content: "";
+        width: 34px;
+        height: 34px;
+        background: linear-gradient(145deg, #fff46a, #e69421);
+        clip-path: polygon(50% 0, 96% 28%, 82% 88%, 22% 100%, 0 34%);
+        filter: drop-shadow(0 8px 8px rgba(76, 51, 14, 0.2));
+      }
+
+      .property-panel {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+        width: 44%;
+        padding: 18px;
+        background: rgba(249, 250, 250, 0.96);
+        box-shadow: -18px 0 34px rgba(6, 10, 16, 0.14);
+      }
+
+      .property-panel h3 {
+        margin: 0 0 14px;
+        font-size: 18px;
+      }
+
+      .property-row {
+        display: grid;
+        grid-template-columns: 28px 1fr;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .stepper {
+        display: grid;
+        grid-template-columns: 34px 1fr 34px;
+        align-items: center;
+        overflow: hidden;
+        min-height: 34px;
+        border-radius: 999px;
+        background: #eceff0;
+        font-weight: 800;
+        text-align: center;
+      }
+
+      .floor-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 46px;
+        margin-top: 14px;
+        padding: 0 12px;
+        border-radius: 16px;
+        background: #eceff0;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .switch {
+        width: 48px;
+        height: 28px;
+        padding: 3px;
+        border-radius: 999px;
+        background: #111417;
+      }
+
+      .switch::before {
+        content: "";
+        display: block;
+        width: 22px;
+        height: 22px;
+        border-radius: 999px;
+        background: var(--accent);
+        margin-left: 20px;
+      }
+
+      .callouts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-top: 34px;
+      }
+
+      .callout {
+        padding: 24px 24px 22px;
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        background: rgba(255, 255, 255, 0.74);
+      }
+
+      .callout b {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 19px;
+      }
+
+      .callout p {
+        margin: 0;
+        color: #555d64;
+        font-size: 15px;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="board">
+      <section class="intro">
+        <div>
+          <h1>手机端建造编辑器原型</h1>
+          <div class="priority-strip">
+            <span>常驻：添加 / 移动 / 旋转</span>
+            <span>选中后：复制 / 删除 / 属性</span>
+            <span>抽屉：形状与材质</span>
+            <span>面板：坐标与尺寸</span>
+          </div>
+        </div>
+        <p class="summary">
+          将 PC 端全展开的建造功能拆成“默认沉浸建造、底部高频工具、上滑素材抽屉、选中后属性面板”四层，减少手机屏幕常驻信息密度。
+        </p>
+      </section>
+
+      <section class="prototype-grid">
+        <article class="state">
+          <div class="state-title">
+            <span>State 01</span>
+            <strong>默认建造</strong>
+          </div>
+          <div class="phone">
+            <div class="scene"></div>
+            <div class="status-bar">
+              <b>Layer 1</b>
+              <span>1003 / 5000</span>
+              <span>坐标 0, 0, 0</span>
+              <div class="close">×</div>
+            </div>
+            <div class="select-ring"></div>
+            <div class="cube"></div>
+            <div class="quick-menu">
+              <button>⧉</button>
+              <button>✕</button>
+              <button>⋯</button>
+            </div>
+            <div class="toolbar">
+              <div class="tool-item is-primary"><i>＋</i>添加</div>
+              <div class="tool-item"><i>↔</i>移动</div>
+              <div class="tool-item"><i>↻</i>旋转</div>
+              <div class="tool-item"><i>▣</i>缩放</div>
+              <div class="tool-item"><i>⋯</i>更多</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="state">
+          <div class="state-title">
+            <span>State 02</span>
+            <strong>添加形状</strong>
+          </div>
+          <div class="phone">
+            <div class="scene"></div>
+            <div class="status-bar">
+              <b>Layer 1</b>
+              <span>添加模式</span>
+              <div class="close">×</div>
+            </div>
+            <div class="select-ring"></div>
+            <div class="drawer">
+              <div class="drawer-handle"></div>
+              <div class="tabs">
+                <span>方块</span>
+                <span>三棱柱</span>
+                <span>三棱锥</span>
+              </div>
+              <div class="shape-grid">
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="state">
+          <div class="state-title">
+            <span>State 03</span>
+            <strong>属性编辑</strong>
+          </div>
+          <div class="phone">
+            <div class="scene"></div>
+            <div class="status-bar">
+              <b>Layer 1</b>
+              <span>已选中方块</span>
+              <div class="close">×</div>
+            </div>
+            <div class="select-ring"></div>
+            <div class="cube"></div>
+            <div class="property-panel">
+              <h3>方块属性</h3>
+              <div class="property-row">
+                <b>X</b>
+                <div class="stepper"><span>−</span><span>1</span><span>＋</span></div>
+              </div>
+              <div class="property-row">
+                <b>Y</b>
+                <div class="stepper"><span>−</span><span>1</span><span>＋</span></div>
+              </div>
+              <div class="property-row">
+                <b>Z</b>
+                <div class="stepper"><span>−</span><span>1</span><span>＋</span></div>
+              </div>
+              <div class="floor-toggle">
+                <span>设为地板</span>
+                <div class="switch"></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="callouts">
+        <div class="callout">
+          <b>1. 默认状态只保留高频入口</b>
+          <p>添加、移动、旋转、缩放放在底部拇指区；图形库、材质和精确参数不常驻。</p>
+        </div>
+        <div class="callout">
+          <b>2. 添加动作改为上滑抽屉</b>
+          <p>方块、三棱柱、三棱锥放在抽屉顶部分类，素材网格只在添加时出现。</p>
+        </div>
+        <div class="callout">
+          <b>3. 精细参数选中后再出现</b>
+          <p>长宽高、地板检测、坐标等低频但重要的控制，放进右侧属性面板。</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

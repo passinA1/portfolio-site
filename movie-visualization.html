@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>全球电影数据的空间化探索原型 | 叶泽鸿</title>
+    <meta
+      name="description"
+      content="全球电影数据的空间化探索原型案例页，展示如何用 3D 地球连接国家、类型与票房，并把时间切片组织成可探索的数据体验。"
+    />
+    <link rel="stylesheet" href="./css/styles.css?v=20260617-movie-nav-v8" />
+  </head>
+  <body class="case-page theme-movie3d">
+    <header class="case-nav" data-reveal data-reveal-delay="40">
+      <nav class="case-links pill-nav pill-nav--project" aria-label="主导航">
+        <a class="pill-link" href="./index.html">
+          <span class="pill-link__label">首页</span>
+          <span class="pill-link__label-hover" aria-hidden="true">首页</span>
+          <span class="pill-link__surface" aria-hidden="true"></span>
+        </a>
+        <a class="pill-link is-active" href="./index.html#work" aria-current="page">
+          <span class="pill-link__label">项目</span>
+          <span class="pill-link__label-hover" aria-hidden="true">项目</span>
+          <span class="pill-link__surface" aria-hidden="true"></span>
+        </a>
+        <a class="pill-link" href="mailto:alan-yzh@foxmail.com">
+          <span class="pill-link__label">联系我</span>
+          <span class="pill-link__label-hover" aria-hidden="true">联系我</span>
+          <span class="pill-link__surface" aria-hidden="true"></span>
+        </a>
+      </nav>
+    </header>
+
+    <main class="case-main">
+      <section class="case-hero case-hero--movie" aria-label="项目概览">
+        <figure class="case-hero-visual case-hero-visual--movie-cover" data-reveal data-reveal-delay="120">
+          <img src="./assets/images/3DMovie/CoverImage.png" alt="3D 电影可视化主界面，中央为地球，外围为电影类别与筛选区域，下方为时间轴" />
+        </figure>
+
+        <div class="case-copy case-copy--hero" data-reveal data-reveal-delay="120">
+          <p class="case-eyebrow">School Project</p>
+          <h1>全球电影数据的空间化探索原型</h1>
+          <p class="case-hero-subtitle">把全球电影数据做成一张可探索的空间关系图</p>
+          <p>
+            这个项目要回答的是：当国家、类型、票房和时间同时出现时，用户能不能先看懂整体关系，再顺着交互继续看细节。
+          </p>
+          <dl class="case-meta-list">
+            <div>
+              <dt>角色</dt>
+              <dd>产品设计 / 交互设计 / 信息体验设计</dd>
+            </div>
+            <div>
+              <dt>类型</dt>
+              <dd>学校项目 / 探索类 3D 可视化</dd>
+            </div>
+            <div>
+              <dt>时间</dt>
+              <dd>2025.03 - 2025.05</dd>
+            </div>
+            <div>
+              <dt>工具</dt>
+              <dd>Figma / Gemini / Figma Make</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <ol class="case-process case-process--flow" aria-label="案例叙事流程" data-reveal data-reveal-delay="80">
+        <li>
+          <span>01</span>
+          <strong>重定义命题</strong>
+          <p>先把它定义成空间探索入口，而不是替代 2D 趋势图。</p>
+        </li>
+        <li>
+          <span>02</span>
+          <strong>拆开维度</strong>
+          <p>把国家、类型、票房和时间分别交给更合适的视觉通道。</p>
+        </li>
+        <li>
+          <span>03</span>
+          <strong>先做骨架</strong>
+          <p>先验证主视图入口、筛选路径和细节查看方式，再进入视觉阶段。</p>
+        </li>
+        <li>
+          <span>04</span>
+          <strong>最后复盘</strong>
+          <p>AI 用来加速发散，但关键判断仍回到可读性和信息层级本身。</p>
+        </li>
+      </ol>
+
+      <section class="movie-observation" aria-label="项目缘起" data-reveal>
+        <div class="movie-observation__intro">
+          <div class="movie-observation__lead">
+            <p class="case-eyebrow">Observation 01</p>
+            <h2>我想先看到电影从哪里来，又流向哪里</h2>
+          </div>
+          <div class="movie-observation__aside">
+            <p class="case-industry-compare__label">这页想回答什么</p>
+            <p>国家来源和类型去向，能不能在同一屏里先被看清。</p>
+          </div>
+        </div>
+
+        <figure class="case-image-card case-image-card--movie-focus movie-observation__visual">
+          <figcaption>主视图原型</figcaption>
+          <img src="./assets/images/3DMovie/CoverImage.png" alt="全球电影数据可视化主视图，中央为 3D 地球，右侧为类别与国家筛选，下方为时间轴" />
+        </figure>
+
+        <div class="movie-observation__summary">
+          <p>
+            表格能告诉我数值，普通图表能告诉我局部趋势，但都很难先把这张关系图整体端出来。所以这页先做整体分布，再把时间和细节往后放。
+          </p>
+          <ul class="movie-point-strip">
+            <li><strong>国家是空间关系：</strong> 先看来源，比先读数字更容易建立感觉。</li>
+            <li><strong>类型是方向关系：</strong> 多个国家流向同一类型时，路径比单点更好记。</li>
+            <li><strong>时间做切片：</strong> 先看一个阶段，再比较变化，负担更小。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="case-phase" aria-label="任务定义" data-reveal>
+        <div class="case-phase-intro">
+          <h3 class="case-h3-bullet">先拆清维度，再决定画面</h3>
+          <p>
+            动手前，我先不急着画地球，而是先问清楚：这四个维度里，什么适合用空间看，什么适合用强弱看，什么必须交给时间来处理。
+          </p>
+        </div>
+
+        <div class="movie-logic-lead" aria-label="判断原则">
+          <p class="movie-logic-lead__label">判断原则</p>
+          <p class="movie-logic-lead__body">
+            位置、聚合、强弱、时间不是同一种信息。如果一开始就把它们全塞进 3D 里，用户看到的只会是一团热闹。我先把每个维度分配给更合适的视觉通道，再决定 3D 到底承担什么。
+          </p>
+        </div>
+
+        <div class="movie-logic-rail" aria-label="视觉编码规则">
+          <article>
+            <span>01 国家</span>
+            <strong>放回地球表面</strong>
+            <p>国家天然带空间属性。先让用户知道电影从哪里来，比先读数字更容易建立整体感觉。</p>
+          </article>
+          <article>
+            <span>02 类型</span>
+            <strong>挂到外圈终点</strong>
+            <p>类型不是起点，而是去向。放到外围之后，每条路径的终点会更清楚，关系也更容易记住。</p>
+          </article>
+          <article>
+            <span>03 票房</span>
+            <strong>交给粗细和亮度</strong>
+            <p>票房不需要先逐个读数。先用视觉强弱把“大关系”扫出来，细数字再留给后续查看。</p>
+          </article>
+          <article>
+            <span>04 时间</span>
+            <strong>留给底部切片</strong>
+            <p>时间最容易把主视图搅乱，所以只让它负责切年份，不直接挤占 3D 画面的注意力。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-phase" aria-label="形式取舍" data-reveal>
+        <div class="case-phase-intro">
+          <h3 class="case-h3-bullet">决定用 3D 之前，我先把它和 2D 分开判断</h3>
+          <p>
+            如果目标是精确比较几十年的涨落，2D 会更直接；如果目标是先把国家、类型和路径关系整体端出来，3D 更合适。所以这页不是拿 3D 取代 2D，而是让它先承担“入口”。
+          </p>
+        </div>
+
+        <div class="movie-choice-layout" aria-label="2D 与 3D 的取舍">
+          <article class="movie-choice-layout__side">
+            <span>2D 更擅长</span>
+            <strong>连续比较时间变化</strong>
+            <p>横轴就是时间，起伏一眼能读出来，适合回答“哪几年变了、变化有多大”。</p>
+          </article>
+
+          <div class="movie-choice-layout__decision">
+            <span>这次取舍</span>
+            <strong>让 3D 先回答“它们怎么连在一起”</strong>
+            <p>先把国家到类型的空间路径整体端出来，再用时间轴和局部状态继续追问具体年份和具体数据。</p>
+          </div>
+
+          <article class="movie-choice-layout__side">
+            <span>3D 更擅长</span>
+            <strong>先建立空间关系</strong>
+            <p>国家、类型和路径能同时进第一视野，适合回答“它们彼此怎么连、整体分布长什么样”。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="movie-wide-section" aria-label="低保真验证" data-reveal>
+        <div class="movie-wide-section__header">
+          <div class="movie-wide-section__title">
+            <p class="case-eyebrow">Validation</p>
+            <h2>先把核心体验压进低保真骨架</h2>
+          </div>
+          <p class="movie-wide-section__intro">
+            视觉之前，我先看三件事：主视图能不能成为入口，筛选是否顺手，细节会不会打断主线。
+          </p>
+        </div>
+
+        <div class="movie-visual-grid movie-visual-grid--triple movie-wide-section__visual" aria-label="低保真结构验证">
+          <figure class="case-image-card case-image-card--movie-panel movie-visual-panel">
+            <figcaption>Prototype 01</figcaption>
+            <img src="./assets/images/3DMovie/prototype1.png" alt="电影可视化低保真原型一，展示主视图入口与整体页面骨架" />
+          </figure>
+          <figure class="case-image-card case-image-card--movie-panel movie-visual-panel">
+            <figcaption>Prototype 02</figcaption>
+            <img src="./assets/images/3DMovie/prototype2.png" alt="电影可视化低保真原型二，展示筛选和详情区的结构组织" />
+          </figure>
+          <figure class="case-image-card case-image-card--movie-panel movie-visual-panel">
+            <figcaption>Prototype 03</figcaption>
+            <img src="./assets/images/3DMovie/prototype3.png" alt="电影可视化低保真原型三，展示不同状态下的信息浏览路径" />
+          </figure>
+        </div>
+
+        <div class="movie-inline-points" aria-label="低保真阶段重点">
+          <article>
+            <span>入口</span>
+            <p><strong>入口够不够清楚：</strong> 用户会不会先看主视图，而不是先读说明。</p>
+          </article>
+          <article>
+            <span>联动</span>
+            <p><strong>联动够不够顺手：</strong> 筛选、搜索和时间切换能不能都回到同一主视图。</p>
+          </article>
+          <article>
+            <span>细节</span>
+            <p><strong>细节够不够轻：</strong> 局部信息出现时，不能把用户硬拉出整体浏览。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="movie-diagonal-section" aria-label="AI 工具流" data-reveal>
+        <div class="movie-diagonal-section__copy">
+          <p class="case-eyebrow">Workflow</p>
+          <h2>AI 帮我加快发散，但关键判断还是自己做</h2>
+          <p>
+            AI 主要用来加快发散和搭演示骨架。真正要自己判断的，还是 3D 是否合适、什么信息该先出现。
+          </p>
+        </div>
+
+        <div class="movie-diagonal-section__flow">
+          <article>
+            <span>Figma</span>
+            <p>先把信息结构、关键界面和交互节奏搭出来。</p>
+          </article>
+          <article>
+            <span>Gemini</span>
+            <p>用来快速发散视觉方向，看不同氛围是否成立。</p>
+          </article>
+          <article>
+            <span>Figma Make</span>
+            <p>用来搭可演示的状态和骨架，不承担真实 3D 逻辑。</p>
+          </article>
+        </div>
+
+        <div class="movie-diagonal-section__visual movie-explore-strip" aria-label="AI 加速视觉发散">
+          <figure class="case-image-card case-image-card--movie-panel movie-visual-panel movie-explore-card">
+            <img src="./assets/images/3DMovie/visualizationExplore1.jpeg" alt="电影可视化视觉探索方向一" />
+          </figure>
+          <figure class="case-image-card case-image-card--movie-panel movie-visual-panel movie-explore-card">
+            <img src="./assets/images/3DMovie/visualizationExplore2.jpeg" alt="电影可视化视觉探索方向二" />
+          </figure>
+          <figure class="case-image-card case-image-card--movie-panel movie-visual-panel movie-explore-card">
+            <img src="./assets/images/3DMovie/visualizationExplore3.jpeg" alt="电影可视化视觉探索方向三" />
+          </figure>
+          <figure class="case-image-card case-image-card--movie-panel movie-visual-panel movie-explore-card">
+            <img src="./assets/images/3DMovie/visualizationExplore4.jpeg" alt="电影可视化视觉探索方向四" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="movie-experience-band" aria-label="最终交互方案" data-reveal>
+        <div class="movie-experience-band__header">
+          <div class="movie-experience-band__title">
+            <p class="case-eyebrow">Interaction</p>
+            <h2>把全局视图与局部反馈组织成一次探索体验</h2>
+          </div>
+          <p class="movie-experience-band__note">主视图负责看全局，下面几张局部图分别承担筛选、选中、计数和时间反馈。</p>
+        </div>
+
+        <div class="movie-experience-band__summary" aria-label="微交互设计说明">
+          <article>
+            <span>先收范围</span>
+            <p>筛选面板先帮用户压掉无关数据，让视线先回到当前想看的国家和类型。</p>
+          </article>
+          <article>
+            <span>再给反馈</span>
+            <p>筛选标签直接显示对应数量，选中结果只做局部放大，不打断整张图的阅读。</p>
+          </article>
+          <article>
+            <span>最后切时间</span>
+            <p>时间轴负责切年份，也顺手告诉用户这一年数据量大不大，避免切完以后没有体感。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-phase" aria-label="交互状态拆解" data-reveal>
+        <div class="case-phase-intro">
+          <h3 class="case-h3-bullet">我把局部反馈压成四种轻状态</h3>
+          <p>所有细节都原地发生，不另开页面。</p>
+        </div>
+
+        <div class="movie-state-grid" aria-label="四种关键状态">
+          <article>
+            <span>筛选状态</span>
+            <strong>先缩小范围，再看关系</strong>
+            <p>先收窄范围，减少无关线条的噪音。</p>
+          </article>
+          <article>
+            <span>悬停反馈</span>
+            <strong>用最轻的方式承接局部信息</strong>
+            <p>需要时再露出信息，不把主视图压成详情页。</p>
+          </article>
+          <article>
+            <span>搜索状态</span>
+            <strong>结果与主视图保持联动</strong>
+            <p>搜索不是跳转，而是快速回到那条具体路径。</p>
+          </article>
+          <article>
+            <span>时间轴</span>
+            <strong>把时间当成切片入口</strong>
+            <p>通过年份切换当前密度，不让时间和主视图抢注意力。</p>
+          </article>
+        </div>
+
+        <div class="movie-detail-gallery" aria-label="局部交互细节图">
+          <figure class="case-image-card case-image-card--movie-panel movie-visual-panel movie-detail-gallery__feature">
+            <figcaption>先筛选，再看图</figcaption>
+            <img src="./assets/images/3DMovie/filter.png" alt="筛选面板状态，展示用户如何按条件收窄数据范围" />
+            <p class="movie-detail-gallery__note">筛选先把无关线条压掉，让用户更快进入当前问题。</p>
+          </figure>
+          <figure class="case-image-card case-image-card--movie-panel movie-visual-panel movie-detail-gallery__feature">
+            <figcaption>选中后只放大局部</figcaption>
+            <img src="./assets/images/3DMovie/selectedResult.png" alt="选中具体数据后的局部放大与结果详情" />
+            <p class="movie-detail-gallery__note">点中具体数据后，只补这一条的信息，不把用户带离主视图。</p>
+          </figure>
+          <figure class="case-image-card case-image-card--movie-panel movie-visual-panel movie-detail-gallery__support movie-detail-gallery__support--tag">
+            <figcaption>标签直接给数量</figcaption>
+            <img src="./assets/images/3DMovie/filterTag1.png" alt="筛选标签状态一，展示不同国家包含的该类别数量" />
+            <p class="movie-detail-gallery__note">用户不必再猜当前筛选有没有结果，数量会直接回应操作。</p>
+          </figure>
+          <figure class="case-image-card case-image-card--movie-panel movie-visual-panel movie-detail-gallery__support movie-detail-gallery__support--tag">
+            <figcaption>换条件也能立刻对比</figcaption>
+            <img src="./assets/images/3DMovie/filterTag2.png" alt="筛选标签状态二，展示另一种筛选情况下的类别数量" />
+            <p class="movie-detail-gallery__note">切换筛选后，计数同步变化，方便快速比较不同国家的类别规模。</p>
+          </figure>
+          <figure class="case-image-card case-image-card--movie-panel movie-visual-panel movie-detail-gallery__support movie-detail-gallery__support--time">
+            <figcaption>时间轴顺手提示规模</figcaption>
+            <img src="./assets/images/3DMovie/timebar.png" alt="时间轴状态，展示不同年份对应的数据规模" />
+            <p class="movie-detail-gallery__note">时间轴不只负责切年份，也帮助用户先感知这一年的数据密度。</p>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-impact" aria-label="项目复盘" data-reveal>
+        <div class="case-copy">
+          <h2>做完以后，我更确定了两件事</h2>
+          <p>
+            好的可视化，不是把所有维度塞进一个视图，而是给每个问题安排合适的入口。
+          </p>
+        </div>
+
+        <div class="movie-reflection-grid" aria-label="成立与不成立的地方">
+          <article>
+            <span>成立的地方</span>
+            <h3>3D 适合做空间关系的入口</h3>
+            <p>国家来源、类型轨道和关系路径能同时进第一视野，整体分布感更容易建立。</p>
+          </article>
+          <article>
+            <span>不成立的地方</span>
+            <h3>单靠 3D 讲不好长期趋势</h3>
+            <p>如果只靠球体变化去读趋势，认知负担会很重。下一步要让 2D 补上趋势概览，和 3D 分工。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-phase" aria-label="下一步方向" data-reveal>
+        <div class="case-phase-intro">
+          <h3 class="case-h3-bullet">如果继续做，我会往这三个方向收</h3>
+          <p>这版已经搭起结构，但还停在探索原型。</p>
+        </div>
+
+        <div class="movie-future-strip" aria-label="后续迭代方向">
+          <article>
+            <span>01</span>
+            <strong>补一个 2D 趋势概览</strong>
+            <p>让 3D 看空间关系，2D 看长期起伏，各做各擅长的事。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>继续降低连线噪音</strong>
+            <p>继续靠筛选、高亮和分层显示，把高密度时期的噪音压下去。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>补更完整的局部详情</strong>
+            <p>把电影详情、国家分布和类别对比补成更完整的二级浏览。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section-grid case-section-grid--closing" aria-label="结论" data-reveal>
+        <div class="case-copy">
+          <h2>这更像一次可视化判断的训练</h2>
+          <p>它让我更明确地意识到，先决定什么该先被看见，比一开始就加维度更重要。</p>
+        </div>
+
+        <div>
+          <p class="case-statement">好的探索型可视化，先让关系可进入，再让细节可追问。</p>
+          <p class="case-callout-line">
+            这次最重要的收获，是把 <strong>空间关系</strong>、<strong>时间切片</strong> 和 <strong>局部反馈</strong> 拆开，再决定每一层界面该做什么。
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      (() => {
+        const revealTargets = [...document.querySelectorAll("[data-reveal]")];
+
+        revealTargets.forEach((element, index) => {
+          const delay = element.dataset.revealDelay || `${Math.min(index * 60, 220)}ms`;
+          element.style.setProperty("--reveal-delay", delay);
+        });
+
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+          revealTargets.forEach((element) => element.classList.add("is-visible"));
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.16,
+            rootMargin: "0px 0px -10% 0px"
+          }
+        );
+
+        revealTargets.forEach((element) => observer.observe(element));
+      })();
+    </script>
+  </body>
+</html>

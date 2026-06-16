@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digistudio UGC 对话系统编辑器 | 叶泽鸿</title>
+    <meta
+      name="description"
+      content="Digistudio UGC 编辑器案例页，展示如何把分散在多个面板里的复杂对话配置，整理成一张能直接看懂的画布，并通过两种创建方式、错误拦截和信息外显，让创作者少走弯路。"
+    />
+    <link rel="stylesheet" href="./css/styles.css?v=20260617-digistudio-layout-v21" />
+  </head>
+  <body class="case-page theme-digistudio">
+    <header class="case-nav" data-reveal data-reveal-delay="40">
+      <nav class="case-links pill-nav pill-nav--project" aria-label="主导航">
+        <a class="pill-link" href="./index.html">
+          <span class="pill-link__label">首页</span>
+          <span class="pill-link__label-hover" aria-hidden="true">首页</span>
+          <span class="pill-link__surface" aria-hidden="true"></span>
+        </a>
+        <a class="pill-link is-active" href="./index.html#work" aria-current="page">
+          <span class="pill-link__label">项目</span>
+          <span class="pill-link__label-hover" aria-hidden="true">项目</span>
+          <span class="pill-link__surface" aria-hidden="true"></span>
+        </a>
+        <a class="pill-link" href="mailto:alan-yzh@foxmail.com">
+          <span class="pill-link__label">联系我</span>
+          <span class="pill-link__label-hover" aria-hidden="true">联系我</span>
+          <span class="pill-link__surface" aria-hidden="true"></span>
+        </a>
+      </nav>
+    </header>
+
+    <main class="case-main">
+      <section class="case-hero case-hero--digistudio" aria-label="项目概览">
+        <div class="case-copy case-copy--hero" data-reveal data-reveal-delay="120">
+          <p class="case-eyebrow">project01</p>
+          <h1>Digistudio UGC 对话系统编辑器</h1>
+          <p class="case-hero-subtitle">把复杂分支对话改成一张能看懂、能继续改的画布</p>
+          <p>
+            我接手后很快发现，真正卡住创作者的地方，是他们脑子里的剧情关系和工具结构对不上。会写复杂剧情的人，脑子里先出现的是关系图，工具里却是一堆分散配置。所以我这次改版的重点，是把这些关系收回一张画布里，让人能顺着逻辑继续写，也能回头快速找到刚配过的内容。
+          </p>
+          <dl class="case-meta-list">
+            <div>
+              <dt>角色</dt>
+              <dd>交互设计 / 系统设计</dd>
+            </div>
+            <div>
+              <dt>平台</dt>
+              <dd>PC 端 UGC 编辑器</dd>
+            </div>
+            <div>
+              <dt>时间</dt>
+              <dd>2024</dd>
+            </div>
+          </dl>
+        </div>
+
+        <figure class="case-hero-visual case-browser-shell canvas-grid-bg" data-reveal data-reveal-delay="200">
+          <div class="case-browser-shell__bar" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <img src="./assets/images/digimi-cover-web.png" alt="Digistudio 对话编辑器画布，展示多分支网状剧情结构" />
+        </figure>
+      </section>
+
+      <ol class="case-process case-process--flow" aria-label="案例叙事流程" data-reveal data-reveal-delay="80">
+        <li>
+          <span>01</span>
+          <strong>看见问题</strong>
+          <p>用户脑子里是分支图，工具里却只有线性表单。</p>
+        </li>
+        <li>
+          <span>02</span>
+          <strong>搭对结构</strong>
+          <p>我先把剧情关系、文本和条件放回同一张画布上。</p>
+        </li>
+        <li>
+          <span>03</span>
+          <strong>补上安全感</strong>
+          <p>该拦的错误当场拦住，该露出的信息直接露出来。</p>
+        </li>
+        <li>
+          <span>04</span>
+          <strong>最后看结果</strong>
+          <p>我用同一任务对比新旧流程，看这次改动是否真的有效。</p>
+        </li>
+      </ol>
+
+      <section class="case-section-grid case-section-grid--problem" aria-label="问题定义" data-reveal>
+        <div class="case-copy">
+          <h2>剧情本身不难，难的是旧工具把逻辑拆散了</h2>
+          <p>
+            <strong>先看清是谁卡住、卡在哪。</strong>
+            我关注的是更复杂的创作者：他们要处理任务、好感度、条件判断和复合触发，脑子里天然是一张分支图。旧系统把这些内容拆在不同组件和面板里，关系一断，效率就会掉下去。
+          </p>
+          <ul class="case-proof-list">
+            <li><strong>流程被拆碎：</strong> 多句对话要拆到不同组件里配，触发顺序还得自己手动串。</li>
+            <li><strong>回看特别费劲：</strong> 文本一多，只能靠人肉翻找，很难集中搜索和批量修改。</li>
+            <li><strong>分支关系看不见：</strong> 一旦进入条件嵌套和多层跳转，哪段接哪段几乎只能靠记。</li>
+          </ul>
+          <div class="case-industry-compare">
+            <p class="case-industry-compare__label">为什么要改成画布</p>
+            <p>
+              我参考了 <strong>UE 蓝图</strong>、<strong>Roblox Studio</strong> 这类成熟编辑器后，确认了一个方向：复杂逻辑要先把关系摆出来，再在关系上做配置。
+            </p>
+          </div>
+        </div>
+
+        <div class="case-problem-visual">
+          <figure class="case-image-card case-image-card--problem">
+            <figcaption>旧版痛点图</figcaption>
+            <img src="./assets/images/digistudio/Digistudio-OldSystem.jpeg" alt="旧版对话配置方式中，文本和触发关系分散在多个组件与面板中" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section-grid case-section-grid--journey" aria-label="用户旅程映射" data-reveal>
+        <div class="case-copy">
+          <h2>最容易卡住创作者的时刻，是回头修改时找不到刚配的逻辑</h2>
+          <p>
+            我把“做一个带好感度分支的任务”拆开后发现，构思阶段其实很顺；真正开始掉速，是想法落进工具之后。
+          </p>
+        </div>
+
+        <div class="case-journey-grid" aria-label="剧情构建用户旅程">
+          <article class="case-journey-stage">
+            <span>01</span>
+            <h3>构思</h3>
+            <p>创作者先在脑中搭好 NPC 任务、分支和结果走向。</p>
+            <p class="case-journey-note">剧情网状交错，其实非常清晰。</p>
+            <p class="case-journey-pain">这一步，问题还没有出现。</p>
+          </article>
+          <article class="case-journey-stage">
+            <span>02</span>
+            <h3>逻辑构建</h3>
+            <p>创作者开始规划先后顺序、条件判断和任务路径。</p>
+            <p class="case-journey-note">先从 NPC 问好开始，再判定好感度。</p>
+            <p class="case-journey-pain">工具开始跟不上脑中的分支图。</p>
+          </article>
+          <article class="case-journey-stage">
+            <span>03</span>
+            <h3>配置执行</h3>
+            <p>创作者要在不同组件和文本面板之间来回点击、添加、补条件。</p>
+            <p class="case-journey-note">等等，文本在哪？条件配置又在哪？</p>
+            <p class="case-journey-pain">一边配一边丢线索，越配越乱。</p>
+          </article>
+          <article class="case-journey-stage">
+            <span>04</span>
+            <h3>验证迭代</h3>
+            <p>创作者回头测试时，已经很难追溯刚才那段逻辑到底藏在哪。</p>
+            <p class="case-journey-note">我完全找不到刚才配的那段逻辑在哪里。</p>
+            <p class="case-journey-pain">一旦回头修改，就像重新找一遍路。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-phase case-phase--tabs" aria-label="V1 方案" data-reveal>
+        <div class="case-phase-intro">
+          <h3 class="case-h3-bullet">Phase 01 | 先把剧情关系摆出来</h3>
+          <p>
+            我先做了一个核心判断：关系看不见，表单再精致，用户还是会迷路。于是我先做了一张能表达分支关系的对话图，把文本、条件和功能都挂回节点上。结构成立以后，我再补两种创建方式：一条保证高频操作够顺，一条照顾先搭骨架的用户。
+          </p>
+        </div>
+
+        <div class="case-phase-tabs">
+          <div class="case-tab-list" role="tablist" aria-label="两种创建方式">
+            <button
+              class="case-tab is-active"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="digistudio-tab-panel-fast"
+              id="digistudio-tab-fast"
+              data-tab-target="digistudio-tab-panel-fast"
+            >
+              <span>顺手往下接</span>
+              <p>优先照顾高频路径。从输出口直接拉线，松手就能在空白处创建下一个节点，适合连续写剧情时一路往下接。</p>
+            </button>
+            <button
+              class="case-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="digistudio-tab-panel-free"
+              id="digistudio-tab-free"
+              data-tab-target="digistudio-tab-panel-free"
+            >
+              <span>先搭骨架</span>
+              <p>给规划型用户保留的路径。从右下角拖出节点，先把主要分支摆好，再慢慢连线和补内容，适合先搭结构再填细节。</p>
+            </button>
+          </div>
+
+          <div class="case-tab-panels">
+            <section
+              class="case-tab-panel is-active"
+              role="tabpanel"
+              id="digistudio-tab-panel-fast"
+              aria-labelledby="digistudio-tab-fast"
+            >
+              <figure class="case-image-card case-image-card--tab-visual canvas-grid-bg">
+                <figcaption>拉线即创建</figcaption>
+                <img src="./assets/images/digistudio/pull-to-create.gif" alt="从节点输出口拉线，在空白处直接创建新节点的交互演示" />
+              </figure>
+            </section>
+            <section
+              class="case-tab-panel"
+              role="tabpanel"
+              id="digistudio-tab-panel-free"
+              aria-labelledby="digistudio-tab-free"
+              hidden
+            >
+              <figure class="case-image-card case-image-card--tab-visual canvas-grid-bg">
+                <figcaption>工具栏拖拽创建</figcaption>
+                <img src="./assets/images/digistudio/drag-drop-panel.gif" alt="从画布右下角组件区拖拽对话节点进入画布的交互演示" />
+              </figure>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-phase case-phase--matrix" aria-label="V2 方案" data-reveal>
+        <div class="case-phase-intro">
+          <h3 class="case-h3-bullet">Phase 02 | 让人敢用，也看得清</h3>
+          <p>画布能用以后，我继续处理信任感和可读性。系统该帮到什么程度、哪些错误要前置拦截、信息一多之后还能不能快速扫清，都会直接影响创作者敢不敢继续用。</p>
+        </div>
+
+        <div class="case-phase-matrix">
+          <article class="case-matrix-item">
+            <h4>删节点后，不做自动重连</h4>
+            <p>这里我专门做过取舍。当中间节点被删除时，系统到底要不要自动把前后逻辑重新接上？我最后放弃了“自动重连”。在复杂分支里，创作者更在意可控，自己重连的成本，通常小于系统错连一次带来的风险。</p>
+          </article>
+          <article class="case-matrix-item">
+            <h4>死循环连线，当场拦住</h4>
+            <p>我把这条防线放在编辑阶段。当用户尝试拉线形成 A → B → A 的剧情闭环时，系统会实时检测并直接拦截，连线失败回弹，同时给出明确提示，避免把逻辑漏洞留到测试阶段才暴露。</p>
+          </article>
+          <article class="case-matrix-item case-matrix-item--media">
+            <h4>信息变多，先保可读性</h4>
+            <p>这里我选择优先保证可读性。条件标签和功能图标直接放到节点外层，又加了可收起的对话组抽屉，并规定线永远压在节点下面。这样分支再多，创作者也能快速扫一眼，看清哪里有条件、哪里能展开、哪条线在连什么。</p>
+            <div class="case-matrix-zoom">
+              <figure class="case-image-card case-image-card--zoom case-image-card--plain-frame">
+                <figcaption>条件与功能图标外显</figcaption>
+                <img src="./assets/images/digistudio/nodeInfo.png" alt="节点条件标签与功能图标的局部放大图" />
+              </figure>
+              <figure class="case-image-card case-image-card--zoom case-image-card--plain-frame">
+                <figcaption>对话组抽屉常驻</figcaption>
+                <img src="./assets/images/digistudio/diaGroup.png" alt="对话组抽屉与画布局部细节放大图" />
+              </figure>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-impact" aria-label="验证结果" data-reveal>
+        <div class="case-copy">
+          <h2>最后看结果：这套改法有没有真的省时间</h2>
+          <p>
+            <strong>测试基准：</strong>
+            为了避免只靠主观感受，我找了 4 名内部 UGC 创作者，用新旧两套系统分别完成同一个中大型剧情任务：3 个好感度分支，4 个复合功能触发。我重点记录找节点、配置内容和整体完成时间，看这次改版有没有把人从反复找配置里解放出来。
+          </p>
+        </div>
+
+        <div class="metric-grid metric-grid--three">
+          <article>
+            <span>定位节点</span>
+            <strong class="metric-number">&lt; 1s</strong>
+            <p class="metric-note">想找哪段逻辑，几乎立刻就能看到</p>
+            <p>关系摆在画布上后，不用再在场景和多个面板之间来回翻入口。</p>
+          </article>
+          <article>
+            <span>配置耗时</span>
+            <strong class="metric-number metric-number--inline metric-number--compact">
+              <span>60m →</span>
+              <span
+                data-countup
+                data-countup-from="60"
+                data-countup-to="15"
+                data-countup-suffix="m"
+                data-countup-duration="1.05"
+                data-countup-chain-next="#metric-efficiency"
+              >60m</span>
+            </strong>
+            <p class="metric-note">同一任务的配置时间明显缩短</p>
+            <p>过去是拆成多个组件分头配置，现在是在一张画布上连续完成。</p>
+          </article>
+          <article>
+            <span>整体效率</span>
+            <strong
+              id="metric-efficiency"
+              class="metric-number"
+              data-countup
+              data-countup-from="0"
+              data-countup-to="80"
+              data-countup-prefix="+"
+              data-countup-suffix="%"
+              data-countup-duration="1"
+              data-countup-autostart="false"
+            >+0%</strong>
+            <p class="metric-note">复杂剧情也终于能改得动、改得起</p>
+            <p>更大的变化在于，大家更愿意继续扩写和返工，因为改动成本终于降下来了。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section-grid case-section-grid--closing" aria-label="结论" data-reveal>
+        <div class="case-copy case-copy--closing">
+          <h4>最后结论</h4>
+          <h2>好的专业工具，要把信息摆清楚，把风险拦在前面。</h2>
+          <p class="case-closing-subtitle">
+            复杂编辑器先要让用户知道自己在哪、刚刚改了什么、接下来会影响哪里。
+          </p>
+          <p class="case-callout-line">
+            这次 Digistudio 重构最能说明我的，是我会先把复杂关系理顺，再把它做成用户敢用、愿意继续扩写的编辑体验。
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      (() => {
+        const revealTargets = [...document.querySelectorAll("[data-reveal]")];
+        const tabs = [...document.querySelectorAll(".case-tab")];
+        const panels = [...document.querySelectorAll(".case-tab-panel")];
+        const countUpTargets = [...document.querySelectorAll("[data-countup]")];
+
+        revealTargets.forEach((element, index) => {
+          const delay = element.dataset.revealDelay || `${Math.min(index * 60, 220)}ms`;
+          element.style.setProperty("--reveal-delay", delay);
+        });
+
+        const activateTab = (button) => {
+          const targetId = button.dataset.tabTarget;
+
+          tabs.forEach((tab) => {
+            const active = tab === button;
+            tab.classList.toggle("is-active", active);
+            tab.setAttribute("aria-selected", active ? "true" : "false");
+          });
+
+          panels.forEach((panel) => {
+            const active = panel.id === targetId;
+            panel.classList.toggle("is-active", active);
+            panel.hidden = !active;
+          });
+        };
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => activateTab(tab));
+          tab.addEventListener("mouseenter", () => activateTab(tab));
+          tab.addEventListener("focus", () => activateTab(tab));
+        });
+
+        const formatCountUpValue = (value, element) => {
+          const prefix = element.dataset.countupPrefix || "";
+          const suffix = element.dataset.countupSuffix || "";
+          const separator = element.dataset.countupSeparator || "";
+          const rounded = Math.round(value);
+          const grouped = separator
+            ? new Intl.NumberFormat("en-US").format(rounded).replace(/,/g, separator)
+            : String(rounded);
+
+          return `${prefix}${grouped}${suffix}`;
+        };
+
+        const runCountUp = (element) => {
+          if (element.dataset.countupStarted === "true") return;
+          element.dataset.countupStarted = "true";
+
+          const from = Number(element.dataset.countupFrom || 0);
+          const to = Number(element.dataset.countupTo || 0);
+          const duration = Math.max(Number(element.dataset.countupDuration || 1), 0.2);
+          const stiffness = 100 * (1 / duration);
+          const damping = 20 + 40 * (1 / duration);
+
+          let current = from;
+          let velocity = 0;
+          let previousTime = null;
+
+          element.textContent = formatCountUpValue(from, element);
+
+          const step = (timestamp) => {
+            if (previousTime === null) previousTime = timestamp;
+            const deltaTime = Math.min((timestamp - previousTime) / 1000, 0.064);
+            previousTime = timestamp;
+
+            const force = stiffness * (to - current) - damping * velocity;
+            velocity += force * deltaTime;
+            current += velocity * deltaTime;
+
+            if (Math.abs(to - current) < 0.08 && Math.abs(velocity) < 0.12) {
+              element.textContent = formatCountUpValue(to, element);
+              const nextSelector = element.dataset.countupChainNext;
+              if (nextSelector) {
+                const nextTarget = document.querySelector(nextSelector);
+                if (nextTarget) {
+                  window.setTimeout(() => runCountUp(nextTarget), 180);
+                }
+              }
+              return;
+            }
+
+            element.textContent = formatCountUpValue(current, element);
+            window.requestAnimationFrame(step);
+          };
+
+          window.requestAnimationFrame(step);
+        };
+
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+          revealTargets.forEach((element) => element.classList.add("is-visible"));
+          countUpTargets.forEach((element) => {
+            element.textContent = formatCountUpValue(Number(element.dataset.countupTo || 0), element);
+            element.dataset.countupStarted = "true";
+          });
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.16,
+            rootMargin: "0px 0px -10% 0px"
+          }
+        );
+
+        revealTargets.forEach((element) => observer.observe(element));
+
+        const countUpObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              if (entry.target.dataset.countupAutostart === "false") {
+                countUpObserver.unobserve(entry.target);
+                return;
+              }
+              runCountUp(entry.target);
+              countUpObserver.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.7,
+            rootMargin: "0px 0px -4% 0px"
+          }
+        );
+
+        countUpTargets.forEach((element) => countUpObserver.observe(element));
+      })();
+    </script>
+  </body>
+</html>

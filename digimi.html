@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digimi 建造系统的多端迁移与交互重构 | 叶泽鸿</title>
+    <meta
+      name="description"
+      content="Digimi 建造系统的多端迁移与交互重构案例页，展示 PC 建造功能迁移到移动端后，如何优化视野、拖拽、撤销和方块选择路径。"
+    />
+    <link rel="stylesheet" href="./css/styles.css?v=20260617-digimi-nav-v8" />
+  </head>
+  <body class="case-page theme-digimi">
+    <header class="case-nav" data-reveal data-reveal-delay="40">
+      <nav class="case-links pill-nav pill-nav--project" aria-label="主导航">
+        <a class="pill-link" href="./index.html">
+          <span class="pill-link__label">首页</span>
+          <span class="pill-link__label-hover" aria-hidden="true">首页</span>
+          <span class="pill-link__surface" aria-hidden="true"></span>
+        </a>
+        <a class="pill-link is-active" href="./index.html#work" aria-current="page">
+          <span class="pill-link__label">项目</span>
+          <span class="pill-link__label-hover" aria-hidden="true">项目</span>
+          <span class="pill-link__surface" aria-hidden="true"></span>
+        </a>
+        <a class="pill-link" href="mailto:alan-yzh@foxmail.com">
+          <span class="pill-link__label">联系我</span>
+          <span class="pill-link__label-hover" aria-hidden="true">联系我</span>
+          <span class="pill-link__surface" aria-hidden="true"></span>
+        </a>
+      </nav>
+    </header>
+
+    <main class="case-main">
+      <section class="case-hero" aria-label="项目概览">
+        <div class="case-copy case-copy--hero" data-reveal data-reveal-delay="120">
+          <p class="case-eyebrow">project02</p>
+          <h1>Digimi 建造系统的多端迁移与交互重构</h1>
+          <p>
+            聚焦 Digimi 建造系统从 PC 迁移到移动端。重点不是缩小界面，而是让玩家在小屏幕上也能看清、拖准、连续搭建。
+          </p>
+          <dl class="case-meta-list">
+            <div>
+              <dt>角色</dt>
+              <dd>系统策划 / UX</dd>
+            </div>
+            <div>
+              <dt>平台</dt>
+              <dd>PC + 移动</dd>
+            </div>
+            <div>
+              <dt>时间</dt>
+              <dd>2022 - 2023</dd>
+            </div>
+          </dl>
+        </div>
+
+        <figure class="case-hero-visual" data-reveal data-reveal-delay="200">
+          <img src="./assets/mockups/finalVision-mockup.png" alt="Digimi PC 与移动端最终效果展示" />
+        </figure>
+      </section>
+
+      <ol class="case-process" aria-label="案例叙事流程" data-reveal data-reveal-delay="80">
+        <li>
+          <span>01</span>
+          <strong>发现问题</strong>
+          <p>PC 界面直接搬到手机后，看不清，也不好操作。</p>
+        </li>
+        <li>
+          <span>02</span>
+          <strong>分析问题</strong>
+          <p>玩家需要更大的建造视野，也需要随时能撤回。</p>
+        </li>
+        <li>
+          <span>03</span>
+          <strong>解决问题</strong>
+          <p>把常用操作放近，把低频功能收起来。</p>
+        </li>
+        <li>
+          <span>04</span>
+          <strong>验证成效</strong>
+          <p>用任务过程观察玩家是否少找、少停顿。</p>
+        </li>
+      </ol>
+
+      <section class="case-section-grid" aria-label="发现问题" data-reveal>
+        <div class="case-copy">
+          <h2>PC 建造界面不能直接缩进手机屏幕</h2>
+          <p>
+            <strong>问题很直接：</strong>
+            PC 端依赖大资源库、鼠标和快捷键。直接缩小到手机后，界面占掉了建造画面，玩家看不清落点。
+          </p>
+          <p>
+            <strong>真正麻烦的是操作：</strong>
+            手机没有右键取消，也没有键盘撤销。玩家一旦放错，就会担心下一步怎么退回。
+          </p>
+        </div>
+
+        <div class="case-image-pair">
+          <figure class="case-image-card case-image-card--plain-frame">
+            <figcaption>PC 原始建造界面</figcaption>
+            <img src="./assets/mockups/finalVision-pcbuild.png" alt="Digimi PC 建造界面，展示完整资源侧栏" />
+          </figure>
+          <figure class="case-image-card case-image-card--plain-frame">
+            <figcaption>直接搬到手机后的问题</figcaption>
+            <img src="./assets/mockups/finalVision-mobilebuild.png" alt="PC 建造界面直接迁移到移动端后的拥挤效果" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section-grid" aria-label="Phase 01" data-reveal>
+        <div class="case-copy">
+          <h3 class="case-h3-bullet">Phase 01 | 拖拽时，让界面主动让路</h3>
+
+          <div class="case-note-block">
+            <h4>核心矛盾</h4>
+            <p>手指操作需要大按钮，3D 建造需要大视野。设计目标是让界面让路，但不能让玩家失去控制感。</p>
+          </div>
+
+          <div class="case-note-block">
+            <h4>界面怎么让路</h4>
+            <p>方块还在底部工具栏里拖动时，面板只变半透明；一旦拖进 3D 场景，界面立刻隐藏，把视野还给玩家。</p>
+          </div>
+
+          <div class="case-note-block">
+            <h4>操作怎么兜底</h4>
+            <p>保留撤销按钮，拖拽时锁定视角。想取消时，拖回底部快捷栏或松手到无效区域即可退回。</p>
+          </div>
+        </div>
+
+        <div class="case-visual-stack">
+          <figure class="case-image-card case-image-card--plain-frame">
+            <figcaption>两段式手势状态机</figcaption>
+            <img src="./assets/mockups/v1-state-machine.gif" alt="两段式手势状态机动态演示" />
+          </figure>
+          <div class="case-state-flow" aria-label="两段式手势状态机步骤">
+            <article>
+              <strong>01</strong>
+              <span>触发拖拽</span>
+              <p>面板 40% 半透明过渡</p>
+            </article>
+            <article>
+              <strong>02</strong>
+              <span>移出区域</span>
+              <p>界面隐藏，3D 视角锁定</p>
+            </article>
+            <article>
+              <strong>03</strong>
+              <span>松手取消</span>
+              <p>拖回底部快捷栏，界面回弹</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section-grid" aria-label="Phase 02" data-reveal>
+        <div class="case-copy">
+          <h3 class="case-h3-bullet">Phase 02 | 把常用方块放到手边</h3>
+          <p>
+            <strong>测试后发现：</strong>
+            Phase 01 解决了拖拽时的视野问题，但初步测试后，我们发现玩家仍要频繁打开大仓库找方块，连续建造被打断。
+          </p>
+          <p>
+            <strong>继续迭代：</strong>
+            我们把方块按使用频率重新分层：常用的贴近手边，偶尔用的收进抽屉，很少用的留在仓库。
+          </p>
+          <ul class="case-proof-list">
+            <li><strong>常用：</strong> 底部快捷栏放最高频方块，支持连续放置。</li>
+            <li><strong>临时：</strong> 最近 / 收藏 / 最多使用，承接大部分换方块需求。</li>
+            <li><strong>低频：</strong> 完整仓库保留分类，只在需要补充时打开。</li>
+          </ul>
+        </div>
+
+        <figure class="case-image-card case-image-card--plain-frame case-image-card--contain">
+          <figcaption>冷温热数据三层架构</figcaption>
+          <img src="./assets/mockups/pyramid-architecture.png" alt="冷温热数据三层金字塔架构图" />
+        </figure>
+      </section>
+
+      <section class="case-impact" aria-label="验证结果" data-reveal>
+        <div class="case-copy">
+          <h2>用内部可用性测试验证设计方向</h2>
+          <p>
+            <strong>验证口径：</strong>
+            6 名内部深度沙盒玩家完成“跨品类高频替换建造”任务。结果不作为最终结论，但能看到迭代后玩家更少停顿、也更少反复找入口。
+          </p>
+        </div>
+
+        <div class="metric-grid">
+          <article>
+            <span>Task Steps</span>
+            <strong class="metric-number">-67%</strong>
+            <p>内部测试中，完成任务所需步骤减少</p>
+          </article>
+          <article>
+            <span>Visual Search</span>
+            <strong class="metric-number">-70%</strong>
+            <p>内部测试中，寻找入口的时间减少</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section-grid case-section-grid--gallery" aria-label="玩家作品反馈" data-reveal>
+        <div class="case-copy">
+          <h2>玩家开始更愿意连续搭建</h2>
+          <p>
+            <strong>反馈信号：</strong>
+            内部玩家对新版建造流程给出了明显正向反馈。更重要的是，他们开始用这套流程搭出更完整的作品，而不是频繁停在找方块和撤销操作上。
+          </p>
+        </div>
+
+        <div class="case-gallery-marquee" aria-label="玩家搭建作品轮播">
+          <div class="case-gallery-track">
+            <figure><img src="./assets/mockups/playerWork1.jpeg" alt="玩家搭建作品 1" /></figure>
+            <figure><img src="./assets/mockups/playerWork2.jpeg" alt="玩家搭建作品 2" /></figure>
+            <figure><img src="./assets/mockups/playerWork3.webp" alt="玩家搭建作品 3" /></figure>
+            <figure><img src="./assets/mockups/playerWork4.webp" alt="玩家搭建作品 4" /></figure>
+            <figure><img src="./assets/mockups/playerWork5.webp" alt="玩家搭建作品 5" /></figure>
+            <figure><img src="./assets/mockups/playerWork6.png" alt="玩家搭建作品 6" /></figure>
+            <figure aria-hidden="true"><img src="./assets/mockups/playerWork1.jpeg" alt="" /></figure>
+            <figure aria-hidden="true"><img src="./assets/mockups/playerWork2.jpeg" alt="" /></figure>
+            <figure aria-hidden="true"><img src="./assets/mockups/playerWork3.webp" alt="" /></figure>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      (() => {
+        const revealTargets = [...document.querySelectorAll("[data-reveal]")];
+
+        revealTargets.forEach((element, index) => {
+          element.classList.add("case-reveal");
+          const delay = element.dataset.revealDelay || `${Math.min(index * 60, 220)}ms`;
+          element.style.setProperty("--reveal-delay", delay);
+        });
+
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+          revealTargets.forEach((element) => element.classList.add("is-visible"));
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.16,
+            rootMargin: "0px 0px -10% 0px"
+          }
+        );
+
+        revealTargets.forEach((element) => observer.observe(element));
+      })();
+    </script>
+  </body>
+</html>
