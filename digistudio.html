@@ -9,7 +9,7 @@
       content="Digistudio UGC 编辑器案例页，展示如何把分散在多个面板里的复杂对话配置，整理成一张能直接看懂的画布，并通过两种创建方式、错误拦截和信息外显，让创作者少走弯路。"
     />
     <link rel="icon" type="image/png" href="./assets/favicon-y.png" />
-    <link rel="stylesheet" href="./css/styles.css?v=20260617-digistudio-layout-v25" />
+    <link rel="stylesheet" href="./css/styles.css?v=20260619-digistudio-narrative-v30" />
   </head>
   <body class="case-page theme-digistudio">
     <header class="case-nav" data-reveal data-reveal-delay="40">
@@ -40,10 +40,9 @@
         <div class="case-copy case-copy--hero" data-reveal data-reveal-delay="120">
           <p class="case-eyebrow">project01</p>
           <h1>Digistudio UGC 对话系统编辑器</h1>
-          <p class="case-hero-subtitle">把复杂分支对话改成一张能看懂、能继续改的画布</p>
-          <p>
-            我接手后很快发现，真正卡住创作者的地方，是他们脑子里的剧情关系和工具结构对不上。会写复杂剧情的人，脑子里先出现的是关系图，工具里却是一堆分散配置。所以我这次改版的重点，是把这些关系收回一张画布里，让人能顺着逻辑继续写，也能回头快速找到刚配过的内容。
-          </p>
+          <p class="case-hero-subtitle">把网状分支剧情，收回一张看得懂、改得动的画布</p>
+          <p>Digistudio 是一个让玩家自己创作游戏内容的 UGC 编辑器，我负责的是其中的剧情创作模块。玩家想把 NPC、任务和多结局写进自己的作品里，但旧版工具更适合“播放线性文本”，很难承载复杂的网状内容。</p>
+          <p>当创作者开始设计多角色、多条件、多分支剧情时，线性表单结构就会和脑中的网状关系错位。我的改版重点，就是把零散配置收回同一张画布里，让人连续写时不掉速，回头改时也能快速定位。</p>
           <dl class="case-meta-list">
             <div>
               <dt>角色</dt>
@@ -70,47 +69,148 @@
         </figure>
       </section>
 
-      <ol class="case-process case-process--flow" aria-label="案例叙事流程" data-reveal data-reveal-delay="80">
-        <li>
-          <span>01</span>
-          <strong>看见问题</strong>
-          <p>用户脑子里是分支图，工具里却只有线性表单。</p>
-        </li>
-        <li>
-          <span>02</span>
-          <strong>搭对结构</strong>
-          <p>我先把剧情关系、文本和条件放回同一张画布上。</p>
-        </li>
-        <li>
-          <span>03</span>
-          <strong>补上安全感</strong>
-          <p>该拦的错误当场拦住，该露出的信息直接露出来。</p>
-        </li>
-        <li>
-          <span>04</span>
-          <strong>最后看结果</strong>
-          <p>我用同一任务对比新旧流程，看这次改动是否真的有效。</p>
-        </li>
-      </ol>
+      <section class="case-personas" aria-label="用户画像" data-reveal>
+        <div class="case-copy case-personas__intro">
+          <h2>用户画像</h2>
+          <p>这套剧情编辑模块服务的是有强烈创作欲望、愿意认真打磨内容的年轻用户。</p>
+          <p>他们最在意三件事：文本组织效率、剧情能不能影响玩法，以及高频迭代时的修改成本。</p>
+        </div>
+
+        <div class="case-persona-grid" aria-label="三类典型创作者">
+          <article class="case-persona-card">
+            <div class="case-persona-card__identity">
+              <div class="case-persona-card__avatar-group">
+                <img
+                  class="case-persona-card__avatar"
+                  src="./assets/images/digistudio/personas/carlise-avatar.png"
+                  alt="carlise 的灰阶抽象头像"
+                />
+                <img
+                  class="case-persona-card__flag"
+                  src="./assets/images/digistudio/personas/flag-indonesia.svg"
+                  alt="印度尼西亚国旗"
+                />
+              </div>
+              <div class="case-persona-card__identity-copy">
+                <p class="case-persona-card__eyebrow">学生 · 剧情创作者</p>
+                <h3>carlise</h3>
+                <p class="case-persona-card__meta">印度尼西亚 · 喜欢《陈情令》</p>
+              </div>
+            </div>
+            <p class="case-persona-card__quote">“我想顺着剧情一路写下去，不想被工具打断。”</p>
+            <div class="case-persona-card__detail">
+              <div class="case-persona-card__block">
+                <span>她在做什么</span>
+                <p>想还原长篇电视剧剧情，并加入自己的二次创作。</p>
+              </div>
+              <div class="case-persona-card__block case-persona-card__block--accent">
+                <span>核心需求</span>
+                <p>文本输入和批量节点管理要足够顺，高频打字时工具不能卡住。</p>
+              </div>
+              <div class="case-persona-card__signal">
+                <strong>设计启发</strong>
+                <p>要给连续输入的人一条“顺手往下接”的创建路径，别打断心流。</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-persona-card">
+            <div class="case-persona-card__identity">
+              <div class="case-persona-card__avatar-group">
+                <img
+                  class="case-persona-card__avatar"
+                  src="./assets/images/digistudio/personas/bmm4-avatar.png"
+                  alt="bmm4 的灰阶抽象头像"
+                />
+                <img
+                  class="case-persona-card__flag"
+                  src="./assets/images/digistudio/personas/flag-colombia.svg"
+                  alt="哥伦比亚国旗"
+                />
+              </div>
+              <div class="case-persona-card__identity-copy">
+                <p class="case-persona-card__eyebrow">年轻玩家 · 关卡创作者</p>
+                <h3>bmm4</h3>
+                <p class="case-persona-card__meta">哥伦比亚 · 喜欢跑酷闯关</p>
+              </div>
+            </div>
+            <p class="case-persona-card__quote">“我希望 NPC 的选择真的能改动关卡。”</p>
+            <div class="case-persona-card__detail">
+              <div class="case-persona-card__block">
+                <span>他在做什么</span>
+                <p>在跑酷闯关里放置 NPC，希望对话选择能实时改变关卡环境。</p>
+              </div>
+              <div class="case-persona-card__block case-persona-card__block--accent">
+                <span>核心需求</span>
+                <p>剧情必须能联动场景物件，做出更有可玩性的触发和解谜。</p>
+              </div>
+              <div class="case-persona-card__signal">
+                <strong>设计启发</strong>
+                <p>剧情不能停在对白里，还要能清楚连接到场景和玩法结果。</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-persona-card">
+            <div class="case-persona-card__identity">
+              <div class="case-persona-card__avatar-group">
+                <img
+                  class="case-persona-card__avatar"
+                  src="./assets/images/digistudio/personas/sssoxy-avatar.png"
+                  alt="sssoxy 的灰阶抽象头像"
+                />
+                <img
+                  class="case-persona-card__flag"
+                  src="./assets/images/digistudio/personas/flag-philippines.svg"
+                  alt="菲律宾国旗"
+                />
+              </div>
+              <div class="case-persona-card__identity-copy">
+                <p class="case-persona-card__eyebrow">Coser · 场景还原玩家</p>
+                <h3>sssoxy</h3>
+                <p class="case-persona-card__meta">菲律宾 · 喜欢动漫还原</p>
+              </div>
+            </div>
+            <p class="case-persona-card__quote">“我改一句词，不想再把整张表翻一遍。”</p>
+            <div class="case-persona-card__detail">
+              <div class="case-persona-card__block">
+                <span>她在做什么</span>
+                <p>想还原动漫名场面，在漫长测试里反复修改每句台词的语气和错别字。</p>
+              </div>
+              <div class="case-persona-card__block case-persona-card__block--accent">
+                <span>核心需求</span>
+                <p>高频微调文案时，能从大量内容里瞬间找到那句要改的台词。</p>
+              </div>
+              <div class="case-persona-card__signal">
+                <strong>设计启发</strong>
+                <p>回看路径和视觉定位效率，决定了她能不能持续打磨细节。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
 
       <section class="case-section-grid case-section-grid--problem" aria-label="问题定义" data-reveal>
         <div class="case-copy">
-          <h2>剧情本身不难，难的是旧工具把逻辑拆散了</h2>
-          <p>
-            <strong>先看清是谁卡住、卡在哪。</strong>
-            我关注的是更复杂的创作者：他们要处理任务、好感度、条件判断和复合触发，脑子里天然是一张分支图。旧系统把这些内容拆在不同组件和面板里，关系一断，效率就会掉下去。
-          </p>
+          <h2>问题定义</h2>
+          <p>旧版剧情系统本质上是靠文本模块来工作的。一个文本模块里只能放一段文本，再通过触发条件把这些模块按顺序串起来，完成最基础的剧情播放。</p>
+          <p>这套方式在做线性文本时还能成立，但一旦用户开始写多角色、多条件、多结果的剧情，问题就会集中冒出来。核心不在某一个面板，而在整套编辑方式从底层上就把“剧情关系”拆散了。</p>
+          <p>一句对白是文本组件，触发它要去事件面板，判定好感度又在另一张条件表里。线性表单结构很快就会和脑中的网状关系彻底错位，整套工具也撑不住复杂度了。</p>
           <ul class="case-proof-list">
-            <li><strong>流程被拆碎：</strong> 多句对话要拆到不同组件里配，触发顺序还得自己手动串。</li>
-            <li><strong>回看特别费劲：</strong> 文本一多，只能靠人肉翻找，很难集中搜索和批量修改。</li>
-            <li><strong>分支关系看不见：</strong> 一旦进入条件嵌套和多层跳转，哪段接哪段几乎只能靠记。</li>
+            <li><strong>心流被拆碎：</strong> 对 Carlise 这类高频创作者来说，哪怕只写几句连续对白，也得在场景里来回点组件、分头填字。</li>
+            <li><strong>复杂度撑不住：</strong> 对 sssoxy 这种要反复改长篇内容的人来说，一旦进入多结局和多条件，线性文本模块就会变成大海捞针。</li>
+            <li><strong>玩法逻辑断层：</strong> 对 bmm4 这种关卡创作者来说，文本和场景逻辑还是孤岛，对话完开门、扣血、传送，没有直观的位置可以挂到剧情节点上。</li>
           </ul>
           <div class="case-industry-compare">
             <p class="case-industry-compare__label">为什么要改成画布</p>
             <p>
-              我参考了 <strong>UE 蓝图</strong>、<strong>Roblox Studio</strong> 这类成熟编辑器后，确认了一个方向：复杂逻辑要先把关系摆出来，再在关系上做配置。
+              我参考了 <strong>UE 蓝图</strong> 和 <strong>Roblox Studio</strong>。它们都证明了同一件事：复杂逻辑要先看见关系，再做细节配置。
+            </p>
+            <p>
+              但我没有直接照搬 UE 蓝图。它面向的是底层变量流和技术逻辑，对年轻 UGC 创作者太硬核。我保留了网状拓扑的直观，把节点封装成“剧情 / 对话动作”，把学习门槛尽量降下来。
             </p>
           </div>
+          <p>所以这次改版的重点，不在把表单做漂亮，而在把剧情、条件和功能重新组织成一张能持续编辑的关系图。</p>
         </div>
 
         <div class="case-problem-visual">
@@ -123,50 +223,77 @@
 
       <section class="case-section-grid case-section-grid--journey" aria-label="用户旅程映射" data-reveal>
         <div class="case-copy">
-          <h2>最容易卡住创作者的时刻，是回头修改时找不到刚配的逻辑</h2>
-          <p>
-            我把“做一个带好感度分支的任务”拆开后发现，构思阶段其实很顺；真正开始掉速，是想法落进工具之后。
-          </p>
+          <h2>User Journey</h2>
+          <p>这些问题不是一开始就爆发的。很多人构思时很顺，真正掉速，是当他们把脑中的剧情图强行塞进线性工具的时候。</p>
+          <p>我把一次中大型剧情任务拆开后，问题主要集中在四步。后面的防错和可读性设计，也都是从这条旅程里长出来的。</p>
         </div>
 
         <div class="case-journey-grid" aria-label="剧情构建用户旅程">
           <article class="case-journey-stage">
             <span>01</span>
             <h3>构思</h3>
-            <p>创作者先在脑中搭好 NPC 任务、分支和结果走向。</p>
-            <p class="case-journey-note">剧情网状交错，其实非常清晰。</p>
-            <p class="case-journey-pain">这一步，问题还没有出现。</p>
+            <p>脑中已经有 NPC、分支和结局走向。</p>
+            <p class="case-journey-note">剧情关系在脑里通常是清楚的。</p>
+            <p class="case-journey-pain">这一步，创作本身还是顺的。</p>
           </article>
           <article class="case-journey-stage">
             <span>02</span>
             <h3>逻辑构建</h3>
-            <p>创作者开始规划先后顺序、条件判断和任务路径。</p>
-            <p class="case-journey-note">先从 NPC 问好开始，再判定好感度。</p>
-            <p class="case-journey-pain">工具开始跟不上脑中的分支图。</p>
+            <p>开始规划先后顺序、好感度和触发路径。</p>
+            <p class="case-journey-note">脑中已经是一张网状结构。</p>
+            <p class="case-journey-pain">工具开始跟不上脑速。</p>
           </article>
           <article class="case-journey-stage">
             <span>03</span>
             <h3>配置执行</h3>
-            <p>创作者要在不同组件和文本面板之间来回点击、添加、补条件。</p>
-            <p class="case-journey-note">等等，文本在哪？条件配置又在哪？</p>
-            <p class="case-journey-pain">一边配一边丢线索，越配越乱。</p>
+            <p>在文本面板、条件组件之间反复横跳，连续操作被频繁打断。</p>
+            <p class="case-journey-note">一忙起来，就很容易连错、配错。</p>
+            <p class="case-journey-pain">心流被拆碎，错误也从这里开始埋下。</p>
           </article>
           <article class="case-journey-stage">
             <span>04</span>
             <h3>验证迭代</h3>
-            <p>创作者回头测试时，已经很难追溯刚才那段逻辑到底藏在哪。</p>
-            <p class="case-journey-note">我完全找不到刚才配的那段逻辑在哪里。</p>
-            <p class="case-journey-pain">一旦回头修改，就像重新找一遍路。</p>
+            <p>一旦误删节点或拉出死循环，回头排查就像在乱麻里找线头。</p>
+            <p class="case-journey-note">最怕的是逻辑悄悄坏了，却没被及时发现。</p>
+            <p class="case-journey-pain">挫败感一上来，很多人就不敢继续扩写大体量剧情。</p>
           </article>
         </div>
+      </section>
+
+      <section class="case-solution-intro" aria-label="解决方案" data-reveal data-reveal-delay="80">
+        <div class="case-copy case-solution-intro__copy">
+          <h2>解决方案</h2>
+          <p>我的方案分两步：先把结构搭对，再把风险拦在前面。前者解决“看不见关系”，后者解决“敢不敢继续改”。</p>
+        </div>
+
+        <ol class="case-process case-process--flow" aria-label="案例叙事流程">
+          <li>
+            <span>01</span>
+            <strong>看见错位</strong>
+            <p>脑中是网状剧情，工具里却只有线性表单。</p>
+          </li>
+          <li>
+            <span>02</span>
+            <strong>收回画布</strong>
+            <p>先把剧情关系、文本和功能挂回同一张画布。</p>
+          </li>
+          <li>
+            <span>03</span>
+            <strong>前置防错</strong>
+            <p>该拦的错误当场拦住，该露出的信息直接露出来。</p>
+          </li>
+          <li>
+            <span>04</span>
+            <strong>验证结果</strong>
+            <p>我用同一任务对比新旧流程，看改动是否真的有效。</p>
+          </li>
+        </ol>
       </section>
 
       <section class="case-phase case-phase--tabs" aria-label="V1 方案" data-reveal>
         <div class="case-phase-intro">
           <h3 class="case-h3-bullet">Phase 01 | 先把剧情关系摆出来</h3>
-          <p>
-            我先做了一个核心判断：关系看不见，表单再精致，用户还是会迷路。于是我先做了一张能表达分支关系的对话图，把文本、条件和功能都挂回节点上。结构成立以后，我再补两种创建方式：一条保证高频操作够顺，一条照顾先搭骨架的用户。
-          </p>
+          <p>第一步先解决结构错位。我把文本、条件和功能都挂回同一张剧情画布，再补两条创建路径：一条照顾连续输入的高频创作者，一条照顾先搭骨架、再填细节的规划型用户。</p>
         </div>
 
         <div class="case-phase-tabs">
@@ -180,8 +307,8 @@
               id="digistudio-tab-fast"
               data-tab-target="digistudio-tab-panel-fast"
             >
-              <span>顺手往下接</span>
-              <p>优先照顾高频路径。从输出口直接拉线，松手就能在空白处创建下一个节点，适合连续写剧情时一路往下接。</p>
+              <span>从输出口拉线</span>
+              <p>连续写剧本时，直接从当前节点往下拉线，松手就生成下一个节点，尽量不打断输入心流。</p>
             </button>
             <button
               class="case-tab"
@@ -192,8 +319,8 @@
               id="digistudio-tab-free"
               data-tab-target="digistudio-tab-panel-free"
             >
-              <span>先搭骨架</span>
-              <p>给规划型用户保留的路径。从右下角拖出节点，先把主要分支摆好，再慢慢连线和补内容，适合先搭结构再填细节。</p>
+              <span>从工具栏拖拽</span>
+              <p>先把分支和结局节点拖进画布，像摆棋子一样先搭骨架，再回头慢慢连线和填词。</p>
             </button>
           </div>
 
@@ -228,30 +355,37 @@
       <section class="case-phase case-phase--matrix" aria-label="V2 方案" data-reveal>
         <div class="case-phase-intro">
           <h3 class="case-h3-bullet">Phase 02 | 让人敢用，也看得清</h3>
-          <p>画布能用以后，我继续处理信任感和可读性。系统该帮到什么程度、哪些错误要前置拦截、信息一多之后还能不能快速扫清，都会直接影响创作者敢不敢继续用。</p>
+          <p>结构搭好后，我开始补安全感。用户一定会反复返工，所以工具不能让错误悄悄发生，也不能让关键信息继续藏在节点里。</p>
         </div>
 
         <div class="case-phase-matrix">
           <article class="case-matrix-item">
-            <h4>删节点后，不做自动重连</h4>
-            <p>这里我专门做过取舍。当中间节点被删除时，系统到底要不要自动把前后逻辑重新接上？我最后放弃了“自动重连”。在复杂分支里，创作者更在意可控，自己重连的成本，通常小于系统错连一次带来的风险。</p>
+            <h4><span class="case-step-badge">1</span>删节点后，不做自动重连</h4>
+            <p>在 A → B → C 这种复杂分支里，如果删掉 B 后系统自作聪明把 A 和 C 接上，最危险的是逻辑已经错了，用户却没立刻发现。所以这里我放弃“自动重连”，把决定权交还给用户。</p>
           </article>
           <article class="case-matrix-item">
-            <h4>死循环连线，当场拦住</h4>
-            <p>我把这条防线放在编辑阶段。当用户尝试拉线形成 A → B → A 的剧情闭环时，系统会实时检测并直接拦截，连线失败回弹，同时给出明确提示，避免把逻辑漏洞留到测试阶段才暴露。</p>
+            <h4><span class="case-step-badge">2</span>死循环连线，当场拦住</h4>
+            <p>新版给了用户自由连线的能力，也必须同时兜住新的风险。我把死循环拦在编辑阶段：一旦形成 A → B → A，连线不会吸附，会直接回弹并给出提示，避免问题拖到测试阶段。</p>
           </article>
           <article class="case-matrix-item case-matrix-item--media">
-            <h4>信息变多，先保可读性</h4>
-            <p>这里我选择优先保证可读性。条件标签和功能图标直接放到节点外层，又加了可收起的对话组抽屉，并规定线永远压在节点下面。这样分支再多，创作者也能快速扫一眼，看清哪里有条件、哪里能展开、哪条线在连什么。</p>
-            <div class="case-matrix-zoom">
-              <figure class="case-image-card case-image-card--zoom case-image-card--plain-frame">
-                <figcaption>条件与功能图标外显</figcaption>
-                <img src="./assets/images/digistudio/nodeInfo.png" alt="节点条件标签与功能图标的局部放大图" />
-              </figure>
-              <figure class="case-image-card case-image-card--zoom case-image-card--plain-frame">
-                <figcaption>对话组抽屉常驻</figcaption>
-                <img src="./assets/images/digistudio/diaGroup.png" alt="对话组抽屉与画布局部细节放大图" />
-              </figure>
+            <div class="case-matrix-subsections">
+              <section class="case-matrix-subsection" aria-label="条件与功能外显">
+                <h5><span class="case-step-badge">3</span>条件与功能外显</h5>
+                <p>对话节点本身也可以挂条件和其他功能模块。对 bmm4 这种要让剧情联动场景的用户来说，扣血、开门、传送这类动作都能直接挂在节点上。为了不让人反复点开抽屉，我把条件标签 <img class="case-inline-icon case-inline-icon--condition" src="./assets/images/digistudio/condition_icon.png" alt="" /> 和图片 <img class="case-inline-icon" src="./assets/images/digistudio/image_icon.png" alt="" />、文本 <img class="case-inline-icon" src="./assets/images/digistudio/text_icon.png" alt="" /> 这类功能 icon 直接露在节点表面，分支再多也能一眼扫清。</p>
+                <figure class="case-image-card case-image-card--zoom case-image-card--plain-frame">
+                  <figcaption>条件与功能图标外显</figcaption>
+                  <img src="./assets/images/digistudio/nodeInfo.png" alt="节点条件标签与功能图标的局部放大图" />
+                </figure>
+              </section>
+              <section class="case-matrix-subsection" aria-label="对话组抽屉">
+                <h5><span class="case-step-badge">4</span>对话组抽屉</h5>
+                <p>第一版里，用户改完当前对话组后，还得退回上一级重新选择，路径很绕。于是我把可收起的对话组抽屉直接嵌进画布里，让人不用跨层跳转就能切换章节和对话组。</p>
+                <p>回头改字时，不用反复退出再进入，回看路径会短很多。</p>
+                <figure class="case-image-card case-image-card--zoom case-image-card--plain-frame">
+                  <figcaption>画布内可收起的对话组抽屉</figcaption>
+                  <img src="./assets/images/digistudio/diaGroup.png" alt="对话组抽屉与画布局部细节放大图" />
+                </figure>
+              </section>
             </div>
           </article>
         </div>
@@ -259,19 +393,16 @@
 
       <section class="case-impact" aria-label="验证结果" data-reveal>
         <div class="case-copy">
-          <h2>最后看结果：这套改法有没有真的省时间</h2>
-          <p>
-            <strong>测试基准：</strong>
-            为了避免只靠主观感受，我找了 4 名内部 UGC 创作者，用新旧两套系统分别完成同一个中大型剧情任务：3 个好感度分支，4 个复合功能触发。我重点记录找节点、配置内容和整体完成时间，看这次改版有没有把人从反复找配置里解放出来。
-          </p>
+          <h2>结果验证</h2>
+          <p><strong>测试基准：</strong> 我找了 4 名内部 UGC 核心创作者，用新旧两套系统分别完成同一个中大型任务：3 个好感度分支，4 个场景功能触发。重点看三件事：找节点、配置时间，以及他们是否还敢继续扩写。</p>
         </div>
 
         <div class="metric-grid metric-grid--three">
           <article>
             <span>定位节点</span>
             <strong class="metric-number">&lt; 1s</strong>
-            <p class="metric-note">想找哪段逻辑，几乎立刻就能看到</p>
-            <p>关系摆在画布上后，不用再在场景和多个面板之间来回翻入口。</p>
+            <p class="metric-note">关系上画布后，几乎不用再人肉翻找</p>
+            <p>画布直接取代了场景和多个面板之间的来回切换。</p>
           </article>
           <article>
             <span>配置耗时</span>
@@ -286,8 +417,8 @@
                 data-countup-chain-next="#metric-efficiency"
               >60m</span>
             </strong>
-            <p class="metric-note">同一任务的配置时间明显缩短</p>
-            <p>过去是拆成多个组件分头配置，现在是在一张画布上连续完成。</p>
+            <p class="metric-note">从割裂配置，变成连续创作</p>
+            <p>文本、条件和功能收进同一张画布后，配置动作终于能一口气做完。</p>
           </article>
           <article>
             <span>整体效率</span>
@@ -302,22 +433,22 @@
               data-countup-duration="1"
               data-countup-autostart="false"
             >+0%</strong>
-            <p class="metric-note">复杂剧情也终于能改得动、改得起</p>
-            <p>更大的变化在于，大家更愿意继续扩写和返工，因为改动成本终于降下来了。</p>
+            <p class="metric-note">不只是更快，也更敢继续写</p>
+            <p>风险被前置拦住后，大家更愿意返工和扩写复杂剧情。</p>
           </article>
         </div>
+        <blockquote class="case-impact-quote">
+          <p>“以前改错一个地方，就要心惊肉跳地排查半天。现在看着线改，心里会踏实很多，也更敢把剧情继续写大。”</p>
+        </blockquote>
       </section>
 
       <section class="case-section-grid case-section-grid--closing" aria-label="结论" data-reveal>
         <div class="case-copy case-copy--closing">
-          <h4>最后结论</h4>
-          <h2>好的专业工具，要把信息摆清楚，把风险拦在前面。</h2>
+          <h2>最后结论</h2>
           <p class="case-closing-subtitle">
-            复杂编辑器先要让用户知道自己在哪、刚刚改了什么、接下来会影响哪里。
+            复杂创作工具，必须先把关系讲清楚，再把风险拦在前面。
           </p>
-          <p class="case-callout-line">
-            这次 Digistudio 重构最能说明我的，是我会先把复杂关系理顺，再把它做成用户敢用、愿意继续扩写的编辑体验。
-          </p>
+          <p class="case-callout-line">用户从不缺少故事，真正拖住他们的，往往是工具结构。关系能被直接看见、修改和回溯时，创作心流才真正能接住。</p>
         </div>
       </section>
     </main>

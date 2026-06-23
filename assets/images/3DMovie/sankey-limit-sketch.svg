@@ -1,0 +1,34 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="36" fill="#F8F5EF"/>
+  <rect x="58" y="58" width="1084" height="644" rx="28" fill="#FBF9F4" stroke="#E5DED3" stroke-width="2"/>
+  <g opacity="0.95">
+    <rect x="158" y="194" width="94" height="18" rx="9" fill="#AEB7C2"/>
+    <rect x="158" y="294" width="112" height="18" rx="9" fill="#B8C1CB"/>
+    <rect x="158" y="394" width="86" height="18" rx="9" fill="#BDC5CE"/>
+    <rect x="158" y="494" width="104" height="18" rx="9" fill="#A7B1BC"/>
+  </g>
+  <g opacity="0.95">
+    <rect x="934" y="176" width="108" height="18" rx="9" fill="#B9C1CA"/>
+    <rect x="934" y="280" width="96" height="18" rx="9" fill="#AAB4BF"/>
+    <rect x="934" y="384" width="118" height="18" rx="9" fill="#BFC7CF"/>
+    <rect x="934" y="488" width="102" height="18" rx="9" fill="#A9B3BE"/>
+  </g>
+  <g stroke-linecap="round" opacity="0.8">
+    <path d="M252 203C412 203 488 170 614 210C736 249 786 182 934 185" stroke="#BEC6CF" stroke-width="10"/>
+    <path d="M252 203C420 203 482 280 620 300C744 318 804 290 934 289" stroke="#CCD3DA" stroke-width="8"/>
+    <path d="M270 303C418 303 492 236 614 252C722 267 808 388 934 393" stroke="#B6BEC8" stroke-width="12"/>
+    <path d="M270 303C424 303 492 354 616 366C752 379 804 493 934 497" stroke="#D0D6DD" stroke-width="9"/>
+    <path d="M244 403C414 403 480 360 620 336C722 319 796 280 934 289" stroke="#C7CED6" stroke-width="11"/>
+    <path d="M244 403C408 403 490 428 624 432C760 436 810 392 934 393" stroke="#B0BAC4" stroke-width="9"/>
+    <path d="M262 503C432 503 496 476 626 450C760 424 790 190 934 185" stroke="#D5DBE2" stroke-width="8"/>
+    <path d="M262 503C404 503 490 522 634 524C756 526 820 500 934 497" stroke="#BBC4CD" stroke-width="10"/>
+  </g>
+  <g opacity="0.55" stroke="#C7CFD7" stroke-width="3" stroke-linecap="round">
+    <path d="M414 132L848 132"/>
+    <path d="M414 610L848 610"/>
+  </g>
+  <path d="M360 116L824 586" stroke="#CC3A30" stroke-width="20" stroke-linecap="round" opacity="0.96"/>
+  <path d="M824 116L360 586" stroke="#CC3A30" stroke-width="20" stroke-linecap="round" opacity="0.96"/>
+  <path d="M771 585C826 583 892 593 952 612" stroke="#CC3A30" stroke-width="4" stroke-linecap="round"/>
+  <text x="792" y="648" fill="#CC3A30" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="28" font-weight="600">局限：缺乏地理通感，多层级连线极易错乱</text>
+</svg>
