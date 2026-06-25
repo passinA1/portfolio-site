@@ -38,8 +38,9 @@
     <main class="case-main">
       <section class="case-hero" aria-label="项目概览">
         <div class="case-copy case-copy--hero" data-reveal data-reveal-delay="120">
-          <p class="case-eyebrow">project02</p>
+          <p class="case-eyebrow">01 商业项目</p>
           <h1>Digimi 建造系统的多端迁移与交互重构</h1>
+          <p class="case-hero-subtitle">把 PC 建造迁到手机上，重点不是缩小界面，而是重做移动端的建造节奏。</p>
           <p>Digimi 是一款以自由建造为核心的沙盒产品，建造系统就是玩家创作内容的主工具。我负责把这套 PC 建造体验迁移到移动端。</p>
           <p>重点不是把 PC 界面缩小塞进手机，而是重做移动端的建造节奏：让玩家在小屏幕上也能看清落点、拖准方块、连续搭建。</p>
           <dl class="case-meta-list">
@@ -88,7 +89,8 @@
 
       <section class="case-section-grid" aria-label="发现问题" data-reveal>
         <div class="case-copy">
-          <h2>移动端建造，不是把 PC 界面缩进手机屏幕</h2>
+          <p class="case-eyebrow">02 问题</p>
+          <h2>问题定义</h2>
           <p>PC 端建造依赖大资源库、鼠标和快捷键。直接搬到手机后，界面会吃掉建造画面，玩家很难看清落点。</p>
           <p>更麻烦的是，手机没有右键取消，也没有键盘撤销。玩家一旦放错，就会开始担心下一步怎么退回。</p>
           <p>所以这次迁移的重点不是“适配尺寸”，而是重做移动端建造的工作流：给足视野、补上取消路径、保住连续搭建节奏。</p>
@@ -108,7 +110,8 @@
 
       <section class="case-section-grid" aria-label="Phase 01" data-reveal>
         <div class="case-copy">
-          <h3 class="case-h3-bullet">Phase 01 | 拖拽时，让界面主动让路</h3>
+          <p class="case-eyebrow">03 方案一</p>
+          <h2>视野与拖拽</h2>
           <p>第一轮先解决“视野和控制打架”。玩家想把方块放准时，手指和面板会一起挡住画面；一旦放错，又缺少 PC 上那种随手撤回的安全感。</p>
 
           <div class="case-note-block">
@@ -154,7 +157,8 @@
 
       <section class="case-section-grid" aria-label="Phase 02" data-reveal>
         <div class="case-copy">
-          <h3 class="case-h3-bullet">Phase 02 | 把常用方块放到手边</h3>
+          <p class="case-eyebrow">04 方案二</p>
+          <h2>方块访问</h2>
           <p>第一轮解决了“看不清、拖不准”，但连续搭建还是会被找方块打断。玩家一旦进入墙面、屋顶、装饰这些高频切换场景，就要反复打开大仓库。</p>
           <p>所以第二轮不再继续改拖拽，而是重排方块访问路径：最高频的贴近手边，临时切换的收进抽屉，低频的再留在大仓库里。我没有把所有东西都铺到底部，因为那样移动端又会重新变成被工具栏压住的 PC 缩略图。</p>
           <ul class="case-proof-list">
@@ -172,7 +176,8 @@
 
       <section class="case-impact" aria-label="验证结果" data-reveal>
         <div class="case-copy case-impact-heading">
-          <h2>我把同一任务拆开验证，看看改动有没有打中真正的阻碍</h2>
+          <p class="case-eyebrow">05 验证</p>
+          <h2>验证结果</h2>
         </div>
 
         <div class="case-impact-layout">
@@ -206,6 +211,7 @@
 
       <section class="case-section-grid case-section-grid--closing" aria-label="结论" data-reveal>
         <div class="case-copy case-copy--closing">
+          <p class="case-eyebrow">06 结论</p>
           <h2>最后结论</h2>
           <p class="case-closing-subtitle">在同一建造任务的新旧对比里，真正拉低移动端效率的，不是单次拖拽本身，而是视野遮挡和找方块路径。</p>
           <p class="case-callout-line">
@@ -216,6 +222,7 @@
 
       <section class="case-section-grid case-section-grid--gallery" aria-label="玩家作品反馈" data-reveal>
         <div class="case-copy">
+          <p class="case-eyebrow">07 反馈</p>
           <h2>玩家作品反馈</h2>
           <p><strong>反馈信号：</strong> 内部玩家对新版流程给出了明显正向反馈。更重要的是，他们开始把时间放回搭建本身，而不是频繁停在找方块和撤销操作上。</p>
         </div>
@@ -235,6 +242,7 @@
         </div>
       </section>
     </main>
+    <script src="./js/nav-effects.js?v=20260624-nav-v1"></script>
     <script>
       (() => {
         const revealTargets = [...document.querySelectorAll("[data-reveal]")];

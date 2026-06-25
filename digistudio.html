@@ -38,7 +38,7 @@
     <main class="case-main">
       <section class="case-hero case-hero--digistudio" aria-label="项目概览">
         <div class="case-copy case-copy--hero" data-reveal data-reveal-delay="120">
-          <p class="case-eyebrow">project01</p>
+          <p class="case-eyebrow">01 商业项目</p>
           <h1>Digistudio UGC 对话系统编辑器</h1>
           <p class="case-hero-subtitle">把网状分支剧情，收回一张看得懂、改得动的画布</p>
           <p>Digistudio 是一个让玩家自己创作游戏内容的 UGC 编辑器，我负责的是其中的剧情创作模块。玩家想把 NPC、任务和多结局写进自己的作品里，但旧版工具更适合“播放线性文本”，很难承载复杂的网状内容。</p>
@@ -71,6 +71,7 @@
 
       <section class="case-personas" aria-label="用户画像" data-reveal>
         <div class="case-copy case-personas__intro">
+          <p class="case-eyebrow">02 用户</p>
           <h2>用户画像</h2>
           <p>这套剧情编辑模块服务的是有强烈创作欲望、愿意认真打磨内容的年轻用户。</p>
           <p>他们最在意三件事：文本组织效率、剧情能不能影响玩法，以及高频迭代时的修改成本。</p>
@@ -192,6 +193,7 @@
 
       <section class="case-section-grid case-section-grid--problem" aria-label="问题定义" data-reveal>
         <div class="case-copy">
+          <p class="case-eyebrow">03 问题</p>
           <h2>问题定义</h2>
           <p>旧版剧情系统本质上是靠文本模块来工作的。一个文本模块里只能放一段文本，再通过触发条件把这些模块按顺序串起来，完成最基础的剧情播放。</p>
           <p>这套方式在做线性文本时还能成立，但一旦用户开始写多角色、多条件、多结果的剧情，问题就会集中冒出来。核心不在某一个面板，而在整套编辑方式从底层上就把“剧情关系”拆散了。</p>
@@ -223,7 +225,8 @@
 
       <section class="case-section-grid case-section-grid--journey" aria-label="用户旅程映射" data-reveal>
         <div class="case-copy">
-          <h2>User Journey</h2>
+          <p class="case-eyebrow">04 过程</p>
+          <h2>用户旅程</h2>
           <p>这些问题不是一开始就爆发的。很多人构思时很顺，真正掉速，是当他们把脑中的剧情图强行塞进线性工具的时候。</p>
           <p>我把一次中大型剧情任务拆开后，问题主要集中在四步。后面的防错和可读性设计，也都是从这条旅程里长出来的。</p>
         </div>
@@ -262,6 +265,7 @@
 
       <section class="case-solution-intro" aria-label="解决方案" data-reveal data-reveal-delay="80">
         <div class="case-copy case-solution-intro__copy">
+          <p class="case-eyebrow">05 方案</p>
           <h2>解决方案</h2>
           <p>我的方案分两步：先把结构搭对，再把风险拦在前面。前者解决“看不见关系”，后者解决“敢不敢继续改”。</p>
         </div>
@@ -393,6 +397,7 @@
 
       <section class="case-impact" aria-label="验证结果" data-reveal>
         <div class="case-copy">
+          <p class="case-eyebrow">06 验证</p>
           <h2>结果验证</h2>
           <p><strong>测试基准：</strong> 我找了 4 名内部 UGC 核心创作者，用新旧两套系统分别完成同一个中大型任务：3 个好感度分支，4 个场景功能触发。重点看三件事：找节点、配置时间，以及他们是否还敢继续扩写。</p>
         </div>
@@ -444,6 +449,7 @@
 
       <section class="case-section-grid case-section-grid--closing" aria-label="结论" data-reveal>
         <div class="case-copy case-copy--closing">
+          <p class="case-eyebrow">07 结论</p>
           <h2>最后结论</h2>
           <p class="case-closing-subtitle">
             复杂创作工具，必须先把关系讲清楚，再把风险拦在前面。
@@ -453,6 +459,7 @@
       </section>
     </main>
 
+    <script src="./js/nav-effects.js?v=20260624-nav-v1"></script>
     <script>
       (() => {
         const revealTargets = [...document.querySelectorAll("[data-reveal]")];

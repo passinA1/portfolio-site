@@ -48,10 +48,11 @@
 
       <section class="readability-opening" aria-label="项目背景" data-reveal>
         <div class="readability-opening__headline">
+          <p class="case-eyebrow">01 用户研究</p>
           <h1>动态背景下的 UI 变色可读性与用户体验研究</h1>
-          <p class="readability-opening__subtitle">我把一个说不清的界面问题，拆成了可以验证的设计判断。</p>
+          <p class="readability-opening__subtitle">这是一个用户体验研究项目。我研究的是：动态变色的 UI，到底会不会让人更容易看清，也让体验更好。</p>
           <p class="readability-opening__description">
-            很多时候，团队会讨论“界面要不要变色”。这次我想先把问题说清楚：当背景一直在变的时候，怎样让信息更容易被看到，同时不打断用户判断？
+            很多产品都会在状态变化时让界面跟着变色，但这件事到底是在帮用户，还是只是在制造更多干扰，往往说不清。这次我想把这个问题讲明白，再用实验去验证。
           </p>
           <dl class="case-meta-list readability-opening__meta-list">
             <div>
@@ -81,35 +82,17 @@
       <section class="readability-stage readability-stage--problem" aria-label="问题定义" data-reveal>
         <div class="readability-stage__lead">
           <div class="readability-stage__title">
-            <p class="case-eyebrow">01 问题定义</p>
-            <h2>我先把讨论从“要不要变色”，收束成“什么时候有帮助”</h2>
+            <p class="case-eyebrow">02 问题</p>
+            <h2>问题定义</h2>
           </div>
           <p class="readability-stage__summary">
-            这类问题的卡点，常常出在一开始没对齐“到底要解决什么”。我把问题重新说成一句更具体的话：动态场景下，界面什么时候该提醒，什么时候该安静。
-          </p>
-        </div>
-
-        <ul class="movie-point-strip readability-opening__points">
-          <li><strong>我定义的问题：</strong> 背景一直在变时，信息怎样更容易被看到。</li>
-          <li><strong>我关心的边界：</strong> 变色能不能帮忙，以及什么时候会开始打扰人。</li>
-          <li><strong>我想得到的结果：</strong> 一套能指导判断的规则，而不是只停留在视觉效果上。</li>
-        </ul>
-      </section>
-
-      <section class="readability-stage readability-stage--value" aria-label="为什么值得做" data-reveal>
-        <div class="readability-stage__lead">
-          <div class="readability-stage__title">
-            <p class="case-eyebrow">02 为什么值得做</p>
-            <h2>这种问题在真实产品里很常见，但很多时候只能凭经验拍板</h2>
-          </div>
-          <p class="readability-stage__summary">
-            只要用户在移动、光线变化、注意力被打断的状态下看界面，就会遇到类似问题。我用 FPS 作为测试环境，是因为它能把这些干扰放大，方便看清规则到底靠不靠谱。
+            比如你在跑步时看运动手表，或者在开车时瞄一眼导航。外面的光线、路况、背景都在变。如果界面也一直跟着变色，你第一反应不一定是“更清楚了”，也可能是“它为什么突然变了”。所以我真正想研究的是：动态变色的 UI，到底是在提升可读性和用户体验，还是在增加新的负担。
           </p>
         </div>
 
         <ul class="case-proof-list readability-application-grid">
-          <li><strong>车载 HUD 界面</strong> 车子进出隧道或突然逆光时，导航和速度如果跟着环境一直闪，会影响驾驶。这里总结出的<strong>“别变太快”</strong>规则，可以让信息稳一点。</li>
-          <li><strong>运动手表界面</strong> 跑步或骑车时，手表上的数据如果一点波动就变色，反而很烦。更合适的做法是<strong>“平时别乱动，到了关键节点再提醒”</strong>。</li>
+          <li><strong>生活里很常见</strong> 只要用户一边移动、一边看界面，这类问题就会出现。运动手表、导航、车载 HUD，都会碰到“背景在变，信息还能不能看清”这件事。</li>
+          <li><strong>团队又很难拍板</strong> 很多时候大家只能凭感觉讨论“要不要变色”。我想把它变成一个能被测试、能看数据、也能听到用户真实感受的问题。</li>
         </ul>
       </section>
 
@@ -117,84 +100,77 @@
         <li>
           <span>01</span>
           <strong>定义问题</strong>
-          <p>先把讨论收束成能验证的问题。</p>
+          <p>先说清到底在研究什么。</p>
         </li>
         <li>
           <span>02</span>
-          <strong>判断价值</strong>
-          <p>确认它为什么和真实产品有关。</p>
+          <strong>看现有产品</strong>
+          <p>先整理真实界面里最常见的做法。</p>
         </li>
         <li>
           <span>03</span>
-          <strong>搭方法</strong>
-          <p>把零散案例整理成可比较对象。</p>
+          <strong>搭测试</strong>
+          <p>把比较对象做进同一套原型里。</p>
         </li>
         <li>
           <span>04</span>
-          <strong>做验证</strong>
-          <p>把方法落成真实任务和原型。</p>
+          <strong>找用户</strong>
+          <p>让真实用户完成任务并留下反馈。</p>
         </li>
         <li>
           <span>05</span>
-          <strong>提炼判断</strong>
-          <p>找出帮助和打扰之间的边界。</p>
+          <strong>看数据</strong>
+          <p>一起看问卷和采访结果。</p>
         </li>
         <li>
           <span>06</span>
           <strong>收成规则</strong>
-          <p>把发现整理成团队能用的准则。</p>
-        </li>
-        <li>
-          <span>07</span>
-          <strong>说明能力</strong>
-          <p>把项目价值落回我的工作方式。</p>
+          <p>把结果整理成能直接用的判断。</p>
         </li>
       </ol>
 
       <section class="readability-stage readability-stage--methods" aria-label="研究过程" data-reveal>
         <div class="readability-stage__lead">
           <div class="readability-stage__title">
-            <p class="case-eyebrow">03 我怎么搭方法</p>
-            <h2>我先把零散做法整理清楚，再搭出一套能比较的方法</h2>
+            <p class="case-eyebrow">03 样本</p>
+            <h2>现有产品</h2>
           </div>
           <p class="readability-stage__summary">
-            为了不靠直觉下结论，我先看了 160 个现有界面，把它们整理成三类最常见的样式：条形、整片渲染、环形。这样后面的测试就有了清楚的比较对象。
+            为了不靠直觉下结论，我先整理了 160 个真实产品里的 UI，再按状态信息挂在哪里、变化覆盖多大来分类。最后出现频率最高的是三类：条形状态条、整体渲染、环形 HUD。这样后面的测试，比较的就不是我随便想出来的样式，而是现实里真的常见方案。
           </p>
         </div>
 
         <div class="readability-stage__body readability-stage__body--methods">
+          <p class="readability-method-lead">最后留下来的 3 类高频类型</p>
           <div class="readability-hud-grid" aria-label="三种 HUD 样式">
             <article class="readability-hud-card">
-              <figure class="case-image-card case-image-card--plain-frame readability-stage__visual readability-hud-card__visual">
-                <figcaption>Type 1</figcaption>
+              <figure class="readability-hud-figure readability-hud-card__visual">
+                <figcaption>样式 01</figcaption>
                 <img src="./assets/images/dynamicUI/Type1.jpeg" alt="Type 1 HUD 样式图，使用条形状态条作为主要状态表达" />
               </figure>
               <div class="readability-hud-card__copy">
-                <span>Type 1</span>
                 <h3>条形状态条</h3>
                 <p>最常见，也最容易一眼看懂。但如果颜色固定，遇到复杂背景也最容易撞色。</p>
               </div>
             </article>
 
             <article class="readability-hud-card">
-              <figure class="case-image-card case-image-card--plain-frame readability-stage__visual readability-hud-card__visual">
-                <figcaption>Type 2</figcaption>
+              <figure class="readability-hud-figure readability-hud-card__visual">
+                <figcaption>样式 02</figcaption>
                 <img src="./assets/images/dynamicUI/Type2.jpeg" alt="Type 2 HUD 样式图，使用整体渲染作为主要状态表达" />
               </figure>
               <div class="readability-hud-card__copy">
-                <span>Type 2</span>
                 <h3>整体渲染</h3>
                 <p>提醒最强，状态变化很直接。但一旦变得太勤，用户最容易觉得整块界面在闪。</p>
               </div>
             </article>
 
             <article class="readability-hud-card">
-              <figure class="case-image-card case-image-card--plain-frame readability-stage__visual readability-hud-card__visual">
-                <figcaption>Type 3</figcaption>
+              <figure class="readability-hud-figure readability-hud-card__visual">
+                <figcaption>样式 03</figcaption>
                 <img src="./assets/images/dynamicUI/Type3.jpeg" alt="Type 3 HUD 样式图，使用环形状态作为主要状态表达" />
               </figure>
               <div class="readability-hud-card__copy">
-                <span>Type 3</span>
                 <h3>环形 HUD</h3>
                 <p>更集中，不太占地方。但能不能看清，更依赖轮廓和对比够不够明显。</p>
               </div>
@@ -208,24 +184,34 @@
       <section class="readability-stage readability-stage--prototype" aria-label="我怎么把它做成可验证的东西" data-reveal>
         <div class="readability-stage__lead">
           <div class="readability-stage__title">
-            <p class="case-eyebrow">04 我怎么把它做成可验证的东西</p>
-            <h2>我自己把测试原型搭出来，让用户在真实干扰里完成任务</h2>
+            <p class="case-eyebrow">04 实验</p>
+            <h2>实验设计</h2>
           </div>
           <p class="readability-stage__summary">
-            我把三种样式、两种颜色规则和高动态场景放进同一套 Unity 原型里。这样能看到用户在运动、干扰和压力里到底能不能看清，而不是只评价一张静态截图。
+            我比较的是三种样式在同一动态场景下的体验差异。问卷先看趋势，采访再解释原因。
           </p>
         </div>
 
-        <div class="readability-stage__side readability-stage__side--method-notes">
+        <div class="readability-stage__side readability-stage__side--research">
           <article>
-            <span>原型能力</span>
-            <h3>把想法做成能跑的测试系统</h3>
-            <p>我把界面、场景和任务都做成了可操作的原型，让问题真的能被测试。</p>
+            <span>步骤 01</span>
+            <h3>统一原型</h3>
+            <p>我在 Unity 里搭了一套统一场景，把三种样式和两种颜色规则放进同一任务里。</p>
           </article>
           <article>
-            <span>验证能力</span>
-            <h3>让用户在干扰里完成真实任务</h3>
-            <p>这样更容易看到他们什么时候看得清，什么时候会累、会犹豫。</p>
+            <span>步骤 02</span>
+            <h3>24 名用户</h3>
+            <p>24 名用户都走完同一流程，保证每组比较都在同一个口径下完成。</p>
+          </article>
+          <article>
+            <span>步骤 03</span>
+            <h3>前后问卷</h3>
+            <p>前测先看基础习惯，后测再看不同样式下的主观体验变化，把趋势先拉出来。</p>
+          </article>
+          <article>
+            <span>步骤 04</span>
+            <h3>实验后采访</h3>
+            <p>采访继续回答一个问题：用户为什么会觉得清楚、困惑、累，或者被打扰。</p>
           </article>
         </div>
       </section>
@@ -233,100 +219,111 @@
       <section class="readability-stage readability-stage--findings" aria-label="用户反馈" data-reveal>
         <div class="readability-stage__lead readability-stage__lead--split">
           <div class="readability-stage__title">
-            <p class="case-eyebrow">05 我最后提炼出了什么</p>
-            <h2>我继续往下看：它在哪些时候真的有用</h2>
+            <p class="case-eyebrow">05 结果</p>
+            <h2>研究结果</h2>
           </div>
           <p class="readability-stage__summary">
-            结果没有把答案推向某一个极端。更重要的是，它帮我看清了：什么时候变化能帮忙，什么时候变化会添乱。
+            问卷先把趋势拉出来，采访再解释为什么会这样。最后看清的，不是“变色一定更好”，而是它什么时候能帮用户更快看清，什么时候又会开始打扰人。
           </p>
         </div>
 
         <div class="readability-findings-flow" aria-label="研究发现与用户证据">
           <article class="readability-finding-row readability-finding-row--positive">
             <div class="readability-finding-row__copy">
-              <p class="readability-finding-row__index">发现 01</p>
-              <h3>对比够高时，信息更容易被看到</h3>
-              <p>当界面和背景拉开差别后，用户不用特地找，信息会更快进到视线里。</p>
+              <p class="readability-finding-row__index">问卷结果</p>
+              <h3>变色不是越多越好</h3>
+              <p>先看分数，趋势已经很清楚了。变色在部分样式里更容易被看见，但变化一旦太频繁、太满，整体体验不会继续变好。</p>
             </div>
 
-            <blockquote class="readability-evidence-card readability-evidence-card--single">
-              <span>清晰条件</span>
-              <p>“只要对比度高，我觉得就比较容易看清。”</p>
-            </blockquote>
+            <figure class="case-image-card case-image-card--plain-frame case-image-card--contain readability-stage__visual readability-stage__visual--chart readability-finding-row__figure">
+              <figcaption>问卷结果</figcaption>
+              <img src="./assets/images/dynamicUI/graphResult-research-v2.png" alt="动态变色 UI 研究的问卷结果图，展示不同样式在用户体验与可读性上的量化差异" />
+              <p class="readability-finding-row__figure-note">只有“整体渲染”这一类样式，在自适应变色后出现了更明显的提升；条形状态条和环形 HUD 的差异并不显著。</p>
+            </figure>
           </article>
 
           <article class="readability-finding-row readability-finding-row--warning">
             <div class="readability-finding-row__copy">
-              <p class="readability-finding-row__index">发现 02</p>
-              <h3>变得太快，会让人累，也会让人犹豫</h3>
-              <p>用户不只是觉得刺眼，还会怀疑这个颜色是不是在表达别的意思。</p>
+              <p class="readability-finding-row__index">采访结果</p>
+              <h3>清楚和打扰会同时出现</h3>
+              <p>采访里最常出现的，不是简单的喜欢或不喜欢。用户更常说的是：什么时候更清楚，什么时候开始误解，什么时候盯久了会累。</p>
             </div>
 
-            <div class="readability-evidence-group">
-              <blockquote class="readability-evidence-card">
-                <span>用户心智</span>
+            <div class="readability-evidence-group readability-evidence-group--triple">
+              <blockquote class="readability-evidence-card readability-evidence-card--plain">
+                <span>更容易看见</span>
+                <p>“只要对比度高，我觉得就比较容易看清。”</p>
+              </blockquote>
+
+              <blockquote class="readability-evidence-card readability-evidence-card--plain">
+                <span>会带来额外联想</span>
                 <p>“主要的影响在于我习惯把它当成血条。当血条改变颜色时，我会想这是否代表了另一种功能，或者预示着一个不同的角色身份。”</p>
               </blockquote>
 
-              <blockquote class="readability-evidence-card">
-                <span>视觉疲劳</span>
+              <blockquote class="readability-evidence-card readability-evidence-card--plain">
+                <span>会积累视觉疲劳</span>
                 <p>“盯动态颜色更伤眼，也更容易累。作为一名有点色弱的人，我觉得辨认起来有些困难。”</p>
               </blockquote>
             </div>
           </article>
-        </div>
 
-        <div class="readability-blackband">
-          <p class="readability-blackband__eyebrow">关键判断</p>
-          <p class="readability-blackband__statement">真正有价值的，是知道什么时候该变，什么时候该稳住。</p>
-          <p class="readability-blackband__body">
-            这一步最重要的收获，是我没有停在“哪个方案更好”，而是继续把边界和条件找了出来。
-          </p>
+          <div class="readability-findings-takeaway" aria-label="研究结论">
+            <p class="readability-findings-takeaway__label">最后判断</p>
+            <p class="readability-findings-takeaway__text">真正有效的不是让界面一直跟着背景变，而是只在两种时刻使用变色：背景干扰高、需要快速拉开对比时；或者状态跨过关键阈值、用户确实需要被提醒时。</p>
+            <p class="readability-findings-takeaway__body">一旦颜色变化开始改写用户原有理解，或频率高到让人持续分心，清晰度收益就会被误读和疲劳抵消。这也是我后面把结论收成设计规则的原因。</p>
+          </div>
         </div>
       </section>
 
       <section class="readability-stage readability-stage--rules" aria-label="设计规则" data-reveal>
         <div class="readability-stage__lead">
           <div class="readability-stage__title">
-            <p class="case-eyebrow">06 我怎么把结果变成工作里能用的东西</p>
-            <h2>最后我把结果收成了三条能直接拿去用的规则</h2>
+            <p class="case-eyebrow">06 规则</p>
+            <h2>设计规则</h2>
           </div>
           <p class="readability-stage__summary">
-            研究做到这里，才真正开始有工作价值。团队需要的不只是结论，还需要下一步该怎么设计、怎么判断。
+            我把前面的研究结论，收成了 3 条可以直接判断的规则。
           </p>
         </div>
 
         <div class="readability-rule-run">
-          <article>
-            <span>规则 01</span>
+          <article class="readability-rule-card readability-rule-card--primary">
+            <span class="readability-rule-card__icon" aria-hidden="true">◎</span>
+            <span>规则 01 / 判断起点</span>
             <h3>先看用户心智</h3>
             <p>先看这个颜色有没有大家已经很熟的含义。像血量这种默认就是红色的东西，贸然改色，用户可能先困惑。</p>
+            <p class="readability-rule-card__note">先确认“这个颜色能不能改”，再进入后面的频率和阈值判断。</p>
           </article>
-          <article>
-            <span>规则 02</span>
+          <article class="readability-rule-card">
+            <span class="readability-rule-card__icon" aria-hidden="true">◔</span>
+            <span>规则 02 / 控制节奏</span>
             <h3>限制变色频率</h3>
             <p>别让界面跟着背景一闪一闪地变。宁可慢一点，也要先稳住。</p>
+            <p class="readability-rule-card__note">变化一旦太勤，清晰度收益很容易被疲劳感抵消。</p>
           </article>
-          <article>
-            <span>规则 03</span>
+          <article class="readability-rule-card">
+            <span class="readability-rule-card__icon" aria-hidden="true">◌</span>
+            <span>规则 03 / 设置触发点</span>
             <h3>只在关键阈值提醒</h3>
             <p>不要一点点变化就改色。更好的做法是到关键节点再提醒，平时保持安静。</p>
+            <p class="readability-rule-card__note">把变色留给真正需要提醒的时刻，而不是所有变化。</p>
           </article>
         </div>
       </section>
 
       <section class="case-section-grid case-section-grid--closing" aria-label="结论" data-reveal>
         <div class="case-copy readability-closing">
-          <p class="case-eyebrow readability-closing__eyebrow">07 这个项目最能说明我什么</p>
-          <h2>我能把一个说不清的问题，拆成可以验证的设计判断</h2>
-          <p class="readability-closing__subtitle">先定义问题，再搭方法、做原型、看结果，最后把发现收成规则。</p>
+          <p class="case-eyebrow readability-closing__eyebrow">07 价值</p>
+          <h2>项目价值</h2>
+          <p class="readability-closing__subtitle">我能完整推进用户研究，也能把模糊问题整理成可验证的设计判断。</p>
           <p class="case-callout-line">
-            这也是它对实际工作最有价值的地方。很多团队卡住，是因为缺少证据、边界和下一步怎么做的判断。这个项目让我把这些环节完整走了一遍。
+            这个项目从问题定义开始，经过样本整理、实验设计、原型搭建、问卷和访谈执行，一直到结果分析与规则提炼，完整体现了我推进用户研究的能力。面对一开始很难直接讨论清楚的设计问题，我可以先建立判断口径，再把它转成可测试的原型、可分析的数据，以及团队后续能够继续使用的设计规则。
           </p>
         </div>
       </section>
     </main>
 
+    <script src="./js/nav-effects.js?v=20260624-nav-v1"></script>
     <script>
       (() => {
         const revealTargets = [...document.querySelectorAll("[data-reveal]")];

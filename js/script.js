@@ -12,7 +12,7 @@ const projects = [
   },
   {
     slug: "ai-film-visualization",
-    title: "全球电影数据的空间化探索原型",
+    title: "MovieTrack——全球电影数据的空间化探索原型",
     note: "用 3D 地球连接国家来源、类型轨道和时间切片，让多维电影数据先形成空间感，再进入局部信息。",
     cover: "./assets/images/3DMovie/CoverImage.png",
     ratio: "1.6997",

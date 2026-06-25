@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>全球电影数据的空间化探索原型 | 叶泽鸿</title>
+    <title>MovieTrack——全球电影数据的空间化探索原型 | 叶泽鸿</title>
     <meta
       name="description"
-      content="全球电影数据的空间化探索原型案例页，展示如何用 3D 地球连接国家、类型与票房，并把时间切片组织成可探索的数据体验。"
+      content="MovieTrack——全球电影数据的空间化探索原型案例页，展示如何用 3D 地球连接国家、类型与票房，并把时间切片组织成可探索的数据体验。"
     />
     <link rel="icon" type="image/png" href="./assets/favicon-y.png" />
     <link rel="stylesheet" href="./css/styles.css?v=20260620-movie-story-v2" />
@@ -42,9 +42,9 @@
         </figure>
 
         <div class="case-copy case-copy--hero is-visible" data-reveal data-reveal-delay="120">
-          <p class="case-eyebrow">School Project</p>
+          <p class="case-eyebrow">01 学校项目</p>
           <div class="case-hero-heading">
-            <h1>全球电影数据的空间化探索原型</h1>
+            <h1>MovieTrack——全球电影数据的空间化探索原型</h1>
             <div class="case-hero-actions">
               <a
                 class="case-link-button"
@@ -113,7 +113,7 @@
       <section class="movie-observation movie-observation--definition" aria-label="项目定义" data-reveal>
         <div class="movie-observation__intro">
           <div class="movie-observation__lead">
-            <p class="case-eyebrow">Target users</p>
+            <p class="case-eyebrow">02 用户</p>
             <h2>目标用户是谁</h2>
           </div>
           <div class="movie-observation__aside">
@@ -136,8 +136,8 @@
 
       <section class="case-phase case-phase--movie-baseline case-phase--problem" aria-label="问题定义" data-reveal>
         <div class="case-phase-intro">
-          <p class="case-eyebrow">Problem</p>
-          <h2 class="case-phase-title">旧的浏览方式，很难同时看到全局和变化</h2>
+          <p class="case-eyebrow">03 问题</p>
+          <h2 class="case-phase-title">旧的浏览方式</h2>
           <p>
             我先回看了几种更常见的数据阅读方式。它们都能回答一部分问题，但一旦问题变成“全球电影整体怎么分布，又怎么随时间变化”，阅读就会很快断掉。
           </p>
@@ -179,8 +179,8 @@
 
       <section class="case-phase case-phase--solution" aria-label="解决方法" data-reveal>
         <div class="case-phase-intro">
-          <p class="case-eyebrow">Solution</p>
-          <h2 class="case-phase-title">为什么选 3D 的表现形式？</h2>
+          <p class="case-eyebrow">04 取舍</p>
+          <h2 class="case-phase-title">为什么保留 3D</h2>
           <p>
             在设计时，我先看的是这一版最优先解决什么。最后发现，要先解决的，是让用户先看到全球电影的整体分布，并意识到这种分布会随时间变化。因为地理位置本身就是理解入口的一部分，所以我保留了 3D。
           </p>
@@ -190,7 +190,8 @@
 
       <section class="case-phase" aria-label="信息拆分" data-reveal>
         <div class="case-phase-intro">
-          <h3 class="case-h3-bullet">难点不在球体本身，难点在信息一多就容易乱</h3>
+          <p class="case-eyebrow">05 编码</p>
+          <h2 class="case-phase-title">信息怎么分层</h2>
           <p>
             真正的难点不是 3D 本身，而是不同维度的信息在抢同一个画面。国家、类型、票房、时间，本来就在讲不同的事情。如果一开始把它们全塞进主视图里，用户看到的只会是一团热闹。
           </p>
@@ -225,8 +226,8 @@
       <section class="movie-wide-section" aria-label="原型与验证" data-reveal>
         <div class="movie-wide-section__header">
           <div class="movie-wide-section__title">
-            <p class="case-eyebrow">Prototype</p>
-            <h2>低保真原型设计</h2>
+            <p class="case-eyebrow">06 原型</p>
+            <h2>低保真原型</h2>
           </div>
           <p class="movie-wide-section__intro">
             这一轮我先不追视觉细节，而是先把界面骨架定下来：中间给 3D 地球，右侧给筛选，上方给搜索，下方给时间轴。先让用户看到整体分布，再顺着不同入口继续往下读。
@@ -281,8 +282,8 @@
 
       <section class="movie-diagonal-section" aria-label="AI 工具流" data-reveal>
         <div class="movie-diagonal-section__copy">
-          <p class="case-eyebrow">AI Workflow</p>
-          <h2>AI 快速产出原型</h2>
+          <p class="case-eyebrow">07 AI</p>
+          <h2>AI 怎么加速</h2>
           <p>
             先把设计规则写成一份能复用的 md，再让 Figma Make 基于低保真原型把页面接出来，最后继续补筛选、反馈和时间切片这些细节。
           </p>
@@ -293,7 +294,7 @@
             <span>先写规则</span>
             <strong>先把设计规范写成 md</strong>
             <p>我先把页面基调、层级、卡片边界和 Movie 页的关键规则写清楚。这样 AI 接到的不是一句模糊提示，而是一份可执行的约束。</p>
-            <pre class="movie-ai-md"><code>全球电影数据的空间化探索原型 · 设计规范
+            <pre class="movie-ai-md"><code>MovieTrack——全球电影数据的空间化探索原型 · 设计规范
 
 一、色彩系统
 背景 & 界面基础色
@@ -520,7 +521,8 @@ Esc  取消选中
       <section class="case-impact" aria-label="结果与价值" data-reveal>
         <div class="movie-impact-summary">
           <div class="case-copy">
-            <h2>AI 帮我更快把入口做出来了</h2>
+            <p class="case-eyebrow">08 结果</p>
+            <h2>结果与价值</h2>
             <p>我先把低保真和设计规范写清，再用 Figma Make 把页面快速接成可操作原型。这样这版没有停在概念图，而是真正落到可以体验、可以继续改的一层。</p>
           </div>
 
@@ -570,6 +572,7 @@ Esc  取消选中
 
     </main>
 
+    <script src="./js/nav-effects.js?v=20260624-nav-v1"></script>
     <script>
       (() => {
         const revealTargets = [...document.querySelectorAll("[data-reveal]")];
