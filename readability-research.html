@@ -6,7 +6,7 @@
     <title>动态背景下的 UI 变色可读性与用户体验研究 | 叶泽鸿</title>
     <meta
       name="description"
-      content="动态背景下的 UI 变色可读性与用户体验研究案例页，展示我如何在高动态场景里测试界面变色是否真的更容易看清，并整理成能落地的设计规则。"
+      content="动态背景下的 UI 变色可读性与用户体验研究案例页，展示我如何在高动态场景里测试界面变色带来的清晰度变化，并整理成能落地的设计规则。"
     />
     <link rel="icon" type="image/png" href="./assets/favicon-y.png" />
     <link rel="stylesheet" href="./css/styles.css?v=20260617-readability-v46" />
@@ -50,7 +50,7 @@
         <div class="readability-opening__headline">
           <p class="case-eyebrow">01 用户研究</p>
           <h1>动态背景下的 UI 变色可读性与用户体验研究</h1>
-          <p class="readability-opening__subtitle">这是一个用户体验研究项目。我研究的是：动态变色的 UI，到底会不会让人更容易看清，也让体验更好。</p>
+          <p class="readability-opening__subtitle">这是一个用户体验研究项目。我研究的是：动态变色的 UI，究竟会怎样影响清晰度和整体体验。</p>
           <p class="readability-opening__description">
             很多产品都会在状态变化时让界面跟着变色，但这件事到底是在帮用户，还是只是在制造更多干扰，往往说不清。这次我想把这个问题讲明白，再用实验去验证。
           </p>
@@ -91,8 +91,8 @@
         </div>
 
         <ul class="case-proof-list readability-application-grid">
-          <li><strong>生活里很常见</strong> 只要用户一边移动、一边看界面，这类问题就会出现。运动手表、导航、车载 HUD，都会碰到“背景在变，信息还能不能看清”这件事。</li>
-          <li><strong>团队又很难拍板</strong> 很多时候大家只能凭感觉讨论“要不要变色”。我想把它变成一个能被测试、能看数据、也能听到用户真实感受的问题。</li>
+          <li><strong>生活里很常见</strong> 只要用户一边移动、一边看界面，这类问题就会出现。运动手表、导航、车载 HUD，都会碰到“背景在变，信息怎样才能被稳定看清”这件事。</li>
+          <li><strong>团队又很难拍板</strong> 很多时候大家只能凭感觉讨论“怎么用变色”。我想把它变成一个能被测试、能看数据、也能听到用户真实感受的问题。</li>
         </ul>
       </section>
 
@@ -136,7 +136,7 @@
             <h2>现有产品</h2>
           </div>
           <p class="readability-stage__summary">
-            为了不靠直觉下结论，我先整理了 160 个真实产品里的 UI，再按状态信息挂在哪里、变化覆盖多大来分类。最后出现频率最高的是三类：条形状态条、整体渲染、环形 HUD。这样后面的测试，比较的就不是我随便想出来的样式，而是现实里真的常见方案。
+            我先整理了 160 个真实产品里的 UI，再按状态信息挂在哪里、变化覆盖多大来分类。最后出现频率最高的是三类：条形状态条、整体渲染、环形 HUD。这样后面的测试，会沿着真实产品里最常见的方案展开。
           </p>
         </div>
 
@@ -172,7 +172,7 @@
               </figure>
               <div class="readability-hud-card__copy">
                 <h3>环形 HUD</h3>
-                <p>更集中，不太占地方。但能不能看清，更依赖轮廓和对比够不够明显。</p>
+                <p>更集中，也更省空间。清晰度会更依赖轮廓和对比的清晰程度。</p>
               </div>
             </article>
           </div>
@@ -223,7 +223,7 @@
             <h2>研究结果</h2>
           </div>
           <p class="readability-stage__summary">
-            问卷先把趋势拉出来，采访再解释为什么会这样。最后看清的，不是“变色一定更好”，而是它什么时候能帮用户更快看清，什么时候又会开始打扰人。
+            问卷先把趋势拉出来，采访再解释为什么会这样。最后看清的是：它什么时候能帮用户更快看清，什么时候又会开始打扰人。
           </p>
         </div>
 
@@ -231,8 +231,8 @@
           <article class="readability-finding-row readability-finding-row--positive">
             <div class="readability-finding-row__copy">
               <p class="readability-finding-row__index">问卷结果</p>
-              <h3>变色不是越多越好</h3>
-              <p>先看分数，趋势已经很清楚了。变色在部分样式里更容易被看见，但变化一旦太频繁、太满，整体体验不会继续变好。</p>
+              <h3>变色的有效性取决于节奏、范围和触发时机</h3>
+              <p>先看分数，趋势已经很清楚了。变色在部分样式里更容易被看见，但变化一旦太频繁、太满，整体体验的收益就会开始回落。</p>
             </div>
 
             <figure class="case-image-card case-image-card--plain-frame case-image-card--contain readability-stage__visual readability-stage__visual--chart readability-finding-row__figure">
@@ -246,7 +246,7 @@
             <div class="readability-finding-row__copy">
               <p class="readability-finding-row__index">采访结果</p>
               <h3>清楚和打扰会同时出现</h3>
-              <p>采访里最常出现的，不是简单的喜欢或不喜欢。用户更常说的是：什么时候更清楚，什么时候开始误解，什么时候盯久了会累。</p>
+              <p>采访里反复出现的是三类判断：什么时候更清楚，什么时候开始误解，什么时候盯久了会累。</p>
             </div>
 
             <div class="readability-evidence-group readability-evidence-group--triple">
@@ -269,7 +269,7 @@
 
           <div class="readability-findings-takeaway" aria-label="研究结论">
             <p class="readability-findings-takeaway__label">最后判断</p>
-            <p class="readability-findings-takeaway__text">真正有效的不是让界面一直跟着背景变，而是只在两种时刻使用变色：背景干扰高、需要快速拉开对比时；或者状态跨过关键阈值、用户确实需要被提醒时。</p>
+            <p class="readability-findings-takeaway__text">真正有效的做法，是把变色留给两个时刻：背景干扰高、需要快速拉开对比时；或者状态跨过关键阈值、用户确实需要被提醒时。</p>
             <p class="readability-findings-takeaway__body">一旦颜色变化开始改写用户原有理解，或频率高到让人持续分心，清晰度收益就会被误读和疲劳抵消。这也是我后面把结论收成设计规则的原因。</p>
           </div>
         </div>
@@ -291,8 +291,8 @@
             <span class="readability-rule-card__icon" aria-hidden="true">◎</span>
             <span>规则 01 / 判断起点</span>
             <h3>先看用户心智</h3>
-            <p>先看这个颜色有没有大家已经很熟的含义。像血量这种默认就是红色的东西，贸然改色，用户可能先困惑。</p>
-            <p class="readability-rule-card__note">先确认“这个颜色能不能改”，再进入后面的频率和阈值判断。</p>
+            <p>先看这个颜色在用户心里承接了什么熟悉含义。像血量这种默认就是红色的东西，贸然改色，用户可能先困惑。</p>
+            <p class="readability-rule-card__note">先确认这个颜色适不适合改动，再进入后面的频率和阈值判断。</p>
           </article>
           <article class="readability-rule-card">
             <span class="readability-rule-card__icon" aria-hidden="true">◔</span>
@@ -305,8 +305,8 @@
             <span class="readability-rule-card__icon" aria-hidden="true">◌</span>
             <span>规则 03 / 设置触发点</span>
             <h3>只在关键阈值提醒</h3>
-            <p>不要一点点变化就改色。更好的做法是到关键节点再提醒，平时保持安静。</p>
-            <p class="readability-rule-card__note">把变色留给真正需要提醒的时刻，而不是所有变化。</p>
+            <p>把变色集中到关键节点，平时保持安静。</p>
+            <p class="readability-rule-card__note">把变色留给真正需要提醒的时刻，让界面在其余时间保持稳定。</p>
           </article>
         </div>
       </section>

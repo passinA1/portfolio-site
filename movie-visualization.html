@@ -58,7 +58,7 @@
           </div>
           <p class="case-hero-subtitle">先让全球电影的来源和流向被整体看见，再让细节被继续追问</p>
           <p>
-            这个项目尝试解决的是：当用户想先搞清楚电影主要从哪些国家来，又集中流向哪些类型时，能不能先建立一层全局感觉，再顺着交互继续往下看。
+            这个项目要解决的是：先让用户看清全球电影的整体分布，再顺着国家、类型和时间继续往下探索。
           </p>
           <p class="movie-hero-note">我也把 AI 接进了这次流程里，用它加速发散、搭骨架，把原型更快推成了一个真的能体验的项目。</p>
           <dl class="case-meta-list">
@@ -118,13 +118,13 @@
           </div>
           <div class="movie-observation__aside">
             <p class="case-industry-compare__label">更接近谁</p>
-            <p>更像探索型用户，不是只想查一部电影的人。</p>
+            <p>更接近想先看全局分布的探索型用户。</p>
           </div>
         </div>
 
         <div class="movie-observation__summary movie-observation__summary--text">
           <p>
-            这页更适合探索型用户，比如想看全球电影分布的影迷、做文化观察的学生，或者需要先摸清国家与类型分布的人。对他们来说，第一步通常不是立刻精确比较某一年涨了多少，而是先看清：电影主要从哪里来，不同国家更集中流向哪些类型，这种分布在某个时间切片里大概长什么样。
+            这页更适合探索型用户，比如想看全球电影分布的影迷、做文化观察的学生，或者需要先摸清国家与类型分布的人。对他们来说，第一步通常会先看清：电影主要从哪里来，不同国家更集中流向哪些类型，这种分布在某个时间切片里大概长什么样，再进入精确比较。
           </p>
           <ul class="movie-point-strip">
             <li><strong>影迷</strong> 想先从全局看一眼，再决定钻进哪个国家、类型或年份。</li>
@@ -172,7 +172,7 @@
 
         <div class="movie-baseline-note">
           <p>
-            所以这次要重做的，不只是筛选方式，而是最前面的可视化入口。
+            所以这次重做直接落在最前面的可视化入口上，筛选只是其中一部分。
           </p>
         </div>
       </section>
@@ -193,7 +193,7 @@
           <p class="case-eyebrow">05 编码</p>
           <h2 class="case-phase-title">信息怎么分层</h2>
           <p>
-            真正的难点不是 3D 本身，而是不同维度的信息在抢同一个画面。国家、类型、票房、时间，本来就在讲不同的事情。如果一开始把它们全塞进主视图里，用户看到的只会是一团热闹。
+            真正的难点，在于不同维度的信息会同时争夺同一个画面。国家、类型、票房、时间，本来就在讲不同的事情。如果一开始把它们全塞进主视图里，用户看到的只会是一团热闹。
           </p>
         </div>
 
@@ -213,7 +213,7 @@
           <article>
             <span>03 票房</span>
             <strong>票房交给粗细和亮度</strong>
-            <p>票房更适合放在第二眼阅读里。先扫出大致分布，再决定要不要继续追数字。</p>
+            <p>票房更适合放在第二眼阅读里。先扫出大致分布，再决定继续追哪组数字。</p>
           </article>
           <article>
             <span>04 时间</span>
@@ -230,7 +230,7 @@
             <h2>低保真原型</h2>
           </div>
           <p class="movie-wide-section__intro">
-            这一轮我先不追视觉细节，而是先把界面骨架定下来：中间给 3D 地球，右侧给筛选，上方给搜索，下方给时间轴。先让用户看到整体分布，再顺着不同入口继续往下读。
+            这版界面先把阅读顺序排清楚：中间给 3D 地球，右侧给筛选，上方给搜索，下方给时间轴。先让用户看到整体分布，再顺着不同入口继续往下读。
           </p>
         </div>
 
@@ -244,7 +244,7 @@
             <article>
               <span>主视图</span>
               <strong>主要视野先留给 3D 地球</strong>
-              <p>这一步先解决整体感。用户第一眼先看到电影大概从哪里来、往哪里流，而不是一上来就掉进局部条件里。</p>
+              <p>这一步先解决整体感。用户第一眼先看到电影大概从哪里来、往哪里流，再进入局部条件和细节筛选。</p>
             </article>
             <article>
               <span>搜索</span>
@@ -259,7 +259,7 @@
             <article>
               <span>时间轴</span>
               <strong>时间轴处理连续变化</strong>
-              <p>时间不是一个个离散标签，而是一段连续区间，所以我把它放到底部，用拖拽和输入时间去选择特定阶段。</p>
+              <p>时间是一段连续区间，所以我把它放到底部，用拖拽和输入时间去选择特定阶段。</p>
             </article>
           </div>
         </div>
@@ -293,7 +293,7 @@
           <article class="movie-ai-card movie-ai-card--doc">
             <span>先写规则</span>
             <strong>先把设计规范写成 md</strong>
-            <p>我先把页面基调、层级、卡片边界和 Movie 页的关键规则写清楚。这样 AI 接到的不是一句模糊提示，而是一份可执行的约束。</p>
+            <p>我先把页面基调、层级、卡片边界和 Movie 页的关键规则写清楚。这样 AI 接到的会是一份可执行的约束。</p>
             <pre class="movie-ai-md"><code>MovieTrack——全球电影数据的空间化探索原型 · 设计规范
 
 一、色彩系统
@@ -503,7 +503,7 @@ Esc  取消选中
           <figure class="case-image-card case-image-card--movie-panel movie-visual-panel movie-detail-gallery__support movie-detail-gallery__support--tag">
             <figcaption>标签直接给数量</figcaption>
             <img src="./assets/images/3DMovie/filterTag1.png" alt="筛选标签状态一，展示不同国家包含的该类别数量" />
-            <p class="movie-detail-gallery__note">当前筛选有没有结果，会被数量直接回应出来。</p>
+            <p class="movie-detail-gallery__note">当前筛选结果，会被数量直接回应出来。</p>
           </figure>
           <figure class="case-image-card case-image-card--movie-panel movie-visual-panel movie-detail-gallery__support movie-detail-gallery__support--tag">
             <figcaption>换条件也能立刻对比</figcaption>
@@ -523,7 +523,7 @@ Esc  取消选中
           <div class="case-copy">
             <p class="case-eyebrow">08 结果</p>
             <h2>结果与价值</h2>
-            <p>我先把低保真和设计规范写清，再用 Figma Make 把页面快速接成可操作原型。这样这版没有停在概念图，而是真正落到可以体验、可以继续改的一层。</p>
+            <p>我先把低保真和设计规范写清，再用 Figma Make 把页面快速接成可操作原型。这样这版直接落到可以体验、可以继续改的一层。</p>
           </div>
 
           <div class="movie-impact-points" aria-label="结果摘要">

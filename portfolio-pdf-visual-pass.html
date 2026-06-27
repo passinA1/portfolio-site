@@ -1548,23 +1548,23 @@
       }
 
       .ds-page--problem .ds-copy {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        padding-top: 5.5mm;
-        gap: 6px;
+        display: grid;
+        grid-template-rows: auto auto;
         align-content: start;
+        height: 100%;
+        padding-top: 2.5mm;
+        gap: 3.2mm;
       }
 
       .ds-page--problem .ds-copy-main {
         display: grid;
-        gap: 6px;
+        gap: 2.4mm;
         align-content: start;
       }
 
       .ds-page--problem .ds-proof {
-        gap: 5px;
+        gap: 2.2mm;
+        margin-top: 1mm;
       }
 
       .ds-page--problem .ds-proof li,
@@ -1588,14 +1588,22 @@
       }
 
       .ds-page--problem .ds-industry-compare {
-        margin-top: 3mm;
-        padding-top: 3mm;
+        margin-top: 0;
+        padding-top: 0;
         padding-left: 0;
+        border-top: none;
       }
 
       .ds-page--problem .ds-rail {
-        margin-top: 2mm;
+        margin-top: 0;
         gap: 3mm;
+      }
+
+      .ds-page--problem .ds-problem-tail {
+        display: grid;
+        gap: 2.4mm;
+        padding-top: 2.8mm;
+        border-top: 1px solid rgba(15, 23, 42, 0.08);
       }
 
       .ds-page--journey {
@@ -1653,7 +1661,7 @@
       }
 
       .ds-page--phase {
-        gap: 4mm;
+        gap: 3mm;
       }
 
       .ds-page--phase .lead {
@@ -1661,19 +1669,20 @@
       }
 
       .ds-page--phase .ds-flow {
-        padding: 3mm 0;
+        padding: 2.6mm 0 0;
+        border-top: 1px solid rgba(15, 23, 42, 0.08);
       }
 
       .ds-page--phase .ds-flow article {
-        padding: 0 3.2mm;
+        padding: 0 2.4mm;
       }
 
       .ds-page--phase .ds-flow strong {
-        font-size: 11px;
+        font-size: 10px;
       }
 
       .ds-page--phase .ds-flow p {
-        font-size: 9.3px;
+        font-size: 8.8px;
         line-height: 1.45;
       }
 
@@ -1683,7 +1692,7 @@
       }
 
       .ds-page--phase .ds-phase-copy {
-        gap: 3mm;
+        gap: 2.2mm;
       }
 
       .ds-page--phase .ds-phase-copy article {
@@ -1710,9 +1719,9 @@
       }
 
       .ds-page--results {
-        gap: 2.6mm;
-        padding-top: 10mm;
-        padding-bottom: 8mm;
+        gap: 2.2mm;
+        padding-top: 9mm;
+        padding-bottom: 7mm;
       }
 
       .ds-page--results .lead {
@@ -1721,13 +1730,24 @@
         line-height: 1.56;
       }
 
+      .ds-page--results .page-heading {
+        gap: 2mm;
+      }
+
       .ds-page--results .title-lg {
         font-size: 22px;
       }
 
+      .ds-page--results .ds-metric-grid {
+        margin-top: 0;
+        padding: 2.6mm 0 2.8mm;
+        border-top: 1px solid rgba(15, 23, 42, 0.08);
+        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+      }
+
       .ds-page--results .ds-matrix {
-        gap: 2.2mm 4mm;
-        padding-top: 2.2mm;
+        gap: 2mm 3.6mm;
+        padding-top: 1.8mm;
       }
 
       .ds-page--results .ds-matrix h4,
@@ -1745,12 +1765,12 @@
       }
 
       .ds-page--results .ds-matrix-subsections {
-        margin-top: 2.4mm;
-        gap: 2.6mm;
+        margin-top: 2mm;
+        gap: 2.2mm;
       }
 
       .ds-page--results .ds-matrix-subsections section {
-        gap: 2mm;
+        gap: 1.6mm;
       }
 
       .ds-page--results .ds-image-card {
@@ -1769,13 +1789,9 @@
         background: none;
       }
 
-      .ds-page--results .ds-metric-grid {
-        margin-top: 2mm;
-      }
-
       .ds-page--results .ds-metric-grid article + article {
-        margin-left: 3mm;
-        padding-left: 3mm;
+        margin-left: 2.4mm;
+        padding-left: 2.4mm;
       }
 
       .ds-page--results .ds-metric-grid strong {
@@ -1793,16 +1809,21 @@
       }
 
       .ds-page--results .ds-closing {
-        margin-top: 1mm;
-        gap: 2mm;
+        margin-top: 0.8mm;
+        gap: 1.8mm;
       }
 
       .ds-page--results .ds-closing strong {
-        font-size: 12px;
+        font-size: 11.4px;
       }
 
       .ds-page--results .split-2 {
-        gap: 2.4mm;
+        gap: 2mm;
+      }
+
+      .ds-results-detail {
+        display: grid;
+        gap: 2mm;
       }
 
       .project--digimi {
@@ -2090,14 +2111,17 @@
       }
 
       .dm-page--phase2 .dm-copy {
-        padding-top: 8.5mm;
-        padding-bottom: 9.5mm;
+        display: grid;
+        align-content: start;
+        height: auto;
+        padding-top: 4.5mm;
+        padding-bottom: 0;
+        gap: 3.2mm;
       }
 
       .dm-page--problem .dm-copy-main,
       .dm-page--phase2 .dm-copy-main {
-        display: grid;
-        gap: 6px;
+        gap: 2.4mm;
         align-content: start;
       }
 
@@ -2157,13 +2181,23 @@
       }
 
       .dm-page--phase2 .dm-tier-grid {
-        margin-bottom: 6.5mm;
-        transform: translateY(-6.5mm);
+        margin: 0;
+        transform: none;
       }
 
       .dm-tier-grid article {
         min-height: 25mm;
         padding: 3.5mm;
+      }
+
+      .dm-page--phase2 .dm-tier-grid article {
+        min-height: 22mm;
+      }
+
+      .dm-page--phase2 .dm-proof {
+        gap: 2.4mm;
+        padding-top: 2.6mm;
+        border-top: 1px solid rgba(15, 23, 42, 0.08);
       }
 
       .dm-tier-grid p {
@@ -2258,60 +2292,80 @@
       }
 
       .dm-page--closing {
-        gap: 4mm;
+        gap: 3.2mm;
       }
 
       .dm-closing-copy {
         display: grid;
-        gap: 3mm;
+        gap: 2.4mm;
       }
 
       .dm-closing-subtitle {
         color: var(--ink);
-        font-size: 13px;
+        font-size: 12.4px;
         font-weight: 600;
-        line-height: 1.54;
+        line-height: 1.5;
       }
 
       .dm-callout-line {
         color: var(--body);
-        font-size: 10px;
-        line-height: 1.62;
+        font-size: 9.6px;
+        line-height: 1.58;
       }
 
       .dm-conclusion {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 3mm;
-        padding-top: 2mm;
+        gap: 2.4mm;
+        padding-top: 0;
       }
 
       .dm-conclusion article {
-        padding-top: 3mm;
-        border-top: 1px solid rgba(15, 23, 42, 0.08);
+        padding-top: 2.4mm;
+        border-top: 1px solid rgba(15, 23, 42, 0.1);
       }
 
       .dm-conclusion strong {
         display: block;
-        margin-bottom: 4px;
-        font-size: 12px;
+        margin-bottom: 3px;
+        font-size: 11.4px;
+      }
+
+      .dm-closing-evidence {
+        display: grid;
+        gap: 2.2mm;
+        padding-top: 2.8mm;
+        border-top: 1px solid rgba(15, 23, 42, 0.1);
       }
 
       .dm-gallery {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 3mm;
+        gap: 2.4mm;
+      }
+
+      .dm-gallery-wrap {
+        display: grid;
+        gap: 1.6mm;
+      }
+
+      .dm-gallery-label {
+        color: var(--blue);
+        font-size: 8.8px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
       }
 
       .dm-gallery figure {
         overflow: hidden;
-        border: 1px solid rgba(15, 23, 42, 0.08);
+        border: 1px solid rgba(15, 23, 42, 0.1);
         background: #fff;
       }
 
       .dm-gallery img {
         width: 100%;
-        height: 30mm;
+        height: 28mm;
         object-fit: cover;
       }
 
@@ -2486,7 +2540,7 @@
       }
 
       .mv-user-grid {
-        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        grid-template-columns: minmax(0, 0.54fr) minmax(0, 0.46fr);
       }
 
       .mv-page--users .mv-user-grid {
@@ -2505,6 +2559,11 @@
       .mv-page--users .mv-card {
         padding-top: 1.4mm;
         grid-template-rows: auto auto 1fr;
+      }
+
+      .mv-page--users .mv-card .mv-copy p {
+        font-size: 9.9px;
+        line-height: 1.6;
       }
 
       .mv-card {
@@ -2559,13 +2618,53 @@
         font-size: 10px;
       }
 
+      .mv-page--users .mv-point-strip li strong {
+        font-size: 9.4px;
+        line-height: 1.28;
+      }
+
       .mv-page--users .mv-point-strip li p {
+        font-size: 8.9px;
+        line-height: 1.46;
         max-width: 95%;
       }
 
       .mv-baseline-wrap {
         display: grid;
         gap: 3mm;
+      }
+
+      .mv-baseline-head {
+        display: grid;
+        gap: 1.8mm;
+        padding-top: 1.8mm;
+        border-top: 1px solid rgba(95, 121, 164, 0.12);
+      }
+
+      .mv-baseline-head .eyebrow {
+        font-size: 8.6px;
+      }
+
+      .mv-page--users .mv-baseline-head .eyebrow {
+        font-size: 8.2px;
+      }
+
+      .mv-baseline-title {
+        color: #2b251f;
+        font-size: 16px;
+        line-height: 1.24;
+      }
+
+      .mv-page--users .mv-baseline-title {
+        font-size: 14.6px;
+        line-height: 1.22;
+      }
+
+      .mv-page--users .mv-baseline-head > p:last-child {
+        font-size: 9.2px;
+        line-height: 1.5;
+        color: #5b544d;
+        max-width: 44ch;
       }
 
       .mv-baseline {
@@ -2597,7 +2696,13 @@
 
       .mv-baseline strong {
         margin: 0;
-        font-size: 11px;
+        font-size: 10.2px;
+        line-height: 1.34;
+      }
+
+      .mv-page--users .mv-baseline article p {
+        font-size: 9.1px;
+        line-height: 1.5;
       }
 
       .mv-baseline-note {
@@ -2727,14 +2832,8 @@
       }
 
       .mv-ai-grid {
-        grid-template-columns: minmax(0, 0.52fr) minmax(0, 0.48fr);
+        grid-template-columns: minmax(0, 0.28fr) minmax(0, 0.42fr) minmax(0, 0.3fr);
         align-items: stretch;
-      }
-
-      .mv-page--ai .mv-ai-grid > .mv-copy {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
       }
 
       .mv-ai-spec {
@@ -2797,17 +2896,37 @@
         height: 100%;
       }
 
-      .mv-ai-pair {
+      .mv-ai-story {
+        display: grid;
+        align-content: start;
+        gap: 2.6mm;
+      }
+
+      .mv-ai-story .lead {
+        color: #2b251f;
+      }
+
+      .mv-ai-spec-wrap {
+        display: grid;
+        align-content: start;
+        gap: 2.4mm;
+        padding: 3.5mm;
+        border: 1px solid rgba(95, 121, 164, 0.14);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .mv-ai-proof {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: space-between;
         gap: 3mm;
         height: 100%;
         padding-top: 0;
       }
 
-      .mv-ai-pair .mv-panel img {
-        height: 34mm;
+      .mv-ai-proof .mv-panel img {
+        height: 38mm;
         object-fit: cover;
       }
 
@@ -2815,17 +2934,21 @@
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 3mm;
-        margin-top: 2mm;
+        margin-top: 1.2mm;
       }
 
       .mv-state-grid article {
-        padding-top: 2.5mm;
+        display: grid;
+        align-content: start;
+        gap: 0.8mm;
+        min-height: 16mm;
+        padding: 2.2mm 2.5mm 0;
         border-top: 1px solid rgba(95, 121, 164, 0.12);
       }
 
-      .mv-state-grid article p {
-        font-size: 9.4px;
-        line-height: 1.5;
+      .mv-state-grid article strong {
+        margin: 0;
+        font-size: 10.6px;
       }
 
       .mv-detail-gallery {
@@ -2886,6 +3009,10 @@
         gap: 1.1mm;
       }
 
+      .mv-detail-gallery .mv-panel-copy figcaption {
+        padding-bottom: 0;
+      }
+
       .mv-detail-gallery__main .mv-panel img {
         max-height: 34mm;
       }
@@ -2921,40 +3048,44 @@
       }
 
       .mv-closing-body {
-        align-content: center;
-        gap: 4mm;
+        display: grid;
+        align-content: start;
+        gap: 3.6mm;
+        min-height: 100%;
       }
 
       .mv-impact-grid {
-        grid-template-columns: minmax(0, 0.48fr) minmax(0, 0.52fr);
-        gap: 5mm;
+        display: grid;
+        gap: 2.8mm;
         align-items: start;
       }
 
       .mv-impact-intro {
         display: grid;
-        gap: 2.4mm;
+        gap: 2.2mm;
       }
 
       .mv-impact-intro > p:last-child {
-        max-width: 50ch;
+        max-width: 62ch;
       }
 
       .mv-impact-points {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 3mm;
+        gap: 2.8mm;
+        padding-top: 0.6mm;
       }
 
       .mv-impact-points article {
         display: grid;
         align-content: start;
         gap: 1.2mm;
-        min-height: 31mm;
-        padding: 3.2mm;
-        border: 1px solid rgba(95, 121, 164, 0.14);
-        border-radius: 8px;
-        background: #fff;
+        min-height: 0;
+        padding: 2.4mm 0 0;
+        border: none;
+        border-top: 1px solid rgba(95, 121, 164, 0.1);
+        border-radius: 0;
+        background: none;
       }
 
       .mv-impact-points span {
@@ -2967,26 +3098,38 @@
 
       .mv-impact-points strong {
         display: block;
-        font-size: 12.4px;
-        line-height: 1.34;
+        font-size: 10.2px;
+        line-height: 1.32;
+      }
+
+      .mv-impact-points p {
+        font-size: 9.2px;
+        line-height: 1.5;
       }
 
       .mv-impact-summary {
-        padding-top: 2.8mm;
-        border-top: 1px solid rgba(95, 121, 164, 0.12);
+        padding-top: 2mm;
+        border-top: 1px solid rgba(95, 121, 164, 0.1);
         color: #2b251f;
-        font-size: 12.2px;
+        font-size: 10.6px;
         font-weight: 600;
-        line-height: 1.5;
+        line-height: 1.46;
       }
 
       .mv-impact-summary strong {
         font-weight: 700;
       }
 
+      .mv-future-wrap {
+        display: grid;
+        gap: 2.4mm;
+        padding-top: 2.8mm;
+        border-top: 1px solid rgba(95, 121, 164, 0.1);
+      }
+
       .mv-future-head {
         display: grid;
-        gap: 1.2mm;
+        gap: 0.8mm;
       }
 
       .mv-future-kicker {
@@ -2998,25 +3141,27 @@
       }
 
       .mv-future-title {
-        font-size: 18px;
-        line-height: 1.28;
+        font-size: 12.6px;
+        line-height: 1.3;
+        max-width: 48ch;
       }
 
       .mv-future {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 3mm;
+        gap: 2.8mm;
       }
 
       .mv-future article {
         display: grid;
         align-content: start;
-        gap: 1.2mm;
-        min-height: 26mm;
-        padding: 3mm;
-        border: 1px solid rgba(95, 121, 164, 0.12);
-        border-radius: 8px;
-        background: #fff;
+        gap: 1.4mm;
+        min-height: 0;
+        padding: 2.6mm 0 0;
+        border: none;
+        border-top: 1px solid rgba(95, 121, 164, 0.1);
+        border-radius: 0;
+        background: none;
       }
 
       .mv-future span {
@@ -3029,14 +3174,14 @@
 
       .mv-future strong {
         display: block;
-        font-size: 12.2px;
-        line-height: 1.36;
+        font-size: 10.4px;
+        line-height: 1.34;
       }
 
       .mv-future p {
         color: #615a53;
-        font-size: 9.6px;
-        line-height: 1.56;
+        font-size: 9px;
+        line-height: 1.48;
       }
 
       .project--research {
@@ -3240,7 +3385,7 @@
       }
 
       .rr-page--problem .rr-problem-grid {
-        gap: 6mm;
+        gap: 4mm;
         align-items: start;
         grid-template-columns: 1fr;
       }
@@ -3252,24 +3397,41 @@
       }
 
       .rr-page--problem .rr-copy {
+        display: grid;
+        grid-template-columns: minmax(0, 0.64fr) minmax(0, 0.36fr);
+        gap: 6mm;
+        align-items: start;
         max-width: none;
         width: 100%;
       }
 
+      .rr-page--problem .rr-problem-intro {
+        display: grid;
+        gap: 2.4mm;
+      }
+
+      .rr-page--problem .rr-problem-note {
+        padding-top: 2.4mm;
+        border-top: none;
+        align-content: start;
+      }
+
       .rr-page--problem .rr-proof-section {
         display: grid;
-        gap: 3mm;
+        gap: 2.4mm;
+        padding-top: 2.6mm;
+        border-top: 1px solid rgba(194, 126, 19, 0.14);
       }
 
       .rr-page--problem .rr-proof-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 6mm;
+        gap: 4.5mm;
       }
 
       .rr-page--problem .rr-proof-card {
-        padding-top: 3.2mm;
-        border-top: 1px solid rgba(194, 126, 19, 0.14);
+        padding-top: 0;
+        border-top: none;
       }
 
       .rr-page--problem .rr-proof-card strong {
@@ -3364,8 +3526,13 @@
         display: block;
         margin: 2.2mm 0 1mm;
         color: #1d2437;
-        font-size: 11.5px;
-        line-height: 1.32;
+        font-size: 10.6px;
+        line-height: 1.3;
+      }
+
+      .rr-page--experiment .rr-panel--sample p {
+        font-size: 9.1px;
+        line-height: 1.48;
       }
 
       .rr-experiment-grid {
@@ -3514,6 +3681,23 @@
         align-items: start;
       }
 
+      .rr-results-copy {
+        display: grid;
+        gap: 2.2mm;
+      }
+
+      .rr-results-block {
+        display: grid;
+        gap: 1.4mm;
+        padding-top: 2.2mm;
+        border-top: 1px solid rgba(194, 126, 19, 0.14);
+      }
+
+      .rr-results-block:first-child {
+        padding-top: 0;
+        border-top: none;
+      }
+
       .rr-panel--chart img {
         height: 57.5mm;
         object-fit: contain;
@@ -3536,21 +3720,32 @@
       .rr-quote-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 2.4mm;
+        gap: 1.8mm;
       }
 
       .rr-quote {
-        padding: 2.8mm;
+        padding: 2.2mm;
         margin: 0;
       }
 
+      .rr-quote span {
+        display: block;
+        color: #c77a1f;
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
       .rr-quote p {
-        margin: 5px 0 0;
+        margin: 4px 0 0;
+        font-size: 8.8px;
+        line-height: 1.42;
       }
 
       .rr-takeaway {
-        padding-top: 2mm;
-        border-top: 1px solid rgba(194, 126, 19, 0.14);
+        padding-top: 0.8mm;
+        border-top: none;
       }
 
       .rr-takeaway strong {
@@ -3574,6 +3769,12 @@
 
       .rr-page--rules {
         grid-template-rows: auto 1fr;
+        gap: 4mm;
+      }
+
+      .rr-rules-body {
+        align-content: start;
+        gap: 3.6mm;
       }
 
       .rr-rule-card {
@@ -3585,7 +3786,7 @@
         border: none;
         border-radius: 0;
         background: none;
-        border-top: 1px solid rgba(194, 126, 19, 0.14);
+        border-top: 1px solid rgba(194, 126, 19, 0.1);
         min-height: 40mm;
       }
 
@@ -3600,26 +3801,49 @@
 
       .rr-rule-card .rr-note {
         margin-top: 2mm;
-        padding-top: 2mm;
-        border-top: 1px solid rgba(194, 126, 19, 0.14);
+        padding-top: 0;
+        border-top: none;
       }
 
       .rr-value-grid {
-        grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
-        padding-top: 3.5mm;
-        border-top: 1px solid rgba(194, 126, 19, 0.14);
+        grid-template-columns: minmax(0, 0.32fr) minmax(0, 0.68fr);
+        gap: 4mm;
+        padding-top: 0;
+        border-top: none;
+        align-items: start;
+      }
+
+      .rr-value-wrap {
+        display: grid;
+        gap: 2.2mm;
+        padding-top: 2.8mm;
+        border-top: 1px solid rgba(194, 126, 19, 0.1);
+      }
+
+      .rr-value-label {
+        color: #c77a1f;
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
       }
 
       .rr-value {
         display: grid;
-        gap: 2.5mm;
+        gap: 1.6mm;
       }
 
       .rr-value-intro {
         color: #1d2437;
-        font-size: 13px;
+        font-size: 10.8px;
         font-weight: 600;
-        line-height: 1.5;
+        line-height: 1.48;
+      }
+
+      .rr-page--rules .rr-value h3 {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.28;
       }
 
       .closing-page {
@@ -3631,14 +3855,30 @@
       .closing-page__body {
         display: grid;
         justify-items: center;
-        gap: 3mm;
-        max-width: 150mm;
+        gap: 2.4mm;
+        max-width: 138mm;
         text-align: center;
+      }
+
+      .closing-page__body .eyebrow {
+        margin-bottom: 0.4mm;
+      }
+
+      .closing-page__body .title-lg {
+        font-size: 22px;
+      }
+
+      .closing-page__body .lead {
+        max-width: 88mm;
+        font-size: 10.4px;
+        line-height: 1.5;
       }
 
       .closing-page__contact {
         display: grid;
-        gap: 1mm;
+        gap: 0.8mm;
+        padding-top: 2mm;
+        border-top: 1px solid rgba(15, 23, 42, 0.1);
       }
     </style>
   </head>
@@ -3663,7 +3903,7 @@
             <h2 class="about-page__headline">关于我 /<br />UX Design 定位</h2>
             <div class="about-page__summary">
               <p>我拥有 3 年游戏系统策划与交互设计经验，目前在人机交互方向继续深造。</p>
-              <p>如果岗位需要一名偏 <strong>UX Design</strong> 的设计师，去处理 <strong>复杂流程、复杂系统和跨职能协作</strong> 中的体验问题，我会是比较匹配的类型。</p>
+              <p>我的工作重点是 <strong>复杂流程、复杂系统和跨职能协作</strong> 中的体验设计，擅长从问题定义推进到交互落地。</p>
             </div>
             <div class="about-page__divider"></div>
             <div class="about-page__left-bottom">
@@ -3798,7 +4038,7 @@
             <div class="ds-copy project-cover-intro">
               <p class="lead">把网状分支剧情，收回一张看得懂、改得动的画布。</p>
               <p>Digistudio 是一个让玩家自己创作游戏内容的 UGC 编辑器，我负责的是其中的剧情创作模块。玩家想把 NPC、任务和多结局写进自己的作品里，但旧版工具更适合播放线性文本，很难承载复杂的网状内容。</p>
-              <p>当创作者开始设计多角色、多条件、多分支剧情时，线性表单结构就会和脑中的网状关系错位。我这次改版的重点，就是把零散配置收回同一张画布里，让人连续写时不掉速，回头改时也能快速定位。</p>
+              <p>多角色、多条件、多分支一旦叠起来，线性表单就接不住创作者脑中的网状关系。我的改版重点，是把零散配置收回同一张画布，让剧情能连续写下去，也能快速回头定位。</p>
             </div>
             <div class="ds-inline-points project-cover-bottom">
               <article><strong>核心矛盾</strong><p>用户脑中是分支图，工具里却只有被拆散的线性表单。</p></article>
@@ -3837,7 +4077,7 @@
           </div>
           <div class="ds-rail split-3">
             <article><strong>连续写作不能断</strong><p>高频输入、长剧情扩写和批量建节点，要让创作者顺着脑中的节奏往下写。</p></article>
-            <article><strong>剧情必须接到玩法</strong><p>对话不是单独的文本树，它要能直连场景状态、任务反馈和关卡结果。</p></article>
+            <article><strong>剧情必须接到玩法</strong><p>对话需要直连场景状态、任务反馈和关卡结果，才能真正参与玩法。</p></article>
             <article><strong>回看与微调要快</strong><p>一旦进入长篇返工，定位速度和修改闭环决定了内容还能不能继续打磨。</p></article>
           </div>
         </div>
@@ -3854,17 +4094,19 @@
           <div class="ds-problem">
             <div class="ds-copy">
               <div class="ds-copy-main">
-                <p>线性文本还能勉强成立，但一旦剧情开始分支，问题就会集中冒出来。核心不在某一个面板，而在整套编辑方式从底层上就把剧情关系拆散了。</p>
+                <p>线性文本还能勉强成立，但一旦剧情开始分支，问题就会集中冒出来。真正的问题来自整套编辑方式本身：它从底层上拆散了剧情关系。</p>
                 <p>一句对白是文本组件，触发它要去事件面板，判定好感度又在另一张条件表里。脑中已经是网状关系，工具里却还是散开的线性表单。</p>
                 <ul class="ds-proof">
                   <li><strong>心流被拆碎：</strong> 对 Carlise 这类高频创作者来说，哪怕只写几句连续对白，也得在场景里来回点组件、分头填字。</li>
                   <li><strong>复杂度撑不住：</strong> 对 sssoxy 这种要反复改长篇内容的人来说，一旦进入多结局和多条件，线性文本模块就会变成大海捞针。</li>
                   <li><strong>玩法逻辑断层：</strong> 对 bmm4 这种关卡创作者来说，文本和场景逻辑还是孤岛，对话完开门、扣血、传送，没有直观的位置可以挂到剧情节点上。</li>
                 </ul>
-                <div class="ds-industry-compare"><span class="ds-label">为什么要改成画布</span><p>我参考了 <strong>UE 蓝图</strong> 和 <strong>Roblox Studio</strong>。它们都证明了同一件事：复杂逻辑要先看见关系，再做细节配置。</p><p>但我没有直接照搬 UE 蓝图。我保留了网状拓扑的直观，把节点封装成剧情 / 对话动作，把学习门槛尽量降下来。</p></div>
               </div>
-              <div class="ds-rail">
-                <article><strong>最后收束出的设计判断</strong><p>这次改版的重点，不在把表单做漂亮，而在把剧情、条件和功能重新组织成一张能持续编辑的关系图。</p></article>
+              <div class="ds-problem-tail">
+                <div class="ds-industry-compare"><span class="ds-label">为什么要改成画布</span><p>我参考了 <strong>UE 蓝图</strong> 和 <strong>Roblox Studio</strong>。它们都证明了同一件事：复杂逻辑要先看见关系，再做细节配置。</p><p>但我没有直接照搬 UE 蓝图。我保留了网状拓扑的直观，把节点封装成剧情 / 对话动作，把学习门槛尽量降下来。</p></div>
+                <div class="ds-rail">
+                  <article><strong>最后收束出的设计判断</strong><p>这次改版的重点，是把剧情、条件和功能重新组织成一张能持续编辑的关系图。</p></article>
+                </div>
               </div>
             </div>
             <figure class="ds-image-card"><figcaption>旧版痛点图</figcaption><img src="./assets/images/digistudio/Digistudio-OldSystem.jpeg" alt="旧版对话配置方式中，文本和触发关系分散在多个组件与面板中" /></figure>
@@ -3901,12 +4143,6 @@
           <h2 class="title-lg">解决方案</h2>
           <p class="lead">第一步解决“看不见关系”，第二步解决“敢不敢继续改”。重点是把剧情、条件和功能收回同一张能持续编辑的关系图。</p>
         </div>
-        <div class="ds-flow">
-          <article><span class="ds-flow-badge">01</span><strong>看见错位</strong><p>脑中是网状剧情，工具里却只有线性表单。</p></article>
-          <article><span class="ds-flow-badge">02</span><strong>收回画布</strong><p>先把剧情关系、文本和功能挂回同一张画布。</p></article>
-          <article><span class="ds-flow-badge">03</span><strong>前置防错</strong><p>该拦的错误当场拦住，该露出的信息直接露出来。</p></article>
-          <article><span class="ds-flow-badge">04</span><strong>验证结果</strong><p>我用同一任务对比新旧流程，看改动是否真的有效。</p></article>
-        </div>
         <div class="ds-phase">
           <div class="ds-phase-copy">
             <article><strong>Phase 01 | 先把剧情关系摆出来</strong><p>第一步先解决结构错位。我把文本、条件和功能挂回同一张剧情画布，再补两条创建路径：一条照顾连续输入，一条照顾先搭骨架再填细节。</p></article>
@@ -3918,6 +4154,12 @@
             <figure class="ds-phase-visual"><figcaption>工具栏拖拽创建</figcaption><img src="./assets/images/digistudio/drag-drop-panel.gif" alt="从画布右下角组件区拖拽对话节点进入画布的交互演示" /></figure>
           </div>
         </div>
+        <div class="ds-flow">
+          <article><span class="ds-flow-badge">01</span><strong>看见错位</strong><p>脑中是网状剧情，工具里却只有线性表单。</p></article>
+          <article><span class="ds-flow-badge">02</span><strong>收回画布</strong><p>先把剧情关系、文本和功能挂回同一张画布。</p></article>
+          <article><span class="ds-flow-badge">03</span><strong>前置防错</strong><p>该拦的错误当场拦住，该露出的信息直接露出来。</p></article>
+          <article><span class="ds-flow-badge">04</span><strong>验证结果</strong><p>我用同一任务对比新旧流程，看改动是否真的有效。</p></article>
+        </div>
         <span class="page-number">08</span>
       </section>
 
@@ -3925,8 +4167,14 @@
         <div class="page-heading">
           <p class="eyebrow">06 验证</p>
           <h2 class="title-lg">结果验证</h2>
-          <p class="lead">第二轮开始处理删除、回看、外显和切换路径。重点已经不是能不能做，而是返工时会不会慌、会不会迷路。</p>
+          <p class="lead">第二轮开始处理删除、回看、外显和切换路径。这一轮开始聚焦返工体验：回看会不会慌，修改会不会迷路。</p>
         </div>
+        <div class="ds-metric-grid">
+          <article><span>定位节点</span><strong>&lt; 1s</strong><p>关系上画布后，几乎不用再人肉翻找。</p></article>
+          <article><span>配置耗时</span><strong>60m → 15m</strong><p>配置动作终于能一口气做完。</p></article>
+          <article><span>整体效率</span><strong>+80%</strong><p>大家也更愿意返工和扩写复杂剧情。</p></article>
+        </div>
+        <div class="ds-results-detail">
         <div class="ds-matrix">
           <article><h4><span class="ds-badge">1</span>删节点后，不做自动重连</h4><p>复杂分支里最怕逻辑被系统悄悄改掉，所以删掉中间节点后，决定权交还给用户。</p></article>
           <article><h4><span class="ds-badge">2</span>死循环连线，当场拦住</h4><p>一旦形成 A → B → A，连线会直接回弹并提示，别把问题留到最后测试才发现。</p></article>
@@ -3935,13 +4183,9 @@
           <section><h5><span class="ds-badge">3</span>条件与功能外显</h5><p>条件标签和功能图标直接露在节点表面，分支再多也能一眼扫清。</p><figure class="ds-image-card"><figcaption>条件与功能图标外显</figcaption><img src="./assets/images/digistudio/nodeInfo.png" alt="节点条件标签与功能图标的局部放大图" /></figure></section>
           <section><h5><span class="ds-badge">4</span>对话组抽屉</h5><p>把可收起的对话组抽屉嵌进画布里，切章节和对话组不用再跨层跳转。</p><figure class="ds-image-card"><figcaption>画布内可收起的对话组抽屉</figcaption><img src="./assets/images/digistudio/diaGroup.png" alt="对话组抽屉与画布局部细节放大图" /></figure></section>
         </div>
-        <div class="ds-metric-grid">
-          <article><span>定位节点</span><strong>&lt; 1s</strong><p>关系上画布后，几乎不用再人肉翻找。</p></article>
-          <article><span>配置耗时</span><strong>60m → 15m</strong><p>配置动作终于能一口气做完。</p></article>
-          <article><span>整体效率</span><strong>+80%</strong><p>大家也更愿意返工和扩写复杂剧情。</p></article>
         </div>
         <div class="ds-closing split-2">
-          <article><strong>最后结论</strong><p>复杂创作工具要先把关系讲清楚，再把风险拦在前面，用户才敢持续返工，也敢把剧情继续写大。</p></article>
+          <article><strong>最后结论</strong><p>复杂创作工具要先把关系讲清楚，再把风险拦在前面，用户才更愿意持续返工，也更愿意把剧情继续写大。</p></article>
           <article><strong>项目价值</strong><p>这个项目说明我会把说不清的问题拆成可验证的设计判断，再把它收束成团队能复用的体验规则。</p></article>
         </div>
         <span class="page-number">09</span>
@@ -3962,9 +4206,9 @@
           <figure class="dm-shell dm-shell--plain"><img src="./assets/mockups/finalVision-mockup.png" alt="Digimi PC 与移动端最终效果展示" /></figure>
           <div class="project-cover-side dm-hero-copy">
             <div class="dm-copy project-cover-intro">
-              <p class="lead">把 PC 建造迁到手机上，重点不是缩小界面，而是重做移动端的建造节奏。</p>
+              <p class="lead">把 PC 建造迁到手机上，核心是重做移动端的建造节奏。</p>
               <p>Digimi 是一款以自由建造为核心的沙盒产品，建造系统就是玩家创作内容的主工具。我负责把这套 PC 建造体验迁移到移动端。</p>
-              <p>重点不是把 PC 界面缩小塞进手机，而是重做移动端的建造节奏：让玩家在小屏幕上也能看清落点、拖准方块、连续搭建。</p>
+              <p>这次迁移围绕移动端的建造节奏展开：让玩家在小屏幕上也能看清落点、拖准方块、连续搭建。</p>
             </div>
             <div class="dm-process project-cover-bottom">
               <article><span>01</span><strong>看见冲突</strong><p>移动端建造的核心矛盾，是视野、控制和连续创作挤在一块。</p></article>
@@ -3988,11 +4232,11 @@
             <div class="dm-copy">
               <div class="dm-copy-main">
                 <p>更麻烦的是，手机没有右键取消，也没有键盘撤销。玩家一旦放错，就会开始担心下一步怎么退回。</p>
-                <p>所以这次迁移的重点不是“适配尺寸”，而是重做移动端建造的工作流：给足视野、补上取消路径、保住连续搭建节奏。</p>
+                <p>所以这次迁移直接重做了移动端建造的工作流：给足视野、补上取消路径、保住连续搭建节奏。</p>
               </div>
               <div class="dm-card">
                 <span class="dm-subtitle">核心判断</span>
-                <p>真正拉低移动端效率的，不是单次拖拽本身，而是视野遮挡、回退焦虑和找方块路径。</p>
+                <p>视野遮挡、回退焦虑和找方块路径，是拉低移动端建造效率的关键因素。</p>
               </div>
             </div>
             <div class="dm-image-pair">
@@ -4034,23 +4278,23 @@
         <div class="page-heading">
           <p class="eyebrow">04 方案二</p>
           <h2 class="title-lg">方块访问</h2>
-          <p class="lead">第一轮解决了“看不清、拖不准”，但连续搭建还是会被找方块打断。第二轮不再继续改拖拽，而是重排方块访问路径。</p>
+          <p class="lead">第一轮解决了“看不清、拖不准”，但连续搭建还是会被找方块打断。第二轮转向方块访问路径，重点重排高频、中频和低频资源的入口。</p>
         </div>
         <div class="page-body-center page-body-center--gap-lg dm-phase2-body">
           <div class="dm-phase-grid">
             <div class="dm-copy">
               <div class="dm-copy-main">
                 <p>最高频的贴近手边，临时切换的收进抽屉，低频的再留在大仓库里。我没有把所有东西都铺到底部，因为那样移动端又会重新变成被工具栏压住的 PC 缩略图。</p>
+                <div class="dm-tier-grid">
+                  <article><span class="dm-tier-label">Hot</span><p>手边直达，保证当前建造动作不断。</p></article>
+                  <article><span class="dm-tier-label">Warm</span><p>短路径切换，减少反复开大仓库。</p></article>
+                  <article><span class="dm-tier-label">Cold</span><p>完整资源保留，但只在低频补料时出现。</p></article>
+                </div>
                 <ul class="dm-proof">
                   <li><strong>热：</strong> 当前主题的基础方块和高频结构件，直接放在底部快捷栏，支撑连续搭建。</li>
                   <li><strong>温：</strong> 最近使用、收藏方块和当前主题的衍生装饰，收进抽屉，承接临时切换。</li>
                   <li><strong>冷：</strong> 跨主题的完整资源库保留分类，只在补充材料时打开。</li>
                 </ul>
-              </div>
-              <div class="dm-tier-grid">
-                <article><span class="dm-tier-label">Hot</span><p>手边直达，保证当前建造动作不断。</p></article>
-                <article><span class="dm-tier-label">Warm</span><p>短路径切换，减少反复开大仓库。</p></article>
-                <article><span class="dm-tier-label">Cold</span><p>完整资源保留，但只在低频补料时出现。</p></article>
               </div>
             </div>
             <figure class="dm-panel"><figcaption>冷温热数据三层架构</figcaption><img src="./assets/mockups/pyramid-architecture.png" alt="冷温热数据三层金字塔架构图" /></figure>
@@ -4063,16 +4307,16 @@
         <div class="page-heading">
           <p class="eyebrow">05 验证</p>
           <h2 class="title-lg">验证结果</h2>
-          <p class="lead">我邀请 6 名内部深度沙盒玩家执行同一个“跨品类高频替换建造”任务，并对新旧方案做同链路对比。重点看频繁回退和反复找入口这两个阻碍有没有真的被削弱。</p>
+          <p class="lead">我让 6 名深度沙盒玩家完成同一段高频替换建造任务，对比新旧两版流程，重点看两个阻碍有没有减轻：频繁回退，和反复找入口。</p>
         </div>
         <div class="page-body-center page-body-center--gap-lg dm-impact-body">
           <div class="dm-impact-layout">
             <div class="dm-impact-row">
               <article class="dm-metric"><span class="dm-metric-label">Task Steps</span><strong>-67%</strong><p>定义为：跨品类替换方块并连续放置 3 次，所需的点击、拖拽和回退总次数。相较旧版均值，这一路径明显下降。</p></article>
-              <div class="dm-impact-copy"><p class="dm-impact-copy__label">验证口径</p><p>我邀请 6 名内部深度沙盒玩家执行同一个“跨品类高频替换建造”任务，并对新旧方案做同链路对比。这里以定性观察为主，定量趋势为辅，重点看前面提出的两个核心阻碍有没有真的被削弱：频繁回退，以及反复找入口。</p></div>
+              <div class="dm-impact-copy"><p class="dm-impact-copy__label">验证口径</p><p>这轮验证沿着同一条任务链路展开。我更关心的不是单个动作快了多少，而是玩家能不能少回退、少找入口，把注意力放回搭建本身。</p></div>
             </div>
             <div class="dm-impact-row dm-impact-row--reverse">
-              <div class="dm-impact-copy"><p class="dm-impact-copy__label">测试结论</p><p class="dm-impact-note">测试结果验证了我前面的判断：移动端建造的主要瓶颈不在“拖拽”本身，而在频繁开仓、找入口和反复回退带来的认知与操作冗余。新方案把高频路径收拢到手边后，玩家的搭建节奏明显更连贯。</p></div>
+              <div class="dm-impact-copy"><p class="dm-impact-copy__label">测试结论</p><p class="dm-impact-note">测试结果验证了我前面的判断：移动端建造的主要瓶颈，集中在频繁开仓、找入口和反复回退带来的认知与操作冗余。新方案把高频路径收拢到手边后，玩家的搭建节奏明显更连贯。</p></div>
               <article class="dm-metric"><span class="dm-metric-label">Visual Search</span><strong>-70%</strong><p>定义为：从想换方块，到找到正确入口并定位目标方块，所花的平均搜索时间。相较旧版均值，这一路径显著缩短。</p></article>
             </div>
           </div>
@@ -4083,20 +4327,25 @@
         <div class="dm-closing-copy page-heading">
           <p class="eyebrow">06 结论</p>
           <h2 class="title-lg">最后结论</h2>
-          <p class="dm-closing-subtitle">在同一建造任务的新旧对比里，真正拉低移动端效率的，不是单次拖拽本身，而是视野遮挡和找方块路径。</p>
-          <p class="dm-callout-line">这次实验把核心路径拆成了两类指标来看：一类是拖拽和回退带来的操作步骤，一类是找入口、找方块带来的搜索时间。新方案先解决前者，再压低后者，所以在同一任务里，操作步骤和视觉搜索都明显下降。结论很清楚：移动端建造不能照搬 PC 界面，而要按连续创作的任务链路重新组织。</p>
+          <p class="dm-closing-subtitle">视野遮挡和找方块路径，是影响移动端建造效率的关键因素。</p>
+          <p class="dm-callout-line">结果很清楚：操作步骤降下来了，找入口的时间也缩短了。高频路径收回手边后，移动端建造终于能顺着任务一路做下去。</p>
         </div>
-        <div class="dm-gallery">
-          <figure><img src="./assets/mockups/playerWork1.jpeg" alt="玩家搭建作品 1" /></figure>
-          <figure><img src="./assets/mockups/playerWork2.jpeg" alt="玩家搭建作品 2" /></figure>
-          <figure><img src="./assets/mockups/playerWork3.webp" alt="玩家搭建作品 3" /></figure>
-          <figure><img src="./assets/mockups/playerWork4.webp" alt="玩家搭建作品 4" /></figure>
-          <figure><img src="./assets/mockups/playerWork5.webp" alt="玩家搭建作品 5" /></figure>
-          <figure><img src="./assets/mockups/playerWork6.png" alt="玩家搭建作品 6" /></figure>
-        </div>
-        <div class="dm-conclusion">
-          <article><strong>反馈信号</strong><p>内部玩家对新版流程给出了明显正向反馈。更重要的是，他们开始把时间放回搭建本身，而不是频繁停在找方块和撤销操作上。</p></article>
-          <article><strong>项目价值</strong><p>这个项目说明我会把跨端迁移拆成连续任务链路来看，而不是只做界面缩放。先对准真正的阻碍，再决定该改视野、手势还是信息访问路径。</p></article>
+        <div class="dm-closing-evidence">
+          <div class="dm-conclusion">
+            <article><strong>反馈信号</strong><p>内部玩家对新版流程给出了明显正向反馈。更重要的是，他们开始把更多时间放回搭建本身，整体节奏也更少被找方块和撤销操作打断。</p></article>
+            <article><strong>项目价值</strong><p>这个项目体现了我处理跨端迁移的方式：从连续任务链路出发识别关键阻碍，再组织界面、手势和信息访问路径。</p></article>
+          </div>
+          <div class="dm-gallery-wrap">
+            <p class="dm-gallery-label">玩家作品反馈</p>
+            <div class="dm-gallery">
+              <figure><img src="./assets/mockups/playerWork1.jpeg" alt="玩家搭建作品 1" /></figure>
+              <figure><img src="./assets/mockups/playerWork2.jpeg" alt="玩家搭建作品 2" /></figure>
+              <figure><img src="./assets/mockups/playerWork3.webp" alt="玩家搭建作品 3" /></figure>
+              <figure><img src="./assets/mockups/playerWork4.webp" alt="玩家搭建作品 4" /></figure>
+              <figure><img src="./assets/mockups/playerWork5.webp" alt="玩家搭建作品 5" /></figure>
+              <figure><img src="./assets/mockups/playerWork6.png" alt="玩家搭建作品 6" /></figure>
+            </div>
+          </div>
         </div>
         <span class="page-number">15</span>
       </section>
@@ -4116,7 +4365,7 @@
           <div class="project-cover-side mv-hero-copy">
             <div class="mv-copy project-cover-intro">
               <p class="lead">先让全球电影的来源和流向被整体看见，再让细节被继续追问。</p>
-              <p>这个项目尝试解决的是：当用户想先搞清楚电影主要从哪些国家来，又集中流向哪些类型时，能不能先建立一层全局感觉，再顺着交互继续往下看。</p>
+              <p>这个项目要解决的是：先让用户看清全球电影的整体分布，再顺着国家、类型和时间继续往下探索。</p>
               <p>我也把 AI 接进了这次流程里，用它加速发散、搭骨架，把原型更快推成了一个真的能体验的项目。</p>
             </div>
             <div class="mv-process project-cover-bottom">
@@ -4138,7 +4387,7 @@
             <h2 class="title-lg">目标用户是谁</h2>
             <div class="mv-copy page-heading">
               <p>这页更适合探索型用户，比如想看全球电影分布的影迷、做文化观察的学生，或者需要先摸清国家与类型分布的人。</p>
-              <p>对他们来说，第一步通常不是立刻精确比较某一年涨了多少，而是先看清：电影主要从哪里来，不同国家更集中流向哪些类型，这种分布在某个时间切片里大概长什么样。</p>
+              <p>对他们来说，通常会先看清电影主要从哪里来、流向哪些类型，以及某个时间切片里的整体分布，再进入精确比较。</p>
             </div>
             <ul class="mv-point-strip">
               <li><strong>影迷</strong><p>想先从全局看一眼，再决定钻进哪个国家、类型或年份。</p></li>
@@ -4147,9 +4396,9 @@
             </ul>
           </div>
           <div class="mv-baseline-wrap">
-            <div class="mv-copy page-heading">
-              <p class="eyebrow">03 问题</p>
-              <h2 class="title-lg">旧的浏览方式</h2>
+            <div class="mv-baseline-head">
+              <p class="eyebrow">03 对照基线</p>
+              <h3 class="mv-baseline-title">旧的浏览方式</h3>
               <p>我先回看了几种更常见的数据阅读方式。它们都能回答一部分问题，但一旦问题变成“全球电影整体怎么分布，又怎么随时间变化”，阅读就会很快断掉。</p>
             </div>
             <div class="mv-baseline">
@@ -4157,7 +4406,7 @@
               <article><img src="./assets/images/3DMovie/baseline-browse.png" alt="电影网站分类浏览截图，按动作、冒险等类别展示电影海报列表" /><span>电影浏览网站</span><strong>适合块状浏览</strong><p>适合找一块内容，但很难继续做全局研究。</p></article>
               <article><img src="./assets/images/3DMovie/baseline-2d-charts.png" alt="传统 2D 电影图表示意图，包含类型柱状图、年度趋势线、热力图与国家到类型关系图" /><span>传统 2D 图表</span><strong>适合做比较</strong><p>很擅长讲趋势和大小，但很难第一眼把全球分布和时间变化一起端到眼前。</p></article>
             </div>
-            <p class="mv-baseline-note">所以这次要重做的，不只是筛选方式，而是最前面的可视化入口。</p>
+            <p class="mv-baseline-note">所以这次重做直接落在最前面的可视化入口上，筛选只是其中一部分。</p>
           </div>
         </div>
         <span class="page-number">17</span>
@@ -4177,7 +4426,7 @@
             <div class="mv-copy">
               <p class="eyebrow">05 编码</p>
               <h2 class="title-lg">信息怎么分层</h2>
-              <p>真正的难点不是 3D 本身，而是不同维度的信息在抢同一个画面。国家、类型、票房、时间，本来就在讲不同的事情。</p>
+              <p>真正的难点，在于不同维度的信息会同时争夺同一个画面。国家、类型、票房、时间，本来就在讲不同的事情。</p>
               <p class="mv-section-note">所以我先决定每种信息该回到哪个视觉通道。</p>
               <div class="mv-rail">
                 <article><span class="mv-strip-label">01 国家</span><strong>位置放回球体表面</strong><p>国家天然带地理属性。先知道它从哪里来，比先读数字更容易建立整体感觉。</p></article>
@@ -4195,15 +4444,15 @@
         <div class="page-heading">
           <p class="eyebrow">06 原型</p>
           <h2 class="title-lg">低保真原型</h2>
-          <p class="lead">这一轮我先不追视觉细节，而是先把界面骨架定下来：中间给 3D 地球，右侧给筛选，上方给搜索，下方给时间轴。先让用户看到整体分布，再顺着不同入口继续往下读。</p>
+          <p class="lead">这版界面先把阅读顺序排清楚：先看整体分布，再沿着筛选、搜索和时间轴进入局部信息。</p>
         </div>
         <div class="mv-prototype-grid">
           <figure class="mv-panel mv-panel--prototype"><figcaption>主视图给 3D 地球，右侧放筛选，上方放搜索，下方放时间轴</figcaption><img src="./assets/images/3DMovie/prototype1.png" alt="电影可视化低保真原型，中央为 3D 地球，右侧为国家和类型筛选，上方为搜索框，下方为时间轴" /></figure>
           <div class="mv-note-stack">
-            <article class="mv-note"><span>主视图</span><strong>主要视野先留给 3D 地球</strong><p>用户第一眼先看到电影大概从哪里来、往哪里流，而不是一上来就掉进局部条件里。</p></article>
+            <article class="mv-note"><span>主视图</span><strong>主要视野先留给 3D 地球</strong><p>用户第一眼先看到电影大概从哪里来、往哪里流，再进入局部条件和细节筛选。</p></article>
             <article class="mv-note"><span>搜索</span><strong>搜索用来快速定位具体对象</strong><p>当用户已经知道自己要找哪个国家、类型或电影名时，直接搜索会比在界面里来回扫更快。</p></article>
             <article class="mv-note"><span>筛选</span><strong>筛选处理国家和类型这类离散条件</strong><p>国家和电影类别都属于一组一组可选条件，放在右侧集中处理会比散在主画面里更容易读。</p></article>
-            <article class="mv-note"><span>时间轴</span><strong>时间轴处理连续变化</strong><p>时间不是一个个离散标签，所以我把它放到底部，用拖拽和输入时间去选择特定阶段。</p></article>
+            <article class="mv-note"><span>时间轴</span><strong>时间轴处理连续变化</strong><p>时间本身是连续变化的维度，所以我把它放到底部，用拖拽和输入时间去选择特定阶段。</p></article>
           </div>
         </div>
         <div class="mv-prototype-strip">
@@ -4217,11 +4466,14 @@
       <section class="pdf-page page-grid project--movie mv-page--ai">
         <div class="page-body-center page-body-center--gap-lg mv-ai-body">
           <div class="mv-ai-grid">
-            <div class="mv-copy page-heading mv-side-card">
+            <div class="mv-copy page-heading mv-ai-story">
               <p class="eyebrow">07 AI</p>
               <h2 class="title-lg">AI 怎么加速</h2>
-              <p>我先把设计规范写进一份 markdown 文件，把配色、排版、布局和信息层级先定下来。这样 Figma Make 接页面时，不是从空白开始猜风格，而是在执行一套已经明确的规则。</p>
-              <p>这也让后面的修改更稳：当我继续补筛选、反馈和时间切片时，判断依据始终是同一份规范，而不是每一轮都重新凭感觉决定。</p>
+              <p class="lead">我先把设计规范写进 markdown，再让 Figma Make 接页面。</p>
+              <p>这样它会直接执行一套已经明确的配色、排版、布局和信息层级规则。后面的修改也都回到同一份判断依据上。</p>
+            </div>
+            <div class="mv-ai-spec-wrap">
+              <p class="mv-strip-label">设计规范（markdown）</p>
               <div class="mv-ai-spec-grid">
                 <article class="mv-ai-spec-group">
                   <span>色彩系统（节选）</span>
@@ -4257,7 +4509,7 @@
                 </article>
               </div>
             </div>
-            <div class="mv-ai-pair">
+            <div class="mv-ai-proof">
               <figure class="mv-panel"><figcaption>低保真原型</figcaption><img src="./assets/images/3DMovie/prototype1.png" alt="电影可视化低保真原型，展示主视图、搜索、筛选和时间轴的骨架" /></figure>
               <figure class="mv-panel"><figcaption>Figma Make 产出页</figcaption><img src="./assets/images/3DMovie/CoverImage.png" alt="基于低保真原型产出的电影可视化页面，包含 3D 地球、右侧筛选栏与底部时间轴" /></figure>
             </div>
@@ -4269,14 +4521,14 @@
       <section class="pdf-page page-grid project--movie mv-page--interaction">
         <div class="mv-copy page-heading">
           <h2 class="title-lg">交互细节</h2>
-          <p class="lead">这几组状态图分别说明筛选、悬停、搜索和时间怎么工作。目标不是把所有信息同时抬上来，而是让用户在主视图里连续地问下去。</p>
+          <p class="lead">这几组状态图分别说明筛选、悬停、搜索和时间怎么工作。这组交互的目标，是让用户在主视图里连续地往下问、往下看。</p>
         </div>
         <div class="page-body-center page-body-center--gap-lg mv-interaction-body">
           <div class="mv-state-grid">
-            <article><span class="mv-strip-label">筛选</span><strong>收窄范围</strong><p>先压掉无关线条，让视线回到当前问题。</p></article>
-            <article><span class="mv-strip-label">悬停</span><strong>原地看详情</strong><p>信息在主视图上展开，不用跳出当前画面。</p></article>
-            <article><span class="mv-strip-label">搜索</span><strong>结果回到路径</strong><p>输入对象后，主视图直接定位那条具体路径。</p></article>
-            <article><span class="mv-strip-label">时间</span><strong>切换年份</strong><p>通过年份切片看当前阶段的数据密度。</p></article>
+            <article><span class="mv-strip-label">筛选</span><strong>收窄范围</strong></article>
+            <article><span class="mv-strip-label">悬停</span><strong>原地看详情</strong></article>
+            <article><span class="mv-strip-label">搜索</span><strong>结果回到路径</strong></article>
+            <article><span class="mv-strip-label">时间</span><strong>切换年份</strong></article>
           </div>
           <div class="mv-detail-gallery">
             <div class="mv-detail-gallery__main">
@@ -4286,7 +4538,7 @@
             <div class="mv-detail-gallery__aside">
               <figure class="mv-panel mv-detail-gallery__support"><img src="./assets/images/3DMovie/filterTag1.png" alt="筛选标签状态一，展示不同国家包含的该类别数量" /><div class="mv-panel-copy"><figcaption>标签直接给数量</figcaption><p class="mv-support-note">当前筛选有没有结果，会被数量直接回应出来。</p></div></figure>
               <figure class="mv-panel mv-detail-gallery__support"><img src="./assets/images/3DMovie/filterTag2.png" alt="筛选标签状态二，展示另一种筛选情况下的类别数量" /><div class="mv-panel-copy"><figcaption>换条件也能立刻对比</figcaption><p class="mv-support-note">切换筛选后，计数同步变化，方便快速比较不同条件下的类别规模。</p></div></figure>
-              <figure class="mv-panel mv-detail-gallery__support mv-detail-gallery__support--timeline"><img src="./assets/images/3DMovie/timebar.png" alt="时间轴状态，展示不同年份对应的数据规模" /><div class="mv-panel-copy"><figcaption>时间轴顺手提示规模</figcaption><p class="mv-support-note">时间轴不只负责切年份，也帮助用户先感知这一年的数据密度。</p></div></figure>
+              <figure class="mv-panel mv-detail-gallery__support mv-detail-gallery__support--timeline"><img src="./assets/images/3DMovie/timebar.png" alt="时间轴状态，展示不同年份对应的数据规模" /><div class="mv-panel-copy"><figcaption>时间轴顺手提示规模</figcaption><p class="mv-support-note">时间轴既负责切年份，也帮助用户先感知这一年的数据密度。</p></div></figure>
             </div>
           </div>
         </div>
@@ -4300,21 +4552,23 @@
               <p class="eyebrow">08 结果</p>
               <h2 class="title-lg">结果与价值</h2>
               <p>我先把低保真和设计规范写清，再用 Figma Make 把页面快速接成可操作原型。这样这版没有停在概念图，而是真正落到可以体验、可以继续改的一层。</p>
-            </div>
-            <div class="mv-impact-points">
-              <article><span>提效</span><strong>重复搭建被压下去了</strong><p>AI 帮我更快把骨架接成页面，让时间更多留给信息分层、交互状态和细节判断。</p></article>
-              <article><span>产出</span><strong>入口已经能工作</strong><p>用户可以先看到电影从哪里来、又大概流向哪里，再顺着筛选、搜索和时间切片继续往下看。</p></article>
+              <p class="mv-impact-summary">这版也把分工收清楚了：<strong>3D 先负责整体分布</strong>，<strong>2D 再负责趋势精读</strong>。</p>
             </div>
           </div>
-          <p class="mv-impact-summary">这版的分工也留清楚了：<strong>3D 先负责整体分布</strong>，<strong>2D 再负责趋势精读</strong>。</p>
-          <div class="mv-future-head">
-            <p class="mv-future-kicker">下一步</p>
-            <h3 class="mv-future-title">如果继续往下做，我会优先收这三处</h3>
+          <div class="mv-impact-points">
+            <article><span>提效</span><strong>原型搭建时间被压缩了</strong><p>AI 帮我更快把低保真接成可操作页面，让时间更多回到信息分层、交互状态和细节判断。</p></article>
+            <article><span>产出</span><strong>入口已经能工作</strong><p>用户可以先看到电影从哪里来、又大概流向哪里，再顺着筛选、搜索和时间切片继续往下看。</p></article>
           </div>
-          <div class="mv-future">
-            <article><span>01</span><strong>补一张 2D 趋势概览</strong><p>让时间变化回到更适合它的表达里，补上长期起伏的整体视角。</p></article>
-            <article><span>02</span><strong>继续压连线噪音</strong><p>继续靠筛选、高亮和分层显示，把高密度时期的噪音压得更清楚。</p></article>
-            <article><span>03</span><strong>补更完整的局部详情</strong><p>让用户不只知道“连了什么”，还能继续看为什么会这样。</p></article>
+          <div class="mv-future-wrap">
+            <div class="mv-future-head">
+              <p class="mv-future-kicker">下一步</p>
+              <h3 class="mv-future-title">如果继续往下做，我会优先收这三处</h3>
+            </div>
+            <div class="mv-future">
+              <article><span>01</span><strong>补一张 2D 趋势概览</strong><p>让时间变化回到更适合它的表达里，补上长期起伏的整体视角。</p></article>
+              <article><span>02</span><strong>继续压连线噪音</strong><p>继续靠筛选、高亮和分层显示，把高密度时期的噪音压得更清楚。</p></article>
+              <article><span>03</span><strong>补更完整的局部详情</strong><p>让用户既知道“连了什么”，也能继续看为什么会这样。</p></article>
+            </div>
           </div>
         </div>
         <span class="page-number">22</span>
@@ -4360,8 +4614,10 @@
         <div class="page-body-center page-body-center--gap-lg rr-problem-body">
           <div class="rr-problem-grid">
             <div class="rr-copy">
-              <p class="lead">比如你在跑步时看运动手表，或者在开车时瞄一眼导航。外面的光线、路况、背景都在变。如果界面也一直跟着变色，你第一反应不一定是“更清楚了”，也可能是“它为什么突然变了”。</p>
-              <p class="lead">所以我真正想研究的是：动态变色的 UI，到底是在提升可读性和用户体验，还是在增加新的负担。</p>
+              <div class="rr-problem-intro">
+                <p class="lead">比如你在跑步时看运动手表，或者在开车时瞄一眼导航。外面的光线、路况、背景都在变。如果界面也一直跟着变色，你第一反应不一定是“更清楚了”，也可能是“它为什么突然变了”。</p>
+                <p class="lead">所以我真正想研究的是：动态变色的 UI，到底是在提升可读性和用户体验，还是在增加新的负担。</p>
+              </div>
               <div class="rr-card rr-problem-note">
                 <p class="rr-kicker">研究切口</p>
                 <strong>先把争论变成能验证的问题</strong>
@@ -4389,7 +4645,7 @@
         <div class="page-heading">
           <p class="eyebrow">03 样本</p>
           <h2 class="title-lg">现有产品</h2>
-          <p class="lead">为了不靠直觉下结论，我先整理了 160 个真实产品里的 UI，再按状态信息挂在哪里、变化覆盖多大来分类。最后出现频率最高的是三类：条形状态条、整体渲染、环形 HUD。</p>
+          <p class="lead">我先整理了 160 个真实产品里的变色界面，再按信息挂载位置和变化覆盖范围去归类。最后稳定收出三类最常见样式：条形状态条、整体渲染、环形 HUD。</p>
         </div>
         <div class="rr-sample-grid">
           <figure class="rr-panel rr-panel--sample">
@@ -4428,7 +4684,7 @@
                 <ul class="rr-checklist">
                   <li>同一动态场景里比较三种常见样式</li>
                   <li>颜色规则统一，避免把别的因素混进来</li>
-                  <li>问卷和采访一起看，不只盯分数</li>
+                  <li>问卷和采访一起看，把趋势和原因同时收回来</li>
                 </ul>
               </div>
             </div>
@@ -4437,7 +4693,7 @@
               <div class="rr-proof-grid">
                 <article class="rr-proof-card">
                   <strong>先把实验场和样本统一起来</strong>
-                  <p>我在 Unity 里搭了一套统一场景，把三种样式和两种颜色规则放进同一任务里，再让 24 名用户都走完同一流程，保证每组比较都在同一个口径下完成。</p>
+                  <p>我在 Unity 里搭了统一场景，让 24 名用户完成同一流程，对比三种样式在同一动态背景下的体验差异。</p>
                 </article>
                 <article class="rr-proof-card">
                   <strong>再把趋势和原因一起收回来</strong>
@@ -4458,19 +4714,21 @@
           <div class="rr-results-grid">
             <div class="rr-result-row rr-result-row--main">
               <div class="rr-copy rr-results-copy">
-                <p class="rr-kicker">问卷结果</p>
-                <h3 class="title-md">变色不是越多越好</h3>
-                <p>先看分数，趋势已经很清楚了。变色在部分样式里更容易被看见，但变化一旦太频繁、太满，整体体验不会继续变好。</p>
-                <div class="rr-interview-block">
+                <div class="rr-results-block">
+                  <p class="rr-kicker">问卷结果</p>
+                  <h3 class="title-md">变色的有效性取决于节奏、范围和触发时机</h3>
+                  <p>先看分数，趋势已经很清楚了。变色在部分样式里更容易被看见，但变化一旦太频繁、太满，整体体验不会继续变好。</p>
+                </div>
+                <div class="rr-results-block rr-interview-block">
                   <p class="rr-kicker">采访结果</p>
                   <h3 class="title-md">清楚和打扰会同时出现</h3>
                   <p>用户更常说的是：什么时候更清楚，什么时候开始误解，什么时候盯久了会累。</p>
                 </div>
-                <div>
+                <div class="rr-results-block">
                   <div class="rr-quote-grid">
-                    <blockquote class="rr-quote"><span>更容易看见</span><p>“只要对比度高，我觉得就比较容易看清。”</p></blockquote>
-                    <blockquote class="rr-quote"><span>会带来额外联想</span><p>“主要的影响在于我习惯把它当成血条。当血条改变颜色时，我会想这是否代表了另一种功能。”</p></blockquote>
-                    <blockquote class="rr-quote"><span>会积累视觉疲劳</span><p>“盯动态颜色更伤眼，也更容易累。作为一名有点色弱的人，我觉得辨认起来有些困难。”</p></blockquote>
+                    <blockquote class="rr-quote"><span>更容易看见</span><p>“对比度够高时，我会更容易看清。”</p></blockquote>
+                    <blockquote class="rr-quote"><span>会误读含义</span><p>“颜色一变，我会先猜你是不是在提示别的功能。”</p></blockquote>
+                    <blockquote class="rr-quote"><span>会积累疲劳</span><p>“动态颜色更伤眼，盯久了会累。”</p></blockquote>
                   </div>
                   <div class="rr-takeaway">
                     <strong>最后判断</strong>
@@ -4511,18 +4769,20 @@
               <span>规则 03 / 设置触发点</span>
               <h3>只在关键阈值提醒</h3>
               <p>不要一点点变化就改色。更好的做法是到关键节点再提醒，平时保持安静。</p>
-              <p class="rr-note">把变色留给真正需要提醒的时刻，而不是所有变化。</p>
+              <p class="rr-note">把变色集中在真正需要提醒的时刻。</p>
             </article>
           </div>
-          <div class="rr-value-grid">
-            <div class="rr-value">
-              <p class="eyebrow">07 价值</p>
-              <h3>项目价值</h3>
-              <p class="rr-value-intro">我能完整推进用户研究，也能把模糊问题整理成可验证的设计判断。</p>
-            </div>
-            <div class="rr-value">
-              <p>这个项目从问题定义开始，经过样本整理、实验设计、原型搭建、问卷和访谈执行，一直到结果分析与规则提炼，完整体现了我推进用户研究的能力。</p>
-              <p>面对一开始很难直接讨论清楚的设计问题，我可以先建立判断口径，再把它转成可测试的原型、可分析的数据，以及团队后续能够继续使用的设计规则。</p>
+          <div class="rr-value-wrap">
+            <p class="rr-value-label">07 价值</p>
+            <div class="rr-value-grid">
+              <div class="rr-value">
+                <h3>项目价值</h3>
+                <p class="rr-value-intro">我能完整推进用户研究，也能把模糊问题整理成可验证的设计判断。</p>
+              </div>
+              <div class="rr-value">
+                <p>这个项目完整展示了我推进用户研究的方式：把模糊问题收成清晰假设，再落成可测试的原型、可分析的结果和可复用的设计规则。</p>
+                <p>我擅长把说不清的问题整理成清晰的判断标准，再把它落成可测试的原型、可验证的结果和团队能继续使用的设计规则。</p>
+              </div>
             </div>
           </div>
         </div>
@@ -4533,7 +4793,7 @@
         <div class="closing-page__body">
           <p class="eyebrow">End</p>
           <h2 class="title-lg">谢谢阅读。</h2>
-          <p class="lead">感谢你看到这里。如果你感兴趣的话，欢迎联系我！</p>
+          <p class="lead">感谢你看到这里。欢迎联系我，继续聊具体岗位和项目。</p>
           <div class="closing-page__contact">
             <p class="body">电话：+86 18257169737</p>
             <p class="body">邮箱：alan-yzh@foxmail.com</p>
